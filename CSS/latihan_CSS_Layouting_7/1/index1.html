@@ -1,0 +1,53 @@
+<!-- Float = properti CSS untuk mengatur posisi sebuah elemen HTML secara paksa agar posisinya bisa diatur sebelah kanan atau kiri dari parent / pembungkusnya. -->
+
+<!-- nilai dari properti float ada: none, left, dan right -->
+
+<!-- yang bisa dilakukan dengan properti float:
+text wrapping = membuat teks mengelilingi gambar / elemen lain.
+
+image gallery = membuat serangkaian gambar menjadi gallery.
+
+multi-column layout = membuat halaman punya beberapa kolom.
+
+dll.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Float 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src="../../Challange2/rdr.jpg" alt="wallpaper">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="clear"></div>
+    </div>
+
+    <!-- jika kita menggunakan property float tetapi misal teks pada tag p diatas hanya sedikit seperti diatas, maka tag img akan dianggap keluar oleh .container atau bisa disebut terjadi collapse. -->
+
+    <!-- untuk mencegah hal itu terjadi kita bisa menggunakan beberapa cara:
+    1. menggunakan property overflow.
+    2. menggunakan <div> kosong.
+    3. menggunakan teknik micro clear fix. -->
+
+    <!--cara 1: jika menggunakan property overflow pada .container dgn value auto (overflow: auto;), maka .container akan menganggap kalau tag img ada lagi karna tinggi dari si .container akan disesuaikan lagi.
+    WARNING: ini bukan cara yg tepat tapi ini bisa disebut mengangkali property float tadi. -->
+
+
+    <!--cara 2: cara yang tepat adalah dengan menggunakan property clear, yang berfungsi menghentikan / membersihkan float. clear punya value left, right, dan both. Jadi misal kita pakai float left maka kita perlu gunakan clear left, jika float right maka clear right, jika float left right maka kita gunakan float left right. DITAMBAH kita harus menambahkan DIV KOSONG, bebas untuk nama class nya, yang penting kita letakkan setelah tag HTML yang menggunakan property float tadi ATAU setelah tag HTML yang ingin kita hentikan penggunaan property float nya. contoh diatas, kita tambahkan div dengan class clear setelah tag p dimana kita masih ingin agar tag p tsb tetap mengelilingi gambarnya, lalu kita tambahkan di file style.css nya pada selector .clear yaitu clear:left sesuai float yg ingin kita bersihkan. -->
+
+
+    <!--cara 3: cara yang sebenarnya paling tepat adalah menggunakan teknik microfix, bisa dicari di google microfix dan lihat yg punya nicolas gallagher, disitu kita tinggal melakukan copy paste saja ke file css kita, karena dengan teknik microfix ini kita tidak perlu menambahkan elemen HTML. CEK FOLDER 3 DI FILE STYLE3.CSS UNTUK MELIHAT CARA KE - 3 INI. -->
+
+
+
+</body>
+</html>

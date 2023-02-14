@@ -1,0 +1,36 @@
+<!-- belajar tentang hyperlink, teks yang memiliki relasi dengan halaman lain.
+diketahui dengan adanya tag a yg artinya anchor -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hyperlink - Halaman 1</title>
+</head>
+<body>
+
+<!-- pada atribut dari tag a bisa diisikan dengan EXTERNAL LINK yaitu berupa link dari suatu website 
+yang terhubung dengan koneksi internet. pada EXTERNAL LINK perlu adanya http untuk protokolnya.
+CONTOH EXTERNAL LINK, href="https://www.google.com". 
+dan juga ada INTERNAL LINK yaitu berupa alamat posisi dari suatu file yg ada di pc pengguna.
+CONTOH INTERNAL LINK, href="../admin/index.html"-->
+<p>Klik <a href="https://www.google.com">disini</a> untuk mengetahui informasi EXTERNAL lanjut.</p>
+
+<!-- kalau file yg dituju ada dihalaman yg berbeda maka harus diketikkan nama foldernya seperti berikut.
+ini disebut dengan RELATIVE URL -->
+<p>Klik <a href="../admin/halaman2.html">disini</a> untuk mengetahui informasi INTERNAL lanjut.</p>
+
+<!-- page anchor, bagian tertentu dari sebuah halaman, bukah saja kita pindah ke suatu halaman tapi
+kita juga langsung diarahkan ke bagian tertentu dihalaman tersebut.
+Pada akhir dari nama filenya perlu ditambahkan tanda # dan id dari tag yg dituju. -->
+<p>Klik <a href="../halaman3.html#bagian3">disini</a> untuk pindah ke halaman 3</p>
+
+<!-- biasanya saat mengklik suatu link kita hanya akan berpindah halaman dengan window yg sama,
+tapi jika kita ingin membuka tab baru / window baru maka bisa ditambahkan atribut target
+dengan value nya, _self, _blank, _parent, _top. -->
+<p>Klik <a href="https://www.google.com" target="_blank">disini</a> untuk melihat web google ditab baru.</p>
+
+
+</body>
+</html>

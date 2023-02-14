@@ -1,0 +1,75 @@
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: lightgreen;
+	margin-left: 100px;
+	margin-top: 30px;
+	margin-bottom: 150px;
+	margin-right: 50px;
+}
+
+/* overlapping margin = menggabungkan dua buah margin, biasanya kiri dan kanan atau atas dan bawah */
+
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: aquamarine;
+	margin-top: 50px;
+}
+/* overlapping margin vertikal, contohnya seperti diatas, ketika .satu punya margin-bottom 150px dan .dua punya margin-top 50px maka keduanya akan bertumpuk tetapi karena .satu punya nilai lebih besar maka .dua akan ditutupi / overlapping. */
+
+.tiga {
+	width: 50px;
+	height: 50px;
+	background-color: violet;
+	margin-left: -50px;
+}
+/* negatif margin digunakan untuk menyembunyikan elemen HTML, dengan cara menambah tanda -. */
+
+
+/* overlapping margin horizontal, contohnya seperti dibawah, margin-right dan margin-left nya akan dijumlahkan karena ini versi horizontalnya. */
+.empat {
+	width: 200px;
+	height: 200px;
+	background-color: salmon;
+	margin-right: 30px;
+}
+
+.lima {
+	width: 100px;
+	height: 100px;
+	background-color: slategrey;
+	margin-left: 20px;
+}
+
+.enam {
+	width: 50px;
+	height: 50px;
+	background-color: rebeccapurple;
+}
+
+.empat, .lima, .enam {
+	display: inline-block;
+}
+
+
+/* auto, sebuah nilai yg diberikan kepada atribut CSS margin. Hanya bisa digunakan kepada margin-left dan margin-right, tidak boleh salah satu dari kedua margin tersebut yg diberikan nilai auto sendiri. nantinya tag html yg diberikan nilai auto margin left dan rightnya, akan mengikuti lebar dari parentnya.*/
+
+.tujuh {
+	width: 250px;
+	height: 250px;
+	background-color: cornsilk;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* margin shorthand */
+.delapan {
+	width: 150px;
+	height: 150px;
+	background-color: goldenrod;
+	margin: 50px auto 40px;
+}
+
+/* jika nilainya 1 saja, maka ke empat sisinya akan bernilai sama. jika ada 2 nilai, maka urutan bacanya atas bawah lalu kiri kanan. jika ada 3 nilai, maka urutan bacanya atas kiri dan kanan lalu bawah. terakhir jika 4 nilai, dibacanya dari atas lalu searah jarum jam ke kanan, bawah dan kiri. */

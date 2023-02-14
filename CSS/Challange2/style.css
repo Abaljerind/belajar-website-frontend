@@ -1,0 +1,205 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* akhir css reset */
+
+
+/* my css style */
+
+body {
+	background-image: url(blue-snow.png);
+}
+
+/* container */
+
+.container {
+	width: 960px;
+	background-color: #eaeaea;
+	margin: auto;
+	padding: 20px;
+}
+
+.container .header {
+	margin-left: 20px;
+	font-family: arial, verdana, sans-serif;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.container ul li {
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 20px;
+	font-family: arial;
+}
+
+.container ul li a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: salmon;
+	font-size: 18px;
+}
+
+.container ul li a:hover {
+	color: white;
+	background-color: skyblue;
+}
+
+/* gambar */
+
+.banner {
+	height: 380px;
+	background-image: url(rdr.jpg);
+	background-size: cover;
+	background-position: 0 -80px;
+	margin-top: 15px;
+	border-top: 10px solid salmon;
+	border-bottom: 10px solid skyblue;
+	background-repeat: no-repeat;
+}
+
+/* content */
+
+.content .artikel h3 {
+	font-size: 32px;
+	font-weight: bold;
+	margin-top: 15px;
+	font-family: arial, verdana, sans-serif;
+	margin-bottom: 10px;
+	text-indent: 15px;
+}
+
+.content .artikel .penulis {
+	font-size: 12px;
+	font-family: arial, verdana, sans-serif;
+	text-align: right;
+	margin-right: 15px;
+}
+
+.penulis a {
+	text-decoration: none;
+	color: salmon;
+}
+
+.penulis a:hover {
+	background-color: skyblue;
+	color: white;
+}
+
+.content .main p {
+	margin-top: 20px;
+	text-indent: 15px;
+	font-size: 15px;
+}
+
+.main {
+	width: 600px;
+	float: left;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* sidebar */
+
+.sidebar {
+	width: 300px;
+	float: right;
+	padding: 20px;
+}
+
+.sidebar h3 {
+	font-size: 22px;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.sidebar img {
+	width: 70px;
+	height: 70px;
+	float: left;
+	padding: 10px;
+}
+
+.sidebar p {
+	font-size: 12px;
+	line-height: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* copyright */
+
+.copyright p {
+	margin-top: 20px;
+	padding: 20px;
+	background-color: dimgrey;
+	text-align: center;
+	font-size: 15px;
+}
+
+/* teknik clearfix */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

@@ -1,0 +1,21 @@
+ul#sarapan li {
+	color: lawngreen;
+}
+
+ul#sarapan li.favorit {
+	color: palevioletred;
+}
+
+ul#sarapan li.mantap {
+	color: blueviolet;
+}
+
+ul#sarapan li.good:hover {
+	font-size: 24px;
+	color: darkgrey;
+}
+
+ul#sarapan li.enak:hover {
+	font-size: 24px;
+	color: darkgoldenrod;
+}

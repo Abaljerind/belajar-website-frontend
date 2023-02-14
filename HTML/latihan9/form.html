@@ -1,0 +1,89 @@
+<!-- untuk membuat sebuah form, diperlukan pembungkus dengan tag form.
+berikut adalah elemen elemen pada form:
+input untuk melakukan input data,
+textarea mirip textfield tapi lebih banyak yg bisa diisi seperti komentar,
+select membuat drop down / combo box,
+button untuk button,
+label untuk menandai sebuah elemen input -->
+
+
+<!-- tag input punya atribut type dengan value:
+text, password, radio button, checkbox, submit, reset, button -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form layout - Halaman 1</title>
+</head>
+<body>
+
+<form>
+	<table>
+		<tr>
+			<!-- atribut for pada label HARUS SAMA dengan atribut id pada input -->
+			<td><label for="username">Username: </label></td>
+			<td><input type="text" id="username" name=""></td>
+		</tr>
+
+		<tr>
+			<td><label for="password">Password: </label></td>
+			<td><input type="password" id="password" name=""></td>
+		</tr>
+
+			<!-- atribut name pada input digunakan untuk mengelompokkan tag inputnya, seperti pada tag radio berikut ini. -->
+		<tr>
+			<td colspan="2">
+				<label>Jenis Kelamin: </label>
+				<input type="radio" id="pria" name="gender">
+				<label for="pria">Pria</label>
+				<input type="radio" id="wanita" name="gender">
+				<label for="wanita">Wanita</label>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<label>Hobi: </label>
+				<input type="checkbox" id="menyanyi" name=""><label for="menyanyi">menyanyi</label>
+				<input type="checkbox" id="olahraga" name=""><label for="olahraga">olahraga</label>
+				<input type="checkbox" id="ngoding" name=""><label for="ngoding">ngoding</label>
+		</tr>
+
+		<tr>
+			<!-- untuk textarea hanya perlu begitu saja. -->
+			<td>Komentar: </td>
+			<td><textarea></textarea></td>
+		</tr>
+	
+		<tr>
+			<td>Asal Kota: </td>
+			<td>
+				<select>
+					<option>Bekasi</option>
+					<option>Jakarta</option>
+					<option>Depok</option>
+					<option>Tangerang</option>
+				</select>
+			</td>
+		</tr>
+
+	<!-- <input type="submit" value="kirim!" name=""> -->
+<!-- secara default text yg tampil adalah submit, tapi kalau mau diganti perlu ditambah
+atribut value -->
+
+<!-- tidak disarankan untuk melakukan submit / mengirim data menggunakan tag input.
+karena sudah ada tag BUTTON yang mempunyai atribut type dengan value nya SUBMIT, RESET, BUTTON -->
+
+		<tr>
+			<td colspan="2"><button type="submit">Kirim!</button></td>
+		</tr>
+		
+	</table>
+
+
+</form>
+
+</body>
+</html>

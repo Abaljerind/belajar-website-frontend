@@ -1,0 +1,23 @@
+h1	{
+	color: deepskyblue;
+	font-size: 75px;
+	text-decoration: line-through;
+
+/* pada css kita bisa memberikan value pada atribut color dengan hexadecimal contoh #ff0202 dan juga rgb misal, rgb(72,32,44) */
+
+}
+
+/* text align = left, right, center, justify */
+
+p {
+	text-align: justify;
+	text-indent: 50px;
+	text-transform: capitalize;
+	letter-spacing: 3px;
+	word-spacing: 5px;
+}
+
+/* text decoration bisa digunakan untuk menghilangkan garis bawah pada tag html a dengan value none seperti dibawah. */
+a {
+	text-decoration: none;
+}

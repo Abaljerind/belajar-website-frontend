@@ -1,0 +1,39 @@
+/* bentuk struktur dari css yaitu, selector { property: value; }
+contoh -> h1 {color: blue;} */
+
+/* selector > digunakan untuk memilih dan memanipulasi elemen pada html,
+yg dipilih berdasarkan tag, id, class bahkan pola. */
+
+/* property: value;	> https://css-tricks.com/almanac/ */
+
+/* css bisa disimpan jadi 1 dengan file html atau bisa juga dijadikan file terpisah dan dihubungkan keduanya.
+
+embed => css disimpan jadi 1 dengan tag style
+
+inline => sama dengan embed, tapi css digunakan langsung di tag html nya dengan tambahan atribut style
+WARNING: inline tidak disarankan untuk digunakan.
+
+external => css dijadikan file tersendiri.
+
+ */
+
+
+/* pewarisan / inheritance
+properti / atribut yang diwariskan antara lain:
+color,
+font,
+letter-spacing,
+line-height,
+line-style,
+text-align,
+text-indent,
+text-transform,
+visibility,
+white-space
+
+jadi, property diatas bisa di isi value nya dengan "inherit;"
+
+ */
+
+
+/* tag div dan juga tag span tidak punya arti apapun, keduanya digunakan untuk mengelompokkan tag tag HTML. */

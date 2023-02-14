@@ -1,0 +1,59 @@
+.pertama {
+	width: 300px;
+	height: 300px;
+	background-color: lightcoral;
+	margin: 20px auto;
+	padding: 50px;
+	border: 5px dashed black;
+}
+
+.kedua {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	background-color: royalblue;
+	border-left: 3px dashed maroon;
+	border-right: 3px dotted moccasin;
+	overflow: auto;
+}
+
+/* menambah atribut border.
+Border ditulis dengan value berurut seperti berikut: 
+border: width style color;
+
+untuk style pada border nilai nya bisa beragam antara lain:
+solid, dotted, dashed, dan double.
+
+border bisa digunakan untuk sisi kiri, kanan, atas, dan bawahnya saja, contoh: border-left, border-top dll.
+
+border juga menambah ukuran elemennya.
+
+ */
+
+/* Padding tidak bisa diberi nilai negatif dan auto. Menambahkan padding akan menambah juga ukuran box dari elemen HTML. */
+
+/* jika tidak ingin menambah lebar dari elemen HTML nya maka bisa dikurangi bagian width dan height nya sesuai yang diinginkan. */
+
+
+/* biasakan untuk mengatur hanya lebar nya saja, karena jika mengatur tingginya juga akan menyebabkan konten keluar jika kontennya sudah melewati tinggi yang kita tentukan. */
+
+
+
+/* box sizing, akan mengatur lebar dari suatu elemen agar tetap sama dengan parent nya, walaupun kita menambah padding dan border. contoh dibawah, lebar dari .box yg jadi parent akan tetap 600px walaupun kita sudah memberikan padding dan border. */
+.box {
+	width: 600px;
+	margin: 10px auto;
+	box-sizing: border-box;
+}
+
+.satu {
+	background-color: lightskyblue;
+	padding: 10px;
+	border: 15px dotted red;
+}
+
+.dua {
+	background-color: lightgreen;
+	padding: 30px;
+	border: 20px dashed orange;
+}

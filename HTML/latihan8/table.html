@@ -1,0 +1,72 @@
+<!-- belajar table pada html. digunakan untuk menampilkan data secara tabular.
+seperti menampilkan anggaran dana, atau skor suatu pertandingan. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Table - Halaman 1</title>
+</head>
+<body>
+
+	<!-- attribut yg ada pada table:
+	border untuk menambahkan garis disekitar cell / data, 
+	cellspacing untuk menambahkan jarak antar cell / data, 
+	cellpadding untuk memberi luas pada sebuah cell / data, 
+	colspan untuk menggabungkan 2 buah kolom,
+	dan rowspan untuk menggabungkan 2 buah baris -->
+
+	<!-- untuk table dengan format simple / sederhana,
+	arsitekturnya hanya perlu tag table sebagai pembungkus,
+	tag tr / table row untuk membuat baris,
+	tag td / table data untuk membuat kolomnya. -->
+
+	<table border="1" cellspacing="0" cellpadding="5">
+		
+		<tr>
+			<td>Baris 1, Kolom 1</td>
+			<td>Baris 1, Kolom 2</td>
+		</tr>
+
+		<tr>
+			<td>Baris 2, Kolom 1</td>
+			<td>Baris 2, Kolom 2</td>
+		</tr>
+
+	</table>
+
+	<br><br><br><br><br><br>
+
+	<!-- sedangkan untuk table dengan format complex,
+	maka terdapat tambahan thead (sebagai header), th untuk judul pada baris,
+	lalu tbody untuk body dari tablenya.  -->
+
+	<table border="1" cellspacing="0" cellpadding="5">
+		
+		<thead>
+			<tr>
+				<th></th>
+				<th>Kolom 1</th>
+				<th>Kolom 2</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<th>Baris 1</th>
+				<td>Baris 1, Kolom 1</td>
+				<td>Baris 1, Kolom 2</td>
+			</tr>
+
+			<tr>
+				<th>Baris 2</th>
+				<td>Baris 2, Kolom 1</td>
+				<td>Baris 2, Kolom 2</td>
+			</tr>
+		</tbody>
+
+	</table>
+
+</body>
+</html>

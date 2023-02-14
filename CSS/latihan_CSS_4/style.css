@@ -1,0 +1,18 @@
+/*body {
+	
+	background-color: white;
+	background-image: url(gambar/tree-cherry.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}*/
+
+body {
+
+	background-color: white;
+	background-image: url(gambar/gradients.jpg);
+	background-repeat: repeat-x;
+
+}
+
+/* jika kita ingin menempatkan sebuah gambar sesuai dengan posisi yg diinginkan, maka perlu ditambahkan atribut " background-repeat: no-repeat; " sehingga kita bisa punya akses ke atribut " background-position: center center " dengan value nya yang bisa kita kombinasikan seperti top right, bottom right dan lain lain. */

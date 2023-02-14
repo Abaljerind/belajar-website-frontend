@@ -1,0 +1,26 @@
+.container {
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.kotak {
+    width: 80px;
+    height: 80px;
+    color: white;
+    background-color: salmon;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    margin: 2px;
+    float: left;
+}
+
+/* untuk membuat teks 1 dari class kotak berada ditengah tengah kotaknya bukan ditengah atas, tetapi tepat ditengah kotaknya, maka kita bisa menggunakan line-height dengan nilai yang sama dengan tinggi kotaknya / height nya. walaupun jika font-size nya kita perbesar. */
+
+/* percobaan penggunaan property clear agar tulisannya berada dibawah kotak. JADI kita hentikan float nya setelah kotak terakhir yaitu kotak 10 dengan menambahkan div kosong dengan class clear seperti difile index2.html */
+
+.clear {
+    clear: left;
+}

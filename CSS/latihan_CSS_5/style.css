@@ -1,0 +1,51 @@
+body {
+	font-family: arial;
+}
+
+/* ketika ada tag html yg punya nilai yg sama bisa dijadikan 1 dengan menambah koma setelah tag pertamanya sebagai pemisah / seperator. */
+h1, h2 {
+	color: green;
+}
+
+
+/* ketika ada tag yang berada di dalam tag lain seperti tag a di dalam tag li yang ada di dalam tag ul juga, maka bisa dituliskan seperti berikut. */
+ul li a {
+	color: orange;
+}
+
+ol li a {
+	color: cadetblue;
+}
+
+
+/* ketika ada tag html yang sama seperti tag p, lalu kita ingin memberikan style yg berbeda di kedua tag p nya, kita bisa tambahkan pada tag p tersebut sebuah atribut, bisa id dan juga class. Untuk penggunaan atribut id pada file css nya kita gunakan #, dan untuk class kita gunakan titik (.) */
+#p1 {
+	color: goldenrod;
+}
+
+.p2 {
+	color: cornflowerblue;
+}
+
+/* perbedaan id dan class:
+id #
+1. setiap halaman hanya boleh punya 1 elemen dengan id tersebut.
+2. setiap elemen HTML hanya boleh punya 1 id
+3. penggunaan id lebih berat 100x lipat.
+4. bisa digunakan sebagai penanda halaman untuk link
+5. digunakan juga untuk javascript dan sebaiknya tidak digunakan untuk CSS. 
+
+class .
+1. penggunaan class hanya 10x lipat dari pada tag HTML.
+2. class bisa punya teks tambahan sehingga tag css nya bisa dibagi, contoh penambahan pada class p2 cetak-tebal, sekarang saat saya gunakan css untuk mencari class cetak-tebal maka akan bisa digunakan.
+
+*/
+
+.cetak-tebal {
+	font-weight: bold;
+}
+
+/* kombinasi CSS untuk tag p dan juga class yang punya cetak-tebal. */
+p.cetak-tebal {
+	font-size: 18px;
+}

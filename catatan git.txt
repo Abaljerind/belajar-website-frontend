@@ -1,0 +1,176 @@
+git init untuk menginisialisasi repo git di komputer kita
+git add <file(s)> untuk menambahkan file kedalam sesuatu yg disebut staging area
+git status untuk mengetahui status repo kita, apakah ada file baru atau file yg berubah atau file yg dihapus tidak
+git commit untuk melakukan commit
+git config untuk masukkan configurasi kedalam git nya
+git branch untuk membuat branch
+git help untuk bantuan perintah di dalam git
+git log untuk melihat log perubahan yg terjadi, bisa ketik "git log -3" untuk membatasi hanya menampilkan 3 buah log saja
+git log -- style.css untuk melihat perubahan yang terjadi hanya pada file style.css
+
+fork / forking => membuat copy / duplikat dari repo orang lain beserta history nya. bisa dibilang juga sebagai jembatan antara repo original dan duplikatnya. kita juga bisa berkontribusi terhadap repo orang lain dengan memodifikasi repo tersebut lalu melakukan pull request agar yang punya repo tersebut dapat mengimplementasikan perubahan yang kita buat jika dirasa bagus. fork != clone
+
+------------------------------------------------------------------------------
+
+kalau sudah membuat sebuah repo git didalam komputer kita akan mengenali 3 buah area:
+1. working tree, folder tempat kita bekerja yg berisi file file project yang kita kerjakan.
+    * dari working tree jika kita membuat perubahan pada suatu file maka file tersebut akan dipindahkan ke dalam staging area dengan kita menggunakan comment yg namanya "git add"
+    * jika kita ingin membatalkan git add nya, kita bisa gunakan comment "git rm --cached <file>"
+
+2. staging area, untuk memberitahukan kepada git bahwa kita sudah melakukan perubahan.
+    * jika file yg ada di staging area sudah bisa kita putuskan commit maka file tersebut dapat kita pindahkan ke history dengan menggunakan commenct yg namanya "git commit"
+
+3. history, jika file yg ada di staging area sudah kita commit maka akan masuk ke dalam history.
+
+------------------------------------------------------------------------------
+###### Jadi alur untuk melakukan push file pada git di lokal (komputer kita), baik untuk menambahkan file baru atau setelah memodifikasi suatu file adalah sebagai berikut:
+git status -> git add (git rm --cached <file> untuk batalkan git add) -> git status -> git commit -m "Menambahkan komen" -> git status
+
+# jika kita melakukan modify pada suatu file seperti penambahan atau penghapusan suatu baris maka kita bisa gunakan comment "git commit -am "isi komen / pesannya" secara langsung tanpa harus melakukan penambahan dengan git add
+
+# -am disini artinya a = add dan m untuk komen / pesannya
+
+Note: 
+* untuk menambahkan lebih dari 1 file bisa gunakan comment "git add .", yang dimana titik tersebut artinya semua file
+
+* jika kita ingin melakukan restore file yg sudah terhapus atau ingin kembali ke keadaan tertentu dari suatu file sebelum diubah kita bisa gunakan checkout. misal "git checkout <7 digit hash commit yg ingin kita gunakan kembali>"
+
+##############
+
+
+--- git log ---
+* git log untuk melihat seluruh perubahan yg terjadi
+
+* git log -- style.css untuk melihat perubahan yang terjadi hanya pada file style.css
+
+* "git log -3" untuk membatasi hanya menampilkan 3 buah log saja 
+
+
+--- git checkout ---
+* jika ingin melakukan checkout ke commit tertentu, gunakan "git checkout <5 digit hash pertama dari commitnya>"
+
+* jika kita ingin mengembalikan file yg terhapus tetapi ada perubahan lain yg terjadi juga pada commit tersebut maka kita bisa gunakan comment "git checkout <5 digit hash pertama dari commitnya> -- <nama file yg ingin di restore>"
+example => git checkout c7832 -- style.css
+
+* Setelah melakukan checkout kita perlu melakukan git commit lagi
+
+* jika kita ingin mengganti branch yg digunakan, kita bisa gunakan comment "git checkout <nama_branch>"
+
+
+--- git branch ---
+* jika kita ingin menambahkan misal fitur baru pada project kita tetapi belum yakin apakah bisa atau tidak misalnya, maka kita bisa membuat sebuah branch baru untuk eksperimen. Kita bisa gunakan comment "git branch <nama_branch>"
+
+* kalau kita hanya ketik "git branch" lalu enter maka akan menampilkan daftar branch yg ada dan warna HIJAU pada nama branch nya adalah branch yg aktif.
+
+## * jika kita ingin melihat graph seperti yg ada di github maka bisa dengan comment dibawah ini
+git log --all --decorate --oneline --graph
+* 8001238 (HEAD -> master, staff, dosen) menambahkan data 1 mahasiswa baru
+* 27c72ab menambahkan file mahasiswa
+
+## untuk alias ini hanya bisa digunakan untuk satu session saja, jadi jika kita tutup window git bash nya maka kita perlu membuat alias lagi.
+
+## * jika kita ingin mempersingkat perintah untuk menampilkan graph nya maka kita bisa gunakan alias seperti dibawah ini
+alias graph="git log --all --decorate --oneline --graph"
+|| dan di saat kita ketik "graph" saja maka outputnya akan sama seperti perintah aslinya.
+
+* jika kita ingin mengganti branch yg digunakan, kita bisa gunakan comment "git checkout <nama_branch>"
+
+
+--- git merge ---
+* untuk melakukan merge pada git, kita harus pindahkan lagi branch nya ke master, lalu kita bisa langsung gunakan comment berikut "git merge <nama_branch yg ingin di merge>", ex: git merge dosen, sehingga branch dosen akan menyatu dengan branch master. 
+
+* Setelah melakukan merge, kita tidak akan butuh lagi branch yang sebelumnya jadi bisa kita hapus saja branch tersebut, dengan comment "git branch -d <nama_branch>". ex: git branch -d dosen
+
+* jika kita ingin menghapus branch yang belum di merge / gabungkan, kita bisa gunakan comment "git branch -D <nama_branch>". ex: git branch -D staff
+
+* comment "git branch --merged" digunakan untuk melihat branch mana yang sudah di merge.
+
+* pada git terdapat 2 tipe merge yaitu:
+a. fast forward, terjadi ketika branch yg ingin kita gabungkan berada dalam jalur langsung / direct path, yang artinya bahwa branch master bisa langsung menuju ke branch cabang yang ingin kita lakukan merge.
+
+b. three-way merge, terjadi ketika branch yg ingin kita gabungkan berbeda jalurnya / bukan jalur langsung, yang artinya bahwa branch master tidak bisa langsung menuju ke branch yang ingin di merge / gabungkan, sehingga merge ini akan membuat commit baru maka kita harus masukkan pesan commit nya di text editor. Jika sudah selesai dengan pesan commit nya, maka jika kita lihat graph nya akan terlihat bahwa branch staff akan menyatu dengan branch master melalui commit baru.
+
+
+--- git merge dengan conflict ---
+* terjadi dimana merge nya mengalami sebuah conflict dikarenakan dua branch mengerjakan baris yg sama dalam 1 repo, jadi secara otomatis git tidak bisa melakukan merge jadi harus kita yg melakukan solve (memilih baris mana yg akan tetap digunakan).
+
+* setelah kita melakukan solve conflict yg ada pada file yg sama dengan memilih baris mana yg akan tetap kita gunakan, maka kita bisa lakukan lagi comment dibawah ini:
+git status -> git add . -> git commit -m "menyelesaikan conflict di file <nama_file>" -> git status -> git branch --merged -> git branch -d <nama_branch> (untuk menghapus branch nya karna sudah tidak diperlukan lagi.) -> git branch
+
+
+--- git remote ---
+###### Jadi alur untuk melakukan push file pada git remote di lokal (komputer kita) yang terhubung dengan github, baik untuk menambahkan file baru atau setelah memodifikasi suatu file adalah sebagai berikut:
+git status -> git add (git rm --cached <file> untuk batalkan git add) -> git status -> git commit -m "Menambahkan komen" -> git status (dapat dilihat bahwa branch di lokal kita berada 1 commit lebih dulu ketimbang branch yang ada di github) -> untuk menyamakan branch di pc dan di github kita bisa gunakan comment "git push" -> git status -> git graph
+
+# jika kita melakukan modify pada suatu file seperti penambahan atau penghapusan suatu baris maka kita bisa gunakan comment "git commit -am "isi komen / pesannya" secara langsung tanpa harus melakukan penambahan dengan git add
+
+# -am disini artinya a = add dan m untuk komen / pesannya
+
+##############
+
+* ada 2 cara sebenarnya untuk melakukan remote yaitu dengan cara clone menggunakan https yg berisi link yg bisa kita copy dan kedua  menggunakan ssh yang perlu sebuah key untuk menghubungkan antara komputer kita dengan github kita.
+
+####### * remote dengan clone => buat sebuah repo di website github, lalu di komputer kita buka folder yg ingin kita gunakan sebagai tempat repo nya, lalu klik kanan dan pilih git bash here, setelah window git bash terbuka kita bisa ketikkan "git clone https://github.com/Abaljerind/git-test.git" dan nantinya repo yg ada di github akan di cloning ke komputer kita.
+
+* jika kita ketikkan "git remote" maka secara default akan keluar output tulisan "origin" yang merupakan nama dari remote nya. bisa kita ubah nantinya jika kita ingin.
+
+* jika kita ketikkan "git remote -v" v disini artinya verbose yang berarti kita ingin melihat datanya lebih detail lagi, bukan hanya nama remote nya saja. outputnya adalah seperti berikut:
+origin  https://github.com/Abaljerind/git-test.git (fetch)
+origin  https://github.com/Abaljerind/git-test.git (push)
+Keduanya adalah alamat yg sama yang bisa digunakan untuk fetch dan juga untuk push.
+
+##############
+
+
+##############
+
+##### --- Cara agar folder yang sudah kita init di komputer dapat kita clone ke github --- #####
+* kita buat dulu folder baru di komputer kita -> lakukan "git init" -> buat file / jika sudah ada file kita lakukan "git add ." -> "git status" -> git commit -m "komen / pesan" -> git status -> lalu buka github dan kita buat repo baru tetapi "file readme nya jangan di ceklis" (jadi benar benar kosong) -> create repository -> muncul halaman "Quick Setup" dimana akan ada 3 opsi (silahkan dibaca semuanya) -> pilih yang "or push an existing repository from the command line" -> dibagian tersebut kita bisa ubah nama remote nya dari origin jadi yang kita mau -> copas baris pertama: git remote add origin https://github.com/Abaljerind/git-test-2.git -> "git remote" untuk cek nama remote nya sudah ada / belum -> "git remote -v" untuk lihat apakah ada detailnya untuk fetch dan push, jika ada maka sudah terhubung -> kalau kita ingin masukkan kode yang kita buat di lokal gunakan baris kedua dan ketiga: git branch -M main -> tekan enter -> git push -u origin main (-u untuk set upstream, jadi kedepannya kita hanya perlu ketik "git push" saja maka file yang sudah di commit akan otomatis terkirim ke origin yang branch nya master) -> tekan enter -> "git status" (output: branch kita sudah up to date dengan origin / main nya) -> bisa lanjut edit file nya
+
+
+### ex: opsi kedua dari Quick Setup
+…or push an existing repository from the command line:
+git remote add origin https://github.com/Abaljerind/git-test-2.git
+git branch -M main
+git push -u origin main
+
+
+--- menggunakan git pull ---
+pov: jika kita menambahkan sebuah file dengan nama misal coba.txt di local dan juga di remote / github tetapi berbeda isinya, sudah bisa dipastikan bahwa nantinya akan terjadi conflict, misal kita tidak tau bahwa ada file yang sama di remote lalu kita lakukan git push file tersebut ke remote maka akan keluar sebuah error berupa conflict tadi. Untuk menyelesaikan conflict tersebut kita harus mengecek dulu dengan git fetch seperti dibawah ini:
+
+* git fetch => digunakan untuk mengecek repo yang ada di remote / github sudah sampai mana commit nya, beda ga dengan yang ada di lokal / pc kita? jika commit yang ada lokal pc kita berbeda dengan yg ada di remote maka outputnya akan seperti ini:
+$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 671 bytes | 44.00 KiB/s, done.
+From https://github.com/Abaljerind/git-test-2
+   9e949a1..7e75512  main       -> origin/main
+
+lanjutan pov: lalu kita gunakan git status seperti dibawah ini:
+
+* gunakan git status untuk melihat hasil pengecekan yang dilakukan oleh git fetch tadi, maka outputnya akan seperti ini:
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+lanjutan pov: selanjutnya kita bisa lakukan git pull seperti dibawah ini:
+
+* gunakan git pull untuk menarik file dari remote / github, dimana akan ada status CONFLICT: merge conflict pada file yang sama tersebut
+
+lanjutan pov: untuk melakukan merge kedua file tadi kita harus menyelesaikan conflict yang ada lewat text editor kita (vs code) dengan memilih baris mana yang ingin kita gunakan setelah kita lakukan "git pull" tadi. setelah kita selesaikan conflict nya, kita bisa lakukan "git add ." -> git commit -m "mengubah isi file coba.txt" -> git status akan mengeluarkan output bahwa git lokal / pc kita punya commit lebih banyak 2 ketimbang remote / github, -> terakhir lakukan "git push" untuk mengirim file ke remote -> git status akan mengeluarkan output up to date -> selesai
+
+
+------------------------------------------------------------------------------
+NOTE: jika kita baru pertama kali menginstall git pada komputer, maka kita perlu menambahkan akun dengan comment berikut:
+git config --global user.email "you@example.com"
+git config --global user.name "your name"
+contoh:
+git config --global user.name "Abaljerind"
+git config --global user.email "abaljerinda@gmail.com"
+
+git config --list | untuk melihat config yang ada, khususnya username dan email yg terhubung

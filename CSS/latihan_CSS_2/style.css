@@ -1,0 +1,24 @@
+h1 {
+/*	font-family: arial, verdana, sans-serif;*/
+/*	font-family: lucida handwriting, brush script m7, cursive;*/
+	font-family: papyrus, copperplate, fantasy;
+	font-size: 100px;
+	font-weight: normal;
+	font-variant: small-caps;
+	font-style: italic;
+}
+/* browser akan mencari ada ga font arial di smartphone user, kalau ga ada, akan dicari juga font verdana disebalahnya sampai ketemu, kalau tidak ada maka akan digunakan font sans-serif. */
+
+/* ada 5 buah generic font yg ada:
+1. serif => times new roman, georgia, garamond
+2. sans-serif => arial, verdana, helvetica
+3. monospace => courier new, lucida console, monaco
+4. cursive => brush script m7, lucida handwriting
+5. fantasy => copperplate, papyrus
+
+ */
+
+p {
+	font-family: georgia, serif;
+	line-height: 50px;
+}

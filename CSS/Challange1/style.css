@@ -1,0 +1,111 @@
+body {
+	background-color: skyblue;
+	font-family: courier new, monaco, monospace;
+	text-align: justify;
+	word-spacing: 2px;
+}
+
+h1 {
+	color: seagreen;
+	font-size: 28px;
+}
+
+h1:hover {
+	font-size: 34px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+#p1, #p3 {
+	color: darkred;
+}
+
+#p2 {
+	color: green;
+}
+
+#p1, #p2, #p3 {
+	text-indent: 18px;
+}
+
+p#activity {
+	color: orangered;
+	font-weight: bold;
+}
+
+ol#todo li {
+	color: darkred;
+}
+
+ol#todo li:nth-child(even) {
+	color: white;
+}
+
+ol#tim7 li a {
+	text-decoration: none;
+	color: green;
+}
+
+ol#tim7 li a:hover {
+	color: darkorange;
+	font-size: 25px;
+	font-style: italic;
+}
+
+ol#tim7 li a:visited {
+	color: darkolivegreen;
+}
+
+ol#tim7 li {
+	color: green;
+}
+
+ul#makanan li {
+	color: whitesmoke;
+}
+
+ul#makanan li:first-child {
+	color: springgreen;
+}
+
+ul#makanan li:last-child {
+	color: darkblue;
+}
+
+ul#minuman li {
+	color: navajowhite;
+}
+
+ul#minuman li:nth-child(odd) {
+	color: darkslateblue;
+	font-style: italic;
+}
+
+ul#minuman li:nth-child(2) {
+	color: darkred;
+	font-weight: bold;
+}
+
+ul#makanan li:nth-child(3):hover {
+	color: dodgerblue;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+
+/* page2.html, page3.html, page4.html */
+
+p#link a {
+	text-decoration: none;
+}
+
+p#link a:hover {
+	color: powderblue;
+	font-size: 20px;
+}
+
+p#link a:active {
+	font-style: italic;
+	font-size: 30px;
+}

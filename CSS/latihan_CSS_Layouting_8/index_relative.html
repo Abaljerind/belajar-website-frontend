@@ -1,0 +1,54 @@
+<!-- biasanya ketika kita memindahkan sebuah elemen HTML dengan memberikan margin, misal margin top = 30px maka elemen tersebut akan berpindah turun kebawah sebanyak 30px, tetapi elemen - elemen dibawahnya juga akan ikut turun kebawah mengikuti elemen diatasnya, disaat inilah kita bisa menggunakan property position -->
+
+<!-- POSITION memungkinkan kita memindahkan elemen html tanpa perlu mempengaruhi elemen html lain yg ada di sekitarnya. -->
+
+<!-- value dari position ada 4, yaitu:
+1. static, default value dari position jika kita tidak menggunakan property position.
+2. relative, posisinya akan keluar dari barisan suatu elemen jika dibuat berbentuk kotak dan berurutan. bisa dianggap bahwa elemen yg menggunakan position relative ini akan maju kedepan 1 dimensi dibandingkan elemen lainnya. lalu ruang yang tadinya ditempati oleh elemen tersebut masih ada, jadi elemen nya akan maju 1 dimensi tapi posisi / ruang elemen nya yang tadi akan tetap ada, bisa dibayangkan bahwa elemen tersebut naik keatas dengan ruang 1 dimensi.
+3. absolute,
+4. fixed,  -->
+
+<!-- WARNING: elemen yang diberi position selain static dapat menggunakan property top, left, right dan bottom untuk mengatur posisinya.
+Jadi, setelah diberi position, kita bisa menambahkan property top, left, bottom dan right untuk mengatur posisi elemennya, contoh:
+position: relative;
+top: 30px;
+maka posisinya akan turun kebawah sebanyak 30px.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Position</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .satu {
+            background-color: lightgreen;
+        }
+
+        .dua {
+            background-color: violet;
+            position: relative;
+            top: 30px;
+            left: 50px;
+        }
+
+        .tiga {
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+</body>
+</html>
