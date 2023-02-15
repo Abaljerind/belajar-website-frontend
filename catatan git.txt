@@ -89,6 +89,41 @@ alias graph="git log --all --decorate --oneline --graph"
 a. fast forward, terjadi ketika branch yg ingin kita gabungkan berada dalam jalur langsung / direct path, yang artinya bahwa branch master bisa langsung menuju ke branch cabang yang ingin kita lakukan merge.
 
 b. three-way merge, terjadi ketika branch yg ingin kita gabungkan berbeda jalurnya / bukan jalur langsung, yang artinya bahwa branch master tidak bisa langsung menuju ke branch yang ingin di merge / gabungkan, sehingga merge ini akan membuat commit baru maka kita harus masukkan pesan commit nya di text editor. Jika sudah selesai dengan pesan commit nya, maka jika kita lihat graph nya akan terlihat bahwa branch staff akan menyatu dengan branch master melalui commit baru.
+  * three-way merge juga disebut "merge commit" karena kita melakukan merge tetapi membuat commit baru.
+
+c. git rebase, merupakan sebuah cara untuk menghindari teknik merge "three-way merge" atau "merge commit" diatas. misalnya kita punya kondisi dimana kita memiliki sebuah branch lain yang sudah melakukan commit dan branch master kita juga melakukan commit (contoh ilustrasi dibawah ini), kondisi ini akan menyebabkan terjadinya "three-way merge" saat kita mau melakukan merge. 
+  * Untuk mencegah merge seperti "three-way merge" ini agar tidak terjadi, kita bisa gunakan rebase yang mana akan membuat kondisi baru untuk "commit" terakhir dari branch yg lainnya ini agar maju ke titik commit terakhir dari branch milik master, sehingga jadinya kita hanya akan melakukan merge dengan teknik "fast forward". 
+
+"three-way merge"
+
+    *
+    |
+    |
+    * branch lain
+*  /
+| /
+*   branch master
+|
+|
+*
+
+"git rebase"
+
+
+    *
+    |
+    |
+   *  branch lain
+  /
+ /
+* branch master
+|
+*
+|
+|
+*
+
+
 
 
 --- git merge dengan conflict ---
