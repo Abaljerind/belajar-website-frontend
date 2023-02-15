@@ -123,6 +123,8 @@ c. git rebase, merupakan sebuah cara untuk menghindari teknik merge "three-way m
 |
 *
 
+  ### * untuk melakukan rebase, kita harus switch branch menjadi branch lain, lalu ketikkan comment "git rebase master" -> setelah itu cek graph nya, bisa dilihat bahwa semua commitnya sudah sejajar, tetapi branch lain masih mendahului commit dari branch master nya, supaya branch master nya ini sejajar berarti kita harus lakukan merging dari branch master ke branch lain dengan cara rebase lagi -> kita pindah dulu ke branch master, "git checkout master" -> lalu kita rebase ke branch lain, "git rebase <nama_branch_lain>" -> cek graph lagi, bisa dilihat bahwa branch master nya sudah sejajar dengan branch lain -> tinggal kita lakukan "push" ke repo master kita -> cek graph, maka commit nya sudah lurus dan tidak ada branch lagi.
+
 
 
 
