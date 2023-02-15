@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan 1</title>
     <style>
+        .container {
+            width: 450px;
+            height: 450px;
+            border: 10px solid black;
+            margin: 50px auto;
+            position: relative;
+        }
+        /* position relative hanya digunakan untuk memajukan elemen html 1 dimensi saja, sedangkan position absolute digunakan untuk menggerakkan elemen html nya. */
+
         .satu, .dua, .tiga {
             width: 150px;
             height: 150px;
+            margin: auto;
         }
 
         .satu {
@@ -17,9 +27,7 @@
 
         .dua {
             background-color: lightgreen;
-            position: relative;
-            top: 100px;
-            left: 50px;
+            position: absolute;
         }
 
         .tiga {
@@ -29,9 +37,11 @@
 </head>
 <body>
     
-    <div class="satu"></div>
-    <div class="dua"></div>
-    <div class="tiga"></div>
+    <div class="container">
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+    </div>
 
 </body>
 </html>
