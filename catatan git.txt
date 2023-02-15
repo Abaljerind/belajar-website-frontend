@@ -165,6 +165,19 @@ lanjutan pov: selanjutnya kita bisa lakukan git pull seperti dibawah ini:
 lanjutan pov: untuk melakukan merge kedua file tadi kita harus menyelesaikan conflict yang ada lewat text editor kita (vs code) dengan memilih baris mana yang ingin kita gunakan setelah kita lakukan "git pull" tadi. setelah kita selesaikan conflict nya, kita bisa lakukan "git add ." -> git commit -m "mengubah isi file coba.txt" -> git status akan mengeluarkan output bahwa git lokal / pc kita punya commit lebih banyak 2 ketimbang remote / github, -> terakhir lakukan "git push" untuk mengirim file ke remote -> git status akan mengeluarkan output up to date -> selesai
 
 
+--- Penggunaan .gitignore ---
+
+* .gitignore adalah sebuah file yg tersimpan di dalam repository git kita, agar kedepannya saat kita melakukan add dan commit ada file yang tidak ikut terbawa ke dalam add nya dan commit nya. misal ada file yg tidak ingin kita tambahkan ke github maka kita bisa daftarkan file file nya di dalam file .gitignore tersebut.
+
+* cara menggunakan .gitignore => buat sebuah file dengan nama ".gitignore" -> isi file .gitignore tesebut dengan nama nama file yang tidak ingin kita add dan commit. Contoh: catatan.txt
+
+* jika kita ingin menambahkan sebuah folder ke dalam file .gitignore maka kita hanya perlu menuliskan "<nama_file>/" saja di dalam file .gitignore tersebut. Contoh: data/
+
+* jika kita ingin menambahkan file file exe yang banyak ke dalam file .gitignore agar tidak ikut di add dan commit, maka kita hanya perlu menuliskan " *.exe " saja, ini artinya semua file yang eksitensi nya .exe tidak akan di add dan commit.
+
+NOTE: biasanya saat kita menggunakan sebuah framework / bahasa pemrograman untuk membuat sebuah project, akan ada file file yang seharusnya tidak kita add dan commit ke dalam github, nah kita bisa memasukkan nama nama file tersebut ke dalam file .gitignore dengan bantuan website berikut https://www.toptal.com/developers/gitignore/ | kita bisa isikan system operasi yg digunakan, nama text editornya, dan bahasa pemrograman / framework nya -> nantinya akan dibuatkan list file file apa saja yang bisa kita input ke dalam file .gitignore kita dengan cara copy paste saja dari website tersebut.
+
+
 ------------------------------------------------------------------------------
 NOTE: jika kita baru pertama kali menginstall git pada komputer, maka kita perlu menambahkan akun dengan comment berikut:
 git config --global user.email "you@example.com"
