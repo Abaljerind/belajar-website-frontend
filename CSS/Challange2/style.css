@@ -56,6 +56,19 @@ body {
 	background-image: url(blue-snow.png);
 }
 
+/* top-bar */
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	background-color: lightskyblue;
+	border-bottom: 3px solid salmon;
+	z-index: 99999;
+}
+
+
 /* container */
 
 .container {
