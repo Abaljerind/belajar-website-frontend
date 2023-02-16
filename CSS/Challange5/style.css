@@ -63,13 +63,13 @@ body {
 
 /* header */
 .header h1 {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
 .header ul li {
-    font-size: 24px;
+    font-size: 20px;
     display: inline-block;
     padding-right: 20px;
 }
@@ -82,4 +82,15 @@ body {
 .header ul li a:hover {
     background-color: lightskyblue;
     color: white;
+}
+
+/* banner */
+.banner {
+    background-image: url(../Challange2/rdr.jpg);
+    height: 380px;
+    background-size: cover;
+    background-position: 0 -80px;
+    margin-top: 20px;
+    border-top: 8px solid salmon;
+    border-bottom: 8px solid lightskyblue;
 }
