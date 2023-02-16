@@ -49,6 +49,8 @@ table {
 
 /* end css reset */
 
+
+/* body dan container */
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -60,6 +62,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+
 
 /* header */
 .header h1 {
@@ -84,6 +87,7 @@ body {
     color: white;
 }
 
+
 /* banner */
 .banner {
     background-image: url(../Challange2/rdr.jpg);
@@ -94,3 +98,114 @@ body {
     border-top: 8px solid salmon;
     border-bottom: 8px solid lightskyblue;
 }
+
+
+/* content */
+.content {
+    margin-top: 20px;
+}
+
+.content .main {
+    width: 600px;
+    float: left;
+}
+
+.content h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.content .penulis {
+    font-size: 13px;
+}
+
+.content .penulis a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.content .penulis a:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.content .main p {
+    padding-bottom: 20px;
+}
+
+
+/* sidebar */
+.content .sidebar {
+    width: 300px;
+    float: right;
+}
+
+.sidebar h4 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.sidebar img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 48px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* teknik clearfix */
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
