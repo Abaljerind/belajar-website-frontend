@@ -60,9 +60,22 @@ body {
 
 .container {
 	width: 960px;
-	background-color: #eaeaea;
-	margin: auto;
+	background-color: white;
+	margin: 80px auto;
 	padding: 20px;
+}
+
+.twitter {
+	width: 200px;
+	height: 200px;
+	background-image: url(rsz_twitter.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	text-indent: -9999px;
+	position: absolute;
+	top: 57px;
+	right: 240px;
+	z-index: -1;
 }
 
 .container .header {
@@ -176,7 +189,6 @@ body {
 
 /* copyright */
 .copyright {
-	width: 960px;
 	background-color: dimgrey;
 	padding: 20px;
 	margin: auto;
