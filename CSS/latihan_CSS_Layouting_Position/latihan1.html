@@ -56,6 +56,32 @@
             z-index: 9999;
         }
         /* z-index hanya berpengaruh pada elemen dengan position non-static. */
+
+        .iklan {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            top: 100px;
+            bottom: 100px;
+            right: 100px;
+            left: 100px;
+            z-index: 9999;
+        }
+        /* penggunaan background-color dengan value rgba akan menghasilkan warna dengan tambahan semacam opacity (alpha) */
+
+        .close {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 3px solid black;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -66,6 +92,10 @@
         <div class="satu"></div>
         <div class="dua"></div>
         <div class="tiga"></div>
+    </div>
+
+    <div class="iklan">
+        <div class="close">X</div>
     </div>
 
 </body>
