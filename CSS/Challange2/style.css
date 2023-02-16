@@ -175,11 +175,14 @@ body {
 
 
 /* copyright */
+.copyright {
+	width: 960px;
+	background-color: dimgrey;
+	padding: 20px;
+	margin: auto;
+}
 
 .copyright p {
-	margin-top: 20px;
-	padding: 20px;
-	background-color: dimgrey;
 	text-align: center;
 	font-size: 15px;
 }
