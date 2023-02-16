@@ -23,26 +23,44 @@
             width: 150px;
             height: 150px;
             margin: auto;
+            position: absolute;
         }
 
         .satu {
             background-color: salmon;
+            z-index: 1;
         }
 
         .dua {
             background-color: lightgreen;
-            position: fixed;
-            top: 0;
-            right: 0;
+            top: 75px;
+            left: 75px;
+            z-index: 2;
         }
         /* position fixed akan sama seperti absolute, elemennya akan melayang / maju 1 dimensi dan tempat awalnya akan hilang. Hanya saja yg berbeda adalah saat discroll elemen dengan position fixed akan tetap berada ditempat dan terkunci jadi mengikuti layarnya saat kita scroll pada page nya. Bedanya lagi adalah position fixed tidak peduli akan pembungkusnya, pasti akan terkunci ke body elemennya. */
 
         .tiga {
             background-color: royalblue;
+            top: 150px;
+            left: 150px;
+            z-index: 3;
         }
+
+        .top-bar {
+            background-color: darkblue;
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+        /* z-index hanya berpengaruh pada elemen dengan position non-static. */
     </style>
 </head>
 <body>
+
+    <div class="top-bar"></div>
     
     <div class="container">
         <div class="satu"></div>
