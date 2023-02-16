@@ -73,3 +73,13 @@ body {
     display: inline-block;
     padding-right: 20px;
 }
+
+.header ul li a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.header ul li a:hover {
+    background-color: lightskyblue;
+    color: white;
+}
