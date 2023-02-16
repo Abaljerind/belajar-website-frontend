@@ -63,19 +63,19 @@ body {
 	background-color: white;
 	margin: 80px auto;
 	padding: 20px;
+	position: relative;
 }
 
 .twitter {
 	width: 200px;
 	height: 200px;
-	background-image: url(rsz_twitter.png);
+	background-image: url(rsz_twitter-removebg-preview.png);
 	background-repeat: no-repeat;
 	display: inline-block;
 	text-indent: -9999px;
 	position: absolute;
-	top: 57px;
-	right: 240px;
-	z-index: -1;
+	top: -23px;
+	right: -27px;
 }
 
 .container .header {
