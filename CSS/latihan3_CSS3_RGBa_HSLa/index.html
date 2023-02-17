@@ -33,6 +33,16 @@
             /* dengan penggunaan RGBa maka kita bisa membuat elemen parentnya transparan tapi elemen yg ada di dalam parentnya tidak transparan, KARENA RGBa itu artinya kita memberikan transparansi pada warna bukan pada elemen seperti yg sebelumnya. */
 
         /* sedangkan opacity juga memberikan transparansi hanya pada elemen misal pada elemen img, div, atau span. */
+
+        /* HSLa = hue, saturation, lightness, alpha */
+        .tiga {
+            width: 100px;
+            height: 100px;
+            background-color: hsla(177, 100%, 50%, 0.5);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     </style>
 </head>
 <body>
@@ -40,6 +50,8 @@
     <div class="satu">
         <div class="dua"></div>
     </div>
+    
+    <div class="tiga"></div>
 
 </body>
 </html>
