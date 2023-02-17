@@ -14,7 +14,7 @@
         .satu {
             width: 300px;
             height: 300px;
-            background-color: rgba(255, 102, 0, 1);
+            background-color: rgba(255, 102, 0, .5);
             position: relative;
         }
         /* value opacity nya berkisar dari 0 - 1, 0 itu artinya sampai hilang tidak terlihat dan 1 artinya tidak transparan, jadi kalau mau memberikan transparansi sebesar 80% maka bisa diisi opacity: .8; */
@@ -28,7 +28,11 @@
             bottom: -50px;
         }
         /* jika ada sebuah elemen berada di dalam elemen lain yg memiliki nilai pada opacity nya maka elemen yg ada di dalam tersebut akan ikut transparan juga, contoh diatas. */
-        /* NOTE: untuk menyelesaikan problem seperti yg dijelaskan pada komentar diatas ini, kita bisa gunakan value RGBa & HSLa. a pada RGBa artinya alpha bisa juga diartikan transparansi. */
+        
+        /* NOTE: untuk menyelesaikan problem seperti yg dijelaskan pada komentar diatas ini, kita bisa gunakan value RGBa & HSLa. a pada RGBa dan HSLa artinya alpha bisa juga diartikan transparansi. */
+            /* dengan penggunaan RGBa maka kita bisa membuat elemen parentnya transparan tapi elemen yg ada di dalam parentnya tidak transparan, KARENA RGBa itu artinya kita memberikan transparansi pada warna bukan pada elemen seperti yg sebelumnya. */
+
+        /* sedangkan opacity juga memberikan transparansi hanya pada elemen misal pada elemen img, div, atau span. */
     </style>
 </head>
 <body>
