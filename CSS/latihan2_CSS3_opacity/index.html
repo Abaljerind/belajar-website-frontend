@@ -10,17 +10,32 @@
             background-image: url(../latihan_CSS_Layouting_6/img/patern.jpg);
         }
 
-        div {
+        .satu {
             width: 300px;
             height: 300px;
             background-color: #f60;
-
+            opacity: .5;
+            position: relative;
         }
+        /* value opacity nya berkisar dari 0 - 1, 0 itu artinya sampai hilang tidak terlihat dan 1 artinya tidak transparan, jadi kalau mau memberikan transparansi sebesar 80% maka bisa diisi opacity: .8; */
+
+        .dua {
+            width: 100px;
+            height: 100px;
+            background-color: lightskyblue;
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            opacity: .5;
+        }
+        /* jika ada sebuah elemen berada di dalam elemen lain yg memiliki nilai pada opacity nya maka elemen yg ada di dalam tersebut akan ikut transparan juga, contoh diatas. */
     </style>
 </head>
 <body>
     
-    <div></div>
+    <div class="satu">
+        <div class="dua"></div>
+    </div>
 
 </body>
 </html>
