@@ -8,6 +8,11 @@ background-image: linear-gradient(<warna awal>, <warna akhir>); -->
 
 <!-- kalau mau lebih dari 2 warna yg digunakan, maka setelah warna kedua bisa tambahkan koma dan warna ketiga, begitu seterusnya. -->
 
+<!-- untuk mengatur arah dari warnanya, bisa menggunakan sintaks berikut,
+background: linear-gradient(<sudut> | <arah>, <warna awal>, <warna kedua>, ... , <warna ke -n>)
+
+    untuk sudut bisa diberikan value seperti contohnya: 90deg, 45deg, atau -45deg, 90deg dan lain lain
+    untuk arah bisa diberikan value: to bottom, to top, to left, to right, to left top, to left bottom, to right top, to right bottom
 -->
 
 <!DOCTYPE html>
@@ -22,7 +27,7 @@ background-image: linear-gradient(<warna awal>, <warna akhir>); -->
             width: 600px;
             height: 300px;
             margin: 50px auto;
-            background-image: linear-gradient(red, #f0d606, rgba(255, 255, 0, 1), green);
+            background-image: linear-gradient(to bottom right, red, #f0d606, rgba(255, 255, 0, 1), green);
         }
     </style>
 </head>
