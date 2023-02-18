@@ -1,3 +1,15 @@
+<!-- linear gradient, memberikan degradasi warna secara garis lurus -->
+
+<!-- linear gradient bukan property css3, melainkan value untuk property background-image / background.
+contoh penggunaan linear gradient, background-image: linear-gradient(red, green); -->
+
+<!-- ## sintaks sederhana linear gradient,
+background-image: linear-gradient(<warna awal>, <warna akhir>); -->
+
+<!-- kalau mau lebih dari 2 warna yg digunakan, maka setelah warna kedua bisa tambahkan koma dan warna ketiga, begitu seterusnya. -->
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +17,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linear Gradient</title>
+    <style>
+        div {
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            background-image: linear-gradient(red, #f0d606, rgba(255, 255, 0, 1), green);
+        }
+    </style>
 </head>
 <body>
-    
+    <div></div>
 </body>
 </html>
