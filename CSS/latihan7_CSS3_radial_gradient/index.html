@@ -1,3 +1,34 @@
+<!-- radial gradient, adalah gradasi warna secara melingkar. Sama dengan linear gradient, radial gradient ini bukan merupakan sebuah property, tapi sebuah value dari background-image -->
+
+<!-- sintaks radial gradient sederhana,
+background-image: radial-gradient(<warna awal>, <warna akhir>) 
+<warna awal> akan menjadi warna pusat dari lingkarannya. 
+    
+Kita juga bisa memberikan multiple color seperti linear gradient.
+Lalu kita juga bisa menggunakan color stop untuk bobot tiap warnanya. 
+-->
+
+<!-- sintaks radial gradient yang lengkap,
+radial-gradient(
+    <tipe> <jangkauan> at <posisi-y> <posisi-x>,
+        <warna-1>, <warna-2>, ..., <warna-n>
+); -->
+
+<!--
+    <tipe> pada radial gradient ada 2, bisa "ellipse" / "circle",
+    <jangkauan> jarak dari pusat gradient ke sisi terluar-nya,
+    <posisi-y> <posisi-x> bisa menentukan posisi dari pusat gradasinya.
+    
+    NOTE: untuk value tipe, jangkauan dan posisi x-y ini bisa hanya diisi salah satunya atau tidak diisi sama sekali. Intinya ketiga value itu hanyalah opsi tambahan untuk mengatur radial gradient.
+ -->
+
+ <!-- untuk value <jangkauan> ada 4 nilai yg bisa diberikan:
+    closest-corner, jarak dari pusat gradient ke "sudut terdekat" elemen.
+    closest-side, jarak dari pusat gradient ke "sisi terdekat" elemen.
+    farthest-corner, jarak dari pusat gradient ke "sudut terjauh" elemen.
+    farthest-side, jarak dari pusat gradient ke "sisi terjauh" elemen.    
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +36,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radial Gradient</title>
+    <style>
+        div {
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            background-image: radial-gradient(circle farthest-corner, red, blue);
+        }
+    </style>
 </head>
 <body>
-    
+    <div></div>
 </body>
 </html>
