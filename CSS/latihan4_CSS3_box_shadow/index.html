@@ -8,9 +8,9 @@
 <color>, mau warna apa bayangannya. untuk warna BIASAKAN untuk menggunakan rgba agar dapat mengatur opacity dari bayangannya.
 
 #### value opsional lainnya ada 2 yaitu:
-<insert>,
+<spread>, bisa dianggap sebagai size / ukuran dari bayangannya. Nilainya numerik dan ada diposisi ke-4
 
-<spread>,
+<inset>,
 
 
 -->
@@ -22,18 +22,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan Box-Shadow</title>
     <style>
-        div {
+        .satu {
             width: 300px;
             height: 300px;
             background-color: #39b54a;
             margin: 50px auto;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, .75);
         }
+        /* .satu adalah contoh penggunaan box-shadow dengan 4 value */
+
+        .dua {
+            width: 200px;
+            height: 200px;
+            background-color: #1279cc;
+            margin: 50px auto;
+            box-shadow: 0px 30px 10px -20px rgba(0, 0, 0, .75);
+            transition: 3s;
+        }
+        /* .dua adalah contoh penggunaan box-shadow dengan tambahan 1 value opsional.
+        dengan value pada box-shadow: 0px 0px 0px 20px rgba(0, 0, 0, .75); seperti itu, maka akan menghasilkan kotak yg kelihatan seperti mempunyai border.
+        */
+
+        .dua:hover {
+            box-shadow: 0px 80px 20px -40px rgba(0, 0, 0, .25);
+            margin-top: 40px;
+        }
+        /* box-shadow ini bisa digunakan jadi seperti diatas dengan tambahan di kelas .dua nya property transition agar memberikan efek animasi. */
+        
     </style>
 </head>
 <body>
     
-<div></div>
+<div class="satu"></div>
+
+<div class="dua"></div>
 
 </body>
 </html>
