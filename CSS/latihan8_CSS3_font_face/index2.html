@@ -1,0 +1,63 @@
+<!-- Keuntungan penggunaan font dengan tipe WOFF / WOFF2
+1. Web open file format adalah kepanjangan dari WOFF
+2. Dikembangkan oleh Mozilla
+3. Dibuat khusus untuk website
+4. Di-load lebih cepat daripada jenis font yang lain
+5. Merupakan kompresi dari tipe TTF / OTF
+    # file dengan tipe TTF / OTF bisa diubah menjadi WOFF / WOFF2 dengan Webfont Generator yg ada di website fontsquirrel dengan cara mengupload file font tipe TTF / OTF tersebut.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penggunaan Font Face 2</title>
+    <style>
+
+        @font-face {
+            font-family: "Kaushan Script";
+            src: url('KaushanScript-Regular.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: "amble regular";
+            src: url('Amble-Regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'cantarellregular';
+            src: url('cantarell-regular-webfont.woff2') format('woff2'),
+                url('cantarell-regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            font-family: "amble regular", arial;
+        }
+
+        h2 {
+            font-size: 100px;
+            text-align: center;
+            font-family: "Kaushan Script", arial;
+        }
+
+        h3 {
+            font-size: 100px;
+            text-align: center;
+            font-family: "cantarellregular", arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Halo Dunia I</h1>
+    <h2>Halo Dunia II</h2>
+    <h3>Halo Dunia III</h3>
+</body>
+</html>

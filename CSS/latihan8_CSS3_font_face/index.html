@@ -13,9 +13,11 @@
 <nama font>.eot?#iefix          | format('embedded-opentype')
 <nama font>.woff2               | format('woff2')
 <nama font>.woff                | format('woff')
-<nama font>.ttf                 | format('truetype')
+<nama font>.ttf or .otf         | format('truetype')
 <nama font>.svg#svgFontName     | format('svg')
 Alasan kenapa ada banyak font dengan tipe yg berbeda adalah karna dukungan tiap di browsernya juga berbeda beda.
+8. Setelah meregister font nya di @font-face, kita bisa memanggil font tersebut lewat font-family di selector yg kita inginkan dengan memanggil nama fontnya yg ada di font-family di @font-face.
+9. @font-face yg kita register ke css di file kita bisa lebih dari 1 selama itu free-use dan lisensinya aman untuk digunakan pada website kita sendiri.
 -->
 
 <!-- layanan font
@@ -28,6 +30,8 @@ dll
 
 NOTE: ada yg berbayar dan juga harus diperhatikan apakah lisensi nya bisa digunakan untuk website kita
 -->
+
+<!-- Contoh penggunaan font face ada di file index2.html -->
 
 
 <!DOCTYPE html>
