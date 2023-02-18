@@ -12,8 +12,12 @@
 
 <inset>, ini opsional juga, akan menyebabkan bayangannya berada di dalam kotak / elemennya, bukan diluar kotak / elemennya. Nilainya "inset". value inset ini berada dibagian paling depan.
 
-
 -->
+
+<!-- multiple shadow, pada property box-shadow ini kita bisa memberikan lebih dari 1 bayangan pada sebuah elemen. 
+    Untuk memberikan value lebih dari 1 pada property box-shadow, kita hanya perlu menambahkan tanda koma (,) setelah value box-shadow yg pertama dan bisa kita tambahkan sampai berapapun yg diperlukan.
+    Contoh: box-shadow: 5px 5px 5px rgba(0,0,0, .5), -5px -5px 5px rgba(255,0,0, .5); -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,6 +64,16 @@
             margin: 50px auto;
             box-shadow: inset 0 0 5px 10px rgba(0, 0, 0, .5);
         }
+
+        /* contoh penggunaan multiple shadow */
+        .empat {
+            width: 200px;
+            height: 200px;
+            background-color: #f7bb08;
+            margin: 30px auto;
+            box-shadow: 10px 10px 15px rgba(255, 0, 0, .5),
+                        -10px -10px 15px rgba(0, 0, 255, .5);
+        }
         
     </style>
 </head>
@@ -70,6 +84,8 @@
 <div class="dua"></div>
 
 <div class="tiga"></div>
+
+<div class="empat"></div>
 
 </body>
 </html>
