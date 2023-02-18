@@ -2,13 +2,41 @@
 
 <!-- kalo kita ingin menggunakan font yg bagus tanpa perlu memikirkan user / client punya font tersebut atau tidak, kita bisa gunakan Google Fonts. Biasakan untuk link yg didapat dari google fonts untuk diletakkan setelah tag title dan sebelum tag style, lalu copy dan paste CSS rules nya dan letakkan di dalam selector css yg ingin digunakan untuk mengubah font nya. -->
 
+<!-- untuk menggunakan property @font-face, kita harus mengikuti langkah berikut:
+1. Download fonts yg ingin digunakan.
+2. Di paling atas CSS nya, ketik "@font-face {}"
+3. Di baris pertama, ketikkan "font-family: 'nama font barunya';"
+4. Arahkan font tersebut menggunakan atribut src: url('<lokasi font nya>'); 
+5. Ketikkan lokasi font beserta ekstensi file font nya.
+6. Biasanya satu font bisa punya banyak sekali file di dalamnya, maka kita harus menuliskan semua lokasi dan nama fontnya juga ditambah format nya.
+7. Untuk format fontnya, berikut ini contohnya.
+<nama font>.eot?#iefix          | format('embedded-opentype')
+<nama font>.woff2               | format('woff2')
+<nama font>.woff                | format('woff')
+<nama font>.ttf                 | format('truetype')
+<nama font>.svg#svgFontName     | format('svg')
+Alasan kenapa ada banyak font dengan tipe yg berbeda adalah karna dukungan tiap di browsernya juga berbeda beda.
+-->
+
+<!-- layanan font
+fonts.google.com
+fontsquirell.com
+fontspring.com
+webtype.com
+typotheque.com
+dll
+
+NOTE: ada yg berbayar dan juga harus diperhatikan apakah lisensi nya bisa digunakan untuk website kita
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penggunaan Font Face</title>
+    <title>Penggunaan Google Fonts</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
