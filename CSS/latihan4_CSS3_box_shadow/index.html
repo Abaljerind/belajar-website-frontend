@@ -8,9 +8,9 @@
 <color>, mau warna apa bayangannya. untuk warna BIASAKAN untuk menggunakan rgba agar dapat mengatur opacity dari bayangannya.
 
 #### value opsional lainnya ada 2 yaitu:
-<spread>, bisa dianggap sebagai size / ukuran dari bayangannya. Nilainya numerik dan ada diposisi ke-4
+<spread>, ini opsional, bisa dianggap sebagai size / ukuran dari bayangannya. Nilainya numerik dan ada diposisi ke-4.
 
-<inset>,
+<inset>, ini opsional juga, akan menyebabkan bayangannya berada di dalam kotak / elemennya, bukan diluar kotak / elemennya. Nilainya "inset". value inset ini berada dibagian paling depan.
 
 
 -->
@@ -22,6 +22,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan Box-Shadow</title>
     <style>
+        body {
+            height: 1000px;
+        }
+
         .satu {
             width: 300px;
             height: 300px;
@@ -48,6 +52,14 @@
             margin-top: 40px;
         }
         /* box-shadow ini bisa digunakan jadi seperti diatas dengan tambahan di kelas .dua nya property transition agar memberikan efek animasi. */
+
+        .tiga {
+            width: 200px;
+            height: 200px;
+            background-color: #e30a3d;
+            margin: 50px auto;
+            box-shadow: inset 0 0 5px 10px rgba(0, 0, 0, .5);
+        }
         
     </style>
 </head>
@@ -56,6 +68,8 @@
 <div class="satu"></div>
 
 <div class="dua"></div>
+
+<div class="tiga"></div>
 
 </body>
 </html>
