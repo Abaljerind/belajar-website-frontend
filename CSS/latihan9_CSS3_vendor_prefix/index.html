@@ -1,3 +1,21 @@
+<!-- vendor-prefix adalah teknik di css3 yang digunakan agar css yang kita buat compatible disemua browser. Secara khusus, vendor-prefix artinya sintaks khusus yang harus ditambahkan untuk beberapa property css3, karna akan ada beberapa property css3 yang tidak akan jalan dibeberapa browser jadi perlu digunakan vendor-prefix ini. -->
+
+<!-- vendor-prefixes:
+1. -webkit-<properti-css3>  | -webkit- agar dapat berjalan di browser chrome, safari dan opera versi terbaru
+2. -moz-<properti-css3>     | -moz- agar dapat berjalan di mozilla
+3. -ms-<properti-css3>      | -ms- internet explorer
+4. -o-<properti-css3>       | -o- opera versi terdahulu
+
+-->
+
+<!-- NOTE: untuk mengetahui properti apa saja di css3 yg perlu ditambahkan vendor-prefix kita bisa cek di website berikut,
+a. shouldiprefix.com
+b. caniuse.com  | lebih lengkap karna semua properti css dan html bisa dicek disini.
+c. pleeease.iamvdo.me/play/  | lebih bagus karna kita tinggal menginput saja css nya dan nanti akan dibuatkan versi vendor-prefix nya.
+
+Untuk tiap project, kita harus install semua browser agar kita bisa tau apakah website yang kita buat berjalan dengan baik atau tidak, sehingga kita bisa menambahkan vendor-prefix jika diperlukan.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +23,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor-Prefix</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        /* misal dibrowser chrome, properti filter ini tidak memberikan pengaruh, maka kita bisa menambahkan vendor-prefix untuk browser chrome yaitu -webkit- */
+        img {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+        /* filter akan dijelaskan divideo selanjutnya, filter ini sama seperti di aplikasi misal instagram untuk memberikan efek efek pada suatu gambar. */
+    </style>
 </head>
 <body>
+
+    <img src="../Challange2/naruto.jpg" alt="naruto" width="200px" height="200px">
     
 </body>
 </html>
