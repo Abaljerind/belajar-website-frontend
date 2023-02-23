@@ -1,3 +1,28 @@
+<!-- transform, properti css3 yang memungkinkan kita bisa memanipulasi format visual dari elemen html. format visual ini bisa ukuran, bentuk dari elemennya maupun posisinya. -->
+
+<!-- bentuk penulisan properti transform,
+
+transform: <fungsi>;
+    
+value pada transform:
+a. scale, untuk memperbesar / memperkecil
+b. rotate, untuk memutar
+c. skew, untuk membuat condong elemennya / miring
+d. translate, untuk mengubah posisi elemennya
+
+NOTE: Kita juga bisa memberikan lebih dari 1 value pada properti transform
+
+-->
+
+<!-- cara penulisan formasi transform:
+
+scale(angka), scaleX(angka), scaleY(angka)
+rotate(deg), rotateX(deg), rotateY(deg)
+skew(deg), skewX(deg), skewY(deg)
+translate(px), translateX(px), translateY(px)
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +30,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform</title>
+    <style>
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 50px auto 0;
+            transition: 1s;
+        }
+
+        .kotak:hover {
+            /* transform: scale(1.5, 2); */
+            /* transform: scaleX(1.5) scaleY(2); */
+            /* transform: rotate(-45deg); */
+            /* transform: rotate(180deg) rotateX(180deg) rotateY(180deg); */
+            /* transform: skewY(-30deg); */
+            /* transform: translateX(50px) translateY(150px); */
+            transform: scale(3) rotate(360deg);
+        }
+    </style>
 </head>
 <body>
     
+
+    <div class="kotak"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero minus, delectus vel eum dolore ab tempore, repudiandae laboriosam deserunt nihil, nesciunt ratione! Pariatur vitae nam praesentium, nobis repudiandae officia officiis.</p>
+
+
 </body>
 </html>
