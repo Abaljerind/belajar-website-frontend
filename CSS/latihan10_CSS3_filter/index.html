@@ -1,3 +1,21 @@
+<!-- filter, properti css3 yang digunakan untuk memberikan efek visual pada gambar, background atau border. -->
+
+<!-- penulisan properti filter dan value-nya:
+filter: <properti-filter>;
+
+value properti filter:
+a. blur (px),
+b. brightness (angka | %),
+c. contrast (angka | %),
+d. saturate (angka | %),
+e. grayscale (angka | %),
+f. sepia (angka | %),
+g. hue-rotate (deg),
+h. invert (angka | %),
+i. opacity (angka | %),
+j. drop-shadow (inset x-offset y-offset spread blur color),
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +23,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filter</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        img {
+            /* filter: blur(10px); */
+            /* filter: brightness(50%); */
+            /* filter: contrast(150%); */
+            /* filter: saturate(25%); */
+            /* filter: grayscale(100%); */
+            /* filter: sepia(100%); */
+            /* filter: hue-rotate(100deg); */
+            /* filter: invert(100%); */
+            /* filter: opacity(50%); */
+            filter: drop-shadow(5px 5px 10px black) brightness(160%) contrast(120%);
+        }
+        /* contoh penggunaan filter dengan banyak value */
+
+        h1 {
+            font-size: 90px;
+            filter: drop-shadow(5px 5px 10px black);
+        }
+    </style>
 </head>
 <body>
-    
+    <img src="../Challange2/rdr.jpg" alt="rdr" width="800px" height="600px">
+
+    <h1>Hello World</h1>
 </body>
 </html>
