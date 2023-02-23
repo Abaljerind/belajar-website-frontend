@@ -49,12 +49,14 @@ table {
 
 /* end css reset */
 
+
 /* body */
 body {
     font-family: 'chunkfiveregular' ,Arial, Helvetica, sans-serif;
     margin: auto;
     width: 960px;
 }
+
 
 /* font-face */
 @font-face {
@@ -64,11 +66,13 @@ body {
     font-style: normal;
 }
 
+
 /* container */
 .container {
     background-color: #666;
     padding: 20px;
 }
+
 
 /* header */
 .header h1 {
@@ -81,6 +85,7 @@ body {
     display: inline-block;
     padding-right: 20px;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .header ul li a {
@@ -92,4 +97,15 @@ body {
     background-color: lightskyblue;
     color: whitesmoke;
     transition: 1s;
+}
+
+
+/* banner */
+.banner {
+    background-image: url(radek-grzybowski-eBRTYyjwpRY-unsplash.jpg);
+    height: 380px;
+    background-size: cover;
+    background-position: 0 -250px;
+    border-top: 10px solid salmon;
+    border-bottom: 10px solid lightskyblue;
 }
