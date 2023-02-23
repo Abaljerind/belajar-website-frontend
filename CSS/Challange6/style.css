@@ -49,6 +49,7 @@ table {
 
 /* end css reset */
 
+/* body */
 body {
     font-family: 'chunkfiveregular' ,Arial, Helvetica, sans-serif;
     margin: auto;
@@ -74,4 +75,21 @@ body {
     font-size: 45px;
     margin-bottom: 20px;
     font-weight: lighter;
+}
+
+.header ul li {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.header ul li a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.header ul li a:hover {
+    background-color: lightskyblue;
+    color: whitesmoke;
+    transition: 1s;
 }
