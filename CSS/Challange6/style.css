@@ -55,6 +55,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     width: 960px;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-wallpaper.png');
 }
 
 
@@ -165,6 +166,20 @@ body {
     line-height: 20px;
 }
 
+
+/* footer */
+.footer {
+    width: 960px;
+    background-color: #666;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer p.copyright {
+    font-size: 15px;
+    color: whitesmoke;
+    text-align: center;
+}
 
 
 /* teknik clearfix */
