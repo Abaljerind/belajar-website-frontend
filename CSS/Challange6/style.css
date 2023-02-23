@@ -111,40 +111,59 @@ body {
 }
 
 
-/* content */
-.content {
+/* content main */
+.content .main {
     width: 600px;
     float: left;
 }
 
-.content h3 {
+.content .main h3 {
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
-p.penulis {
+.main p.penulis {
     font-size: 14px;
 }
 
-p.penulis a {
+.main p.penulis a {
     color: salmon;
     text-decoration: none;
 }
 
-p.penulis a:hover {
+.main p.penulis a:hover {
     color: whitesmoke;
     background-color: lightskyblue;
     transition: 1s;
 }
 
-.content p {
+.main p {
+    font-size: 16px;
     padding-bottom: 20px;
+    line-height: 20px;
 }
 
 
 /* sidebar */
+.sidebar {
+    width: 300px;
+    float: right;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
 
+.sidebar img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    padding: 10px;
+}
+
+.sidebar p {
+    font-size: 15px;
+    line-height: 20px;
+}
 
 
 
