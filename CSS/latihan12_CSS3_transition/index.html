@@ -33,7 +33,7 @@ b. durasi (s/ms), ini adalah parameter yg wajib ditulis, sedangkan 3 value lainn
 
 
 c. fungsi, bisa disebut juga timing function. fungsi ini punya beberapa nilai yg bisa kita berikan, antara lain:
-        - ease
+        - ease (default value kalau value function tidak dituliskan)
         - ease-in
         - ease-out
         - ease-in-out
@@ -43,9 +43,16 @@ c. fungsi, bisa disebut juga timing function. fungsi ini punya beberapa nilai yg
 
 
 
-d. delay,
+d. delay (s/ms), gunanya untuk memberikan waktu delay / tunggu sebelum kita menjalankan transisi.
+Contoh delay, 
+transition: 3s 2s; => dibacanya, durasinya 3 detik tapi tunggu dulu selama 2 detik.
+
+
 
 transition: [property] <durasi> [fungsi] [delay];
+
+Kita juga bisa menggunakan multiple value pada transition menggunakan tanda koma seperti properti css lainnya, contohnya:
+transition: transform 2s, margin-left 3s 2s, background-color 500ms 3s;
 
 NOTE: selalu simpan property transition di keadaan awal dari elemen yg ingin kita gunakan.
 
@@ -97,13 +104,19 @@ NOTE: selalu simpan property transition di keadaan awal dari elemen yg ingin kit
         .kotak6 {
             transition: all 3s cubic-bezier(0.24, -0.35, 0.76, 1.59);
         }
+        .kotak7 {
+            transition: 3s 2s;
+        }
+        .kotak8 {
+            transition: margin-left 3s, transform 3s 2s, background-color 500ms 3s;
+        }
 
         /* cara baca selector dibawah ini ( .container:hover .kotak ), "pada saat container nya di :hover, kotak yg ada di dalamnya akan bergeser dan berputar".
         
 
         Sedangkan kalau selectornya seperti ini,
         
-        .kotak:hover => maka kita harus terus mengarahkan cursor kita pada kotaknya.
+        .kotak:hover => maka kita harus terus mengarahkan cursor kita pada kotaknya agar keadaan awalnya berubah jadi keadaan akhir.
         
         */
         .container:hover .kotak {
@@ -121,6 +134,8 @@ NOTE: selalu simpan property transition di keadaan awal dari elemen yg ingin kit
         <div class="kotak kotak4">ease-in-out</div>
         <div class="kotak kotak5">linear</div>
         <div class="kotak kotak6">cubic-bezier</div>
+        <div class="kotak kotak7">delay</div>
+        <div class="kotak kotak8">multiple value</div>
     </div>
 </body>
 </html>
