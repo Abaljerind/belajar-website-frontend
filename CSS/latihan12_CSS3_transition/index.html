@@ -1,3 +1,56 @@
+<!-- dengan penggunaan properti transition, kita dapat mengubah nilai dari properti HTML secara halus. Ciri khas dari transition ini adalah adanya "keadaan awal" dan juga "keadaan akhir" -->
+
+<!-- parameter value dari transition:
+a. property, untuk menggunakan parameter value property ini, kita harus buat dulu "keadaan akhir" nya, misal dengan pseudo-class yaitu :hover, lalu di "keadaan awal" nya, kita bisa menambahkan property yg ada di "keadaan akhir" sebagai value dari parameter property.
+
+contoh:
+
+.kotak {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: margin-left 1s;
+        }
+
+.container:hover .kotak {
+            transform: rotate(720deg);
+            margin-left: 800px;
+            background-color: royalblue;
+        }
+
+bisa dilihat bahwa property margin-left yg ada di .container:hover .kotak kita tambahkan ke selector .kotak diproperty transition nya, sehingga nantinya 2 properti (transform & background-color) yang ada di .container:hover .kotak tidak akan dijalankan sama sekali.
+
+Berikut ini adalah properti yang bisa kita animasikan dengan transition:
+background-color | background-position | background-size | border | color | filter | font-size | line-height | top left bottom right | margin-padding | width height | opacity | transform | word-spacing | letter-spacing | dll
+
+
+Sedangkan berikut ini adalah properti yang tidak bisa kita animasikan:
+font-family | display | position | dll
+
+
+
+b. durasi (s/ms), ini adalah parameter yg wajib ditulis, sedangkan 3 value lainnya hanya value optional jadi tidak wajib.
+
+
+c. fungsi, bisa disebut juga timing function. fungsi ini punya beberapa nilai yg bisa kita berikan, antara lain:
+        - ease
+        - ease-in
+        - ease-out
+        - ease-in-out
+        - linear
+        - cubic bezier (w, x, y, z)
+
+
+
+
+d. delay,
+
+transition: [property] <durasi> [fungsi] [delay];
+
+NOTE: selalu simpan property transition di keadaan awal dari elemen yg ingin kita gunakan.
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +58,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 900px;
+            margin: 10px auto;
+            border: 5px solid black;
+        }
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: margin-left 1s;
+        }
+
+        /* cara baca selector dibawah ini ( .container:hover .kotak ), "pada saat container nya di :hover, kotak yg ada di dalamnya akan bergeser dan berputar".
+        
+
+        Sedangkan kalau selectornya seperti ini,
+        
+        .kotak:hover => maka kita harus terus mengarahkan cursor kita pada kotaknya.
+        
+        */
+        .container:hover .kotak {
+            transform: rotate(720deg);
+            margin-left: 800px;
+            background-color: royalblue;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="kotak"></div>
+    </div>
 </body>
 </html>
