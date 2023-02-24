@@ -38,7 +38,7 @@ c. fungsi, bisa disebut juga timing function. fungsi ini punya beberapa nilai yg
         - ease-out
         - ease-in-out
         - linear
-        - cubic bezier (w, x, y, z)
+        - cubic bezier (angka) (w, x, y, z)
 
 
 
@@ -74,7 +74,28 @@ NOTE: selalu simpan property transition di keadaan awal dari elemen yg ingin kit
             width: 100px;
             height: 100px;
             background-color: salmon;
-            transition: margin-left 1s;
+            text-align: center;
+            line-height: 100px;
+            margin: 5px 0;
+        }
+
+        .kotak1 {
+            transition: all 3s ease;
+        }
+        .kotak2 {
+            transition: all 3s ease-in;
+        }
+        .kotak3 {
+            transition: all 3s ease-out;
+        }
+        .kotak4 {
+            transition: all 3s ease-in-out;
+        }
+        .kotak5 {
+            transition: all 3s linear;
+        }
+        .kotak6 {
+            transition: all 3s cubic-bezier(0.24, -0.35, 0.76, 1.59);
         }
 
         /* cara baca selector dibawah ini ( .container:hover .kotak ), "pada saat container nya di :hover, kotak yg ada di dalamnya akan bergeser dan berputar".
@@ -94,7 +115,12 @@ NOTE: selalu simpan property transition di keadaan awal dari elemen yg ingin kit
 </head>
 <body>
     <div class="container">
-        <div class="kotak"></div>
+        <div class="kotak kotak1">ease</div>
+        <div class="kotak kotak2">ease-in</div>
+        <div class="kotak kotak3">ease-out</div>
+        <div class="kotak kotak4">ease-in-out</div>
+        <div class="kotak kotak5">linear</div>
+        <div class="kotak kotak6">cubic-bezier</div>
     </div>
 </body>
 </html>
