@@ -1,3 +1,41 @@
+<!-- mirip dengan transition, animation ini bisa bergerak dari posisi awal ke posisi akhir juga tapi dengan tambahan beberapa posisi lainnya, yang mana ini menggunakan "keyframe" -->
+
+<!-- untuk membuat keyframe, properti yg digunakan seperti ini,
+
+@keyframes [name] {
+    from {
+        [property-css]
+    }
+    to {
+        [property-css]
+    }
+}
+
+NOTE: pada bagian "from" dan juga "to" nya bisa diganti dengan persen jadi seperti ini,
+
+@keyframes [name] {
+    0% {
+        [property-css]
+    }
+    100% {
+        [property-css]
+    }
+}
+
+-->
+
+<!-- 
+    Berikut ini adalah value / nilai apa saja yang bisa kita kasih ke properti animation:
+    - [name],
+    - [duration],
+    - [timing-function],
+    - [delay],
+    - [iteration-count],
+    - [direction],
+    - [fill-mode],
+    - [play-state],
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +43,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation CSS</title>
+
+    <style>
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            animation: animasiKotak 2s ease;
+        }
+
+        /* .kotak:hover {
+            animation: animasiKotak 2s ease;
+        } */
+        /* setelah membuat keyframes seperti dibawah, kita tambahkan properti animation di selector yg kita inginkan, misal seperti diatas ( .kotak:hover || bisa juga di selector nya .kotak ) dengan valuenya: "nama keyframes" "durasi seperti transition" terakhir "function timing nya seperti transition"; */
+
+        @keyframes animasiKotak {
+            0% {
+                width: 200px;
+            }
+            50% {
+                width: 500px;
+                height: 200px;
+            }
+            100% {
+                width: 500px;
+                height: 500px;
+            }
+        }
+    </style>
+
 </head>
 <body>
-    
+    <div class="kotak"></div>
 </body>
 </html>
