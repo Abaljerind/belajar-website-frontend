@@ -97,7 +97,8 @@ body {
 .header ul li a:hover {
     background-color: lightskyblue;
     color: whitesmoke;
-    transition: 1s;
+    transition: 300ms ease-in;
+    border-radius: 5px;
 }
 
 
