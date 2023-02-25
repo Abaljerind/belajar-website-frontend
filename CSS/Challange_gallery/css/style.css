@@ -91,6 +91,8 @@ css ubah span yang ada di dalam tag a yang ketika di hover akan menjalankan prop
     padding: 100px 0;
 }
 
+/* NOTE: 
+:target ini adalah pseudo elemen yang ada HANYA pada tag a untuk memilih elemen aktif yang diinginkan pada elemen lain yang memiliki nilai target yang sama. contoh di file index.html nya pada tag a href nya berisi "#gambar-1" maka agar bisa digunakan tag a tersebut pada elemen lain seperti overlay maka perlu diberi id yang sama yaitu "gambar-1" juga, dan HARUS menggunakan ID karna id pada selector css menggunakan tanda pagar # */
 .overlay:target {
     width: auto;
     height: auto;
@@ -107,19 +109,51 @@ css ubah span yang ada di dalam tag a yang ketika di hover akan menjalankan prop
 /* cara baca selector dibawah:
 Pada saat overlay ini kita target, img didalamnya kita kasih animasi */
 .overlay:target img {
-    animation: ZoomDanFade 1s;
+    animation: ZoomDanFade 800ms;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -20px;
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    line-height: 17px;
+    padding: 5px;
+    opacity: 0;
+}
+
+/* cara baca selector dibawah:
+Pada saat overlay ini kita target, class close di dalamnya kita kasih animasi */
+.overlay:target .close {
+    animation: slideDown 800ms 800ms forwards;
 }
 
 
 /* animasi */
 @keyframes ZoomDanFade {
     0% {
-        transform: scale(0);
+        transform: scale(0) rotate(0);
         opacity: 0;
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        margin-top: 0;
         opacity: 1;
     }
 }
