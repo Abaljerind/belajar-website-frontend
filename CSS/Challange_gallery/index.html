@@ -15,12 +15,21 @@
     <div class="container">
 
         <ul class="gallery">
-            
+
             <li>
-                <a href="">
+                <a href="#gambar-1">
                     <img src="img/thumb/apotheosis.jpg" alt="Apotheosis">
                     <span>Apotheosis</span>
                 </a>
+
+                <!-- pada tag a kita berikan "#gambar-1" agar saat kita klik image yg ada di browser, tag a itu akan men-trigger class overlay yang mana sudah kita berikan id="gambar-1" sehingga nantinya selector di css dengan pseudo-class target akan menjalankan properti yg ada didalam selector-nya. Jadi secara tidak langsung class overlay dibawah akan bergantung dengan tag a dan isinya (img dan span) sehingga bisa dijalankan selector di css nya (.overlay:target {}) -->
+
+                <div class="overlay" id="gambar-1">
+                <!-- overlay digunakan untuk lapisan hitam dengan opacity tertentu yang akan menutup seluruh tampilan window sebelum memunculkan gambar yang fullsize nya -->
+
+                    <img src="img/full/apotheosis.jpg" alt="Apotheosis">
+
+                </div>
             </li>
 
             <li>
