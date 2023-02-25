@@ -109,7 +109,7 @@ css ubah span yang ada di dalam tag a yang ketika di hover akan menjalankan prop
 /* cara baca selector dibawah:
 Pada saat overlay ini kita target, img didalamnya kita kasih animasi */
 .overlay:target img {
-    animation: ZoomDanFade 800ms;
+    animation: fade 800ms;
 }
 
 .overlay .close {
@@ -130,6 +130,29 @@ Pada saat overlay ini kita target, img didalamnya kita kasih animasi */
 Pada saat overlay ini kita target, class close di dalamnya kita kasih animasi */
 .overlay:target .close {
     animation: slideDown 800ms 800ms forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fade 800ms 800ms forwards;
+}
+
+
+/* navigasi next dan prev */
+.next, .prev {
+    width: 57px;
+    height: 92px;
+    background-image:url(../img/next-prev/next.png);
+    position: absolute;
+    text-indent: -9999px;
+    top: 40%;
+    margin-left: 50px;
+    opacity: 0;
+}
+
+.prev {
+    background-image: url(../img/next-prev/prev.png);
+    margin-left: -100px;
 }
 
 
@@ -154,6 +177,16 @@ Pada saat overlay ini kita target, class close di dalamnya kita kasih animasi */
 
     100% {
         margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
         opacity: 1;
     }
 }
