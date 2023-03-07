@@ -13,7 +13,9 @@
 */
 
 /* properti yg bisa diberikan pada container:
-1. display: flex | inline-flexs */
+1. display: flex | inline-flexs
+2. flex-direction: row | row-reverse | column | column-reverse
+3. flex-wrap: nowrap | wrap | wrap-reverse */
 
 .container {
     width: 600px;
@@ -21,17 +23,13 @@
     margin: 30px auto;
     padding: 5px;
     box-sizing: border-box;
-}
-
-.container::after {
-    content: '';
-    display: block;
-    clear: both;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .container div {
     width: 120px;
     height: 120px;
     background-color: rgb(128, 128, 241);
-    float: left;
+    margin: 2px;
 }
