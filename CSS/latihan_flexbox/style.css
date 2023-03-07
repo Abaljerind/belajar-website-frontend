@@ -48,7 +48,7 @@ Ex. align-self: flex-start; | align-self: center;
     /* flex-direction: column-reverse; */
     /* flex-wrap: wrap; */
     /* justify-content: space-evenly; */
-    /* align-items: baseline; */
+    /* align-items: flex-start; */
 }
 
 .container div {
@@ -74,10 +74,12 @@ Ex. align-self: flex-start; | align-self: center;
 .container div.dua {
     order: 4;
     flex-grow: 3;
+    align-self: flex-end;
 }
 
 .tiga {
     order: 2;
+    align-self: center;
 }
 
 .empat {
