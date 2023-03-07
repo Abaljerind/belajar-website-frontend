@@ -15,7 +15,8 @@
 /* properti yg bisa diberikan pada container:
 1. display: flex | inline-flexs
 2. flex-direction: row | row-reverse | column | column-reverse
-3. flex-wrap: nowrap | wrap | wrap-reverse */
+3. flex-wrap: nowrap | wrap | wrap-reverse
+4. justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly */
 
 .container {
     width: 600px;
@@ -24,7 +25,8 @@
     padding: 5px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
 }
 
 .container div {
