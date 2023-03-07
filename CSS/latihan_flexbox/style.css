@@ -16,17 +16,21 @@
 1. display: flex | inline-flexs
 2. flex-direction: row | row-reverse | column | column-reverse
 3. flex-wrap: nowrap | wrap | wrap-reverse
-4. justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly */
+4. justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+5. align-items: flex-start |  flex-end | center | stretch | baseline */
 
 .container {
     width: 600px;
+    height: 400px;
     border: 5px solid #333;
     margin: 30px auto;
     padding: 5px;
     box-sizing: border-box;
     display: flex;
     /* flex-direction: column-reverse; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
+    align-items: baseline;
 }
 
 .container div {
@@ -34,4 +38,12 @@
     height: 120px;
     background-color: rgb(128, 128, 241);
     margin: 2px;
+}
+
+.container div.tiga {
+    font-size: 60px;
+}
+
+.container div.empat {
+    font-size: 100px;
 }
