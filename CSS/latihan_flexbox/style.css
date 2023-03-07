@@ -1,3 +1,5 @@
+/* NOTE: flexbox ini bisa digunakan sebagai pengganti dari float */
+
 /* flexbox, model layout 1 dimensi yg dapat mengatur jarak dan penjajaran antar item dalam sebuah container. 1 dimensi tadi diartiikan bahwa kita hanya bisa mengatur secara 1 dimensi antara baris (horizontal) atau kolom (vertikal), dan tidak bisa mengatur keduanya (horizonal dan vertikal) sekaligus. */
 
 /* untuk mengatur layout 2 dimensi bisa menggunakan css grid. */
