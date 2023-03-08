@@ -34,3 +34,45 @@ body {
     flex: 1;
     order: 3;
 }
+
+/* latihan 2 */
+.container-dua {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.layanan-satu, .layanan-dua, .layanan-tiga {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.layanan-satu {
+    background-color: rgb(119, 119, 255);
+}
+
+.layanan-dua {
+    background-color: rgb(103, 216, 103);
+}
+
+.layanan-tiga {
+    background-color: rgb(255, 124, 124);
+}
+
+/* kelas untuk responsive */
+
+/* cara baca baris @media dibawah: jika lebar minimal window nya 600px atau lebih maka .container-dua akan menggunakan style css yg dibawah ini.
+
+intinya jika lebarnya dibawah 600px maka display flex dibawah tidak akan dijalankan, tetapi jika lebarnya minimal sudah 600px atau lebih maka display flex dibawah dijalankan.
+
+*/
+@media( min-width: 600px) {
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layanan-satu, .layanan-dua, .layanan-tiga {
+        width: 30%;
+    }
+}
