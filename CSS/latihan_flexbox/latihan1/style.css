@@ -80,6 +80,36 @@ body {
 }
 
 
+/* latihan 4 */
+.container-empat {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.card {
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #eee;
+    overflow: hidden;
+    margin: 10px;
+    flex: 1;
+}
+
+.card .header {
+    height: 150px;
+    background-color: #666;
+}
+
+.card .content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card.besar {
+    transform: scale(1.12);
+}
+
+
 /* kelas untuk responsive */
 
 /* cara baca baris @media dibawah: jika lebar minimal window nya 600px atau lebih maka .container-dua akan menggunakan style css yg dibawah ini.
@@ -99,5 +129,9 @@ intinya jika lebarnya dibawah 600px maka display flex dibawah tidak akan dijalan
 
     .thumbnail {
         width: 25%;
+    }
+
+    .container-empat {
+        display: flex;
     }
 }
