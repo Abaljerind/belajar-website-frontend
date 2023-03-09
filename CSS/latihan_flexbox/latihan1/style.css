@@ -59,6 +59,27 @@ body {
     background-color: rgb(255, 124, 124);
 }
 
+/* latihan 3 */
+.container-tiga {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* max-width digunakan agar saat browser di kecilkan ukuran dari isinya bisa ikut mengecil jadi tidak akan fix ukurannya. */
+
+.thumbnail {
+    width: 50%;
+}
+
+/* dengan properti width 100% maka img akan mengikuti ukuran dari thumbnail nya. karna 100% = 800px dari lebarnya sehingga dengan display flex, img nya akan mengikuti lebar container nya. */
+.thumbnail img {
+    width: 100%;
+}
+
+
 /* kelas untuk responsive */
 
 /* cara baca baris @media dibawah: jika lebar minimal window nya 600px atau lebih maka .container-dua akan menggunakan style css yg dibawah ini.
@@ -74,5 +95,9 @@ intinya jika lebarnya dibawah 600px maka display flex dibawah tidak akan dijalan
 
     .layanan-satu, .layanan-dua, .layanan-tiga {
         width: 30%;
+    }
+
+    .thumbnail {
+        width: 25%;
     }
 }
