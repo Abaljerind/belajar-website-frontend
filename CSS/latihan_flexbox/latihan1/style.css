@@ -110,6 +110,29 @@ body {
 }
 
 
+/* latihan 5 */
+.container-lima {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: flex;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.kotak span {
+    margin: auto;
+}
+
 /* kelas untuk responsive */
 
 /* cara baca baris @media dibawah: jika lebar minimal window nya 600px atau lebih maka .container-dua akan menggunakan style css yg dibawah ini.
