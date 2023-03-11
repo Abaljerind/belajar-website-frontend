@@ -1,9 +1,9 @@
 /* em dan rem */
 
 /* 1. em, selain digunakan untuk satuan panjang, em juga bisa digunakan untuk margin dan padding */
-html {
-  /* font-size: 10px; */
-}
+/* html {
+  font-size: 10px;
+} */
 
 body {
   font-family: "Roboto", sans-serif;
