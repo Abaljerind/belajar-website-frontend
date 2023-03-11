@@ -38,7 +38,7 @@ body {
 }
 
 .col-em p {
-  font-size: 1.5em; */
-}
+  font-size: 1.5em;
+} */
 
 /* untuk em, dia relatif thdp ukuran font yg sedang digunakan pada pembungkusnya, jadi akan dicek ke elemen pembungkusnya apakah diberikan font-size atau tidak, disini elemen pembungkusnya kan typography dan typography tidak diberi nilai font-size maka si em akan mengecek ke elemen pembungkus dari typography sampai ketemu jadi untuk dibagian ini akan dicek terus sampai ke tag html, dan karna tidak ada maka nilai "default" nya akan bernilai "16px" */
