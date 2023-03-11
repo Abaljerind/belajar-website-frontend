@@ -26,3 +26,19 @@ body {
   margin: 0 0.5em;
   padding: 0 0.5em;
 }
+
+/* col-em */
+/* misal kita berikan font-size di bagian class col-em maka nilai dari h2 dan p nya akan dikalikan dengan font-size yg ada di col-em -> untuk h2 10x1.5 = 15 dan untuk p 2x10 = 20 */
+/* .col-em {
+  font-size: 10px;
+}
+
+.col-em h2 {
+  font-size: 2em;
+}
+
+.col-em p {
+  font-size: 1.5em; */
+}
+
+/* untuk em, dia relatif thdp ukuran font yg sedang digunakan pada pembungkusnya, jadi akan dicek ke elemen pembungkusnya apakah diberikan font-size atau tidak, disini elemen pembungkusnya kan typography dan typography tidak diberi nilai font-size maka si em akan mengecek ke elemen pembungkus dari typography sampai ketemu jadi untuk dibagian ini akan dicek terus sampai ke tag html, dan karna tidak ada maka nilai "default" nya akan bernilai "16px" */
