@@ -1,0 +1,12 @@
+/* css value / nilai yg bisa diberikan pada css:
+- integer, bilangan bulat hanya positif dan negatif
+- number, bilangan bulat tapi bisa juga memiliki koma dan minus
+- percetage, persen
+- dimension, number yg punya satuan dibelakangnya. Dibagi menjadi beberapa:
+    * angle, untuk sudut. contoh deg, rad (radian), grad (gradian), turn
+    * time, untuk waktu. contoh s (second) dan ms (milli seconds)
+    * resolution, menentukan resolusi dari website, contoh dpi (dot per inch), dpcm, dppx
+    * length, ada 2 kategori:
+        - absoulute, satuan yg mutlak / pasti, contoh px, pt, pc, cm, mm, in
+        - relative, satuan yg responsive, contoh %, em (relatif thdp ukuran font yg sedang digunakan), rem (relatif thdp ukuran font "root" yg biasanya di tag <html>), ch (relatif thdp lebar karakter '0' dari font-family tertentu yg sedang digunakan), vh (relatif thdp tinggi dari viewport / layar yg dilihat saat itu, misal layar hp, desktop dll), vw (relatif thdp lebar dari viewport), vmin (relatif thdp dimensi terkecil sebuah viewport), vmax (relatif thdp dimensi terbesar sebuah viewport) 
+*/
