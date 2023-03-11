@@ -1,6 +1,9 @@
 /* em dan rem */
 
 /* 1. em, selain digunakan untuk satuan panjang, em juga bisa digunakan untuk margin dan padding */
+html {
+  font-size: 10px;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -42,3 +45,25 @@ body {
 } */
 
 /* untuk em, dia relatif thdp ukuran font yg sedang digunakan pada pembungkusnya, jadi akan dicek ke elemen pembungkusnya apakah diberikan font-size atau tidak, disini elemen pembungkusnya kan typography dan typography tidak diberi nilai font-size maka si em akan mengecek ke elemen pembungkus dari typography sampai ketemu jadi untuk dibagian ini akan dicek terus sampai ke tag html, dan karna tidak ada maka nilai "default" nya akan bernilai "16px" */
+
+/* col-rem */
+/* walaupun pada .col-rem sudah diberikan font-size tetapi satuan rem tidak akan berubah mengikuti font-size di .col-rem nya, rem hanya mengikuti nilai pada tag html / root nya. */
+.col-rem {
+  font-size: 10px;
+}
+
+.col-rem h2 {
+  font-size: 2rem;
+}
+
+.col-rem p {
+  font-size: 1.5rem;
+}
+
+/* untuk rem, sama dengan em jika tidak ditemukan adanya pembungkus sampai ke tag html / root nya, nilai font-size nya akan default 16px. tetapi karena rem relatif thdp ukuran font "root" yg biasanya ada di tag <html>, maka untuk rem kita perlu memberikan font-size pada tag html nya. */
+
+/* penggunaan rem dan em,
+rem: digunakan untuk font
+em: digunakan untuk leg pada suatu elemen, leg bisa margin, padding, bahkan width, height
+
+*/
