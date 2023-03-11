@@ -2,7 +2,7 @@
 
 /* 1. em, selain digunakan untuk satuan panjang, em juga bisa digunakan untuk margin dan padding */
 html {
-  font-size: 10px;
+  /* font-size: 10px; */
 }
 
 body {
@@ -48,7 +48,7 @@ body {
 
 /* col-rem */
 /* walaupun pada .col-rem sudah diberikan font-size tetapi satuan rem tidak akan berubah mengikuti font-size di .col-rem nya, rem hanya mengikuti nilai pada tag html / root nya. */
-.col-rem {
+/* .col-rem {
   font-size: 10px;
 }
 
@@ -58,12 +58,69 @@ body {
 
 .col-rem p {
   font-size: 1.5rem;
-}
+} */
 
-/* untuk rem, sama dengan em jika tidak ditemukan adanya pembungkus sampai ke tag html / root nya, nilai font-size nya akan default 16px. tetapi karena rem relatif thdp ukuran font "root" yg biasanya ada di tag <html>, maka untuk rem kita perlu memberikan font-size pada tag html nya. */
+/* untuk rem, sama dengan em jika tidak ditemukan adanya pembungkus sampai ke tag html / root nya, nilai font-size nya akan default 16px. tetapi karena "rem relatif" thdp ukuran font "root" yg biasanya ada di tag <html>, maka untuk rem kita perlu memberikan font-size pada tag html nya. */
 
 /* penggunaan rem dan em,
 rem: digunakan untuk font
 em: digunakan untuk leg pada suatu elemen, leg bisa margin, padding, bahkan width, height
+*/
 
+/* NOTE: untuk em dan rem, jika tidak dituliskan font-size nya sama sekali pada css maka default value em dan rem akan menjadi 16px */
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em 3em;
+  margin: 0 1.5rem;
+}
+/* padding dan margin: karna tidak diberikan nilai font-size di pembungkus dari .btn nya maka default value untuk acuan padding dan margin akan menjadi 16px yg berarti:
+
+padding: 1em 3em = 16x1 = 16px (atas bawah) dan 3x16 = 48px (kiri kanan)
+*/
+
+/* untuk margin,
+margin: 0 1.5em berarti 0 untuk atas bawah dan 1.5x16 = 24px untuk kiri kanan
+*/
+
+/* untuk margin agar fix: 0 1.5rem;
+maka pakai rem jadi tidak akan relatif terhadap ukuran font melainkan relatif terhadap font root nya, tapi karna tidak di set berarti ukuran font nya 16px,
+
+jadi atas bawah 0 dan kiri kanan 1.5x16 = 24px
+*/
+
+.btn-sm {
+  font-size: 0.5em;
+}
+/* bagian sini berarti padding nya: 
+0.5x16 = 8px untuk padding atas dan bawah, lalu 0.5x48px = 24px padding kiri kanan
+*/
+
+/* margin: 0 1.5em berarti 0 untuk atas bawah dan 1.5x(0.5x16) = 12px margin kiri kanan
+*/
+
+/* untuk margin agar fix: 0 1.5rem;
+maka pakai rem jadi tidak akan relatif terhadap ukuran font melainkan relatif terhadap font root nya, tapi karna tidak di set berarti ukuran font nya 16px,
+
+jadi atas bawah 0 dan kiri kanan 1.5x16 = 24px
+*/
+
+.btn-lg {
+  font-size: 2em;
+}
+/* bagian sini berarti padding nya:
+2x16 = 32px padding atas bawah, 2x48 = 96px padding kiri kanan
+*/
+
+/* margin: 0 1.5em berarti 0 untuk atas bawah dan 1.5x(2x16)px = 48px margin kiri kanan */
+
+/* untuk margin agar fix: 0 1.5rem;
+maka pakai rem jadi tidak akan relatif terhadap ukuran font melainkan relatif terhadap font root nya, tapi karna tidak di set berarti ukuran font nya 16px,
+
+jadi atas bawah 0 dan kiri kanan 1.5x16 = 24px
 */
