@@ -22,20 +22,12 @@ header {
   padding: 40px 0;
 }
 
-.content {
-  display: flex;
-}
-
-.sidebar {
-  flex: 1;
-}
-
-.sidebar aside {
+aside {
   background-color: #2f93ff;
   padding: 60px 0;
 }
 
-.sidebar nav {
+nav {
   background-color: #e45765;
   padding: 100px 0;
 }
