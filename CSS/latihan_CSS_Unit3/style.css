@@ -24,15 +24,20 @@ header {
   height: 100vh;
   display: flex;
 }
+/* height: 100vh berarti 100% dari tinggi window yg sedang digunakan */
 
 h1 {
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  /* font-size: 4vw; */
+  /* dengan vw diatas ini, maka ketika layar dikecilkan seukuran layar hp, tulisannya tidak akan terpotong seperti pada 4rem diatasnya tetapi tulisan h1 nya akan mengecil, untuk mengatasi tulisan yg mengecil itu kita bisa gunakan v-max seperti dibawah ini */
+  font-size: 4vmax;
   line-height: 1.2em;
   color: white;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   text-align: center;
   margin: auto;
 }
+/* font-size: 4vw berarti 4% dari lebar window yg sedang digunakan */
 
 section {
   margin: 30px auto;
