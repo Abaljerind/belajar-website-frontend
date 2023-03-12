@@ -15,12 +15,23 @@ body {
   line-height: 1.8em;
 }
 
+/* contoh header ini akan membuat img nya, tetap berada di tengah layar walaupun window nya dikecilkan. Yang terpenting adalah properti background-size, background-position dan height nya yg diberi satuan vh. */
+header {
+  background-color: #ccc;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+}
+
 h1 {
   font-size: 4rem;
   line-height: 1.2em;
   color: white;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   text-align: center;
+  margin: auto;
 }
 
 section {
