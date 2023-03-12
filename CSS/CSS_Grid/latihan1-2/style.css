@@ -22,6 +22,11 @@ header {
   padding: 40px 0;
 }
 
+.sidebar {
+  float: left;
+  width: 40%;
+}
+
 .sidebar aside {
   background-color: #2f93ff;
   padding: 60px 0;
@@ -34,7 +39,14 @@ header {
 
 main {
   background-color: #e0aa77;
-  padding: 171px;
+  width: 60%;
+  float: right;
+  box-sizing: border-box;
+  padding: 171.5px;
+}
+
+.clear {
+  clear: both;
 }
 
 footer {
