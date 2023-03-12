@@ -1,0 +1,59 @@
+body {
+  max-width: 200vh;
+  background-color: #333;
+  color: white;
+  margin: auto;
+}
+
+.container {
+  text-align: center;
+}
+
+header {
+  padding: 4rem;
+  background-color: violet;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+.side {
+  float: left;
+  width: 40%;
+}
+
+aside {
+  background-color: royalblue;
+  padding: 2.5rem;
+}
+
+aside h2 {
+  font-size: 2.5em;
+}
+
+nav {
+  background-color: salmon;
+  padding: 2.5rem;
+}
+
+nav h2 {
+  font-size: 2.5em;
+}
+
+main {
+  background-color: darkorange;
+  padding: 2.5rem;
+  text-align: center;
+  line-height: 15.1rem;
+}
+
+main h2 {
+  font-size: 2.5em;
+}
+
+footer {
+  background-color: darkslategray;
+  padding: 2rem;
+  text-align: center;
+}
