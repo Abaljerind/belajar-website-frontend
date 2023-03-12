@@ -24,7 +24,11 @@ html {
   grid-template-columns: 1fr 1.5fr;
   grid-template-rows: 1fr 1fr 1.3fr;
 }
+/* pada grid-template-areas digunakan untuk mendeklarasikan area berdasarkan tag html nya dan berjumlah sesuai yg diinginkan, diatas contohnya adalah 4 baris x 2 kolom */
 
+/* grid-template-columns & grid-template-rows digunakan untuk memberikan ukuran dgn satuan fraction sesuai jumlah baris dan kolomnya */
+
+/* pada tag html5, hanya perlu digunakan saja properti grid-area dengan nama yg telah di deklarasikan di grid-template-areas nya. */
 header {
   grid-area: header;
   background-color: #b063d8;
