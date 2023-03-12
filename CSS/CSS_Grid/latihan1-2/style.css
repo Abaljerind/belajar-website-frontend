@@ -16,3 +16,28 @@ html {
   box-sizing: border-box;
   padding: 5px;
 }
+
+header {
+  background-color: #b063d8;
+  padding: 40px 0;
+}
+
+.sidebar aside {
+  background-color: #2f93ff;
+  padding: 60px 0;
+}
+
+.sidebar nav {
+  background-color: #e45765;
+  padding: 100px 0;
+}
+
+main {
+  background-color: #e0aa77;
+  padding: 171px;
+}
+
+footer {
+  background-color: #666;
+  padding: 20px 0;
+}
