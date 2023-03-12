@@ -1,0 +1,39 @@
+/* 
+- vh (relatif thdp tinggi dari viewport / layar yg dilihat saat itu, misal layar hp, desktop dll), 
+- vw (relatif thdp lebar dari viewport), 
+- vmin (relatif thdp dimensi terkecil sebuah viewport), 
+- vmax (relatif thdp dimensi terbesar sebuah viewport)
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.8em;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+section {
+  margin: 30px auto;
+  width: 80%;
+}
+
+section .detail {
+  font-size: 1.4rem;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.5em 0;
+  margin-bottom: 2em;
+  color: #333;
+}
