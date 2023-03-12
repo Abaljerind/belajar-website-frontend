@@ -15,24 +15,36 @@ html {
   border: 5px solid #333;
   box-sizing: border-box;
   padding: 5px;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "nav main"
+    "footer footer";
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1.3fr;
 }
 
 header {
+  grid-area: header;
   background-color: #b063d8;
   padding: 40px 0;
 }
 
 aside {
+  grid-area: aside;
   background-color: #2f93ff;
   padding: 60px 0;
 }
 
 nav {
+  grid-area: nav;
   background-color: #e45765;
   padding: 100px 0;
 }
 
 main {
+  grid-area: main;
   background-color: #e0aa77;
   box-sizing: border-box;
   flex: 1.5;
@@ -42,6 +54,7 @@ main {
 }
 
 footer {
+  grid-area: footer;
   background-color: #666;
   padding: 20px 0;
 }
