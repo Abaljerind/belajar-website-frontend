@@ -32,8 +32,12 @@ html {
 header {
   grid-area: header;
   background-color: #b063d8;
-  padding: 40px 0;
+  /* padding: 40px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+/* grid bisa digunakan bersamaan dengan flex seperti diatas untuk membuat teks nya berada di tengah, jadi tidak perlu pakai padding lagi. */
 
 aside {
   grid-area: aside;
