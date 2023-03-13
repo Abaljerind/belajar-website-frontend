@@ -24,9 +24,22 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     * <track-size> : bisa berupa px, %, auto, atau fr (fraction) bisa disebut juga bagian.
     * <line-name> : nama yg bisa diberikan pada track
 
-- grid-auto-columns
-- grid-auto-rows
-- grid-auto-flow
+- grid-auto-columns, mengatur ukuran grid track yg tidak dituliskan pada grid-template atau bisa disebut juga implicit track
+- grid-auto-rows, mengatur ukuran grid track yg tidak dituliskan pada grid-template atau bisa disebut juga implicit track
+    
+    #explicit & implicit:
+        - explicit adalah nilai baris / kolom yg dituliskan dengan jelas seperti 50px, 10px, 20% dll.
+        - implicit adalah nilai sisa dari baris / kolom yang tidak dituliskan sama sekali, jadi nilainya tidak diatur sama sekali.
+    
+    Cara penulisan kedua properti diatas seperti berikut:
+    grid-auto-columns: <track-size>;
+    grid-auto-rows: <track-size>;
+
+- grid-auto-flow, mengatur penempatan item / cell pada grid track, termasuk yang ditulis secara implicit.
+
+    Cara penulisannya:
+    grid-auto-flow: row | column | row dense | column dense;
+
 - grid-template-areas
 - grid-template
 - grid-column-gap
