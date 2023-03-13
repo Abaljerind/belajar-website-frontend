@@ -1,1 +1,10 @@
 css grid -> modul css baru untuk mendefinisikan sistem layout berbentuk grid dalam 2 dimensi (baris & kolom).
+
+istilah di css grid:
+1. grid container, elemen pembungkus grid, di definisikan dengan menuliskan "display: grid;"
+2. grid item, elemen elemen yg berada 1 level dibawah / di dalam grid container (isi dari grid container)
+3. grid line (garis pembatas antar baris dan kolom), garis horizontal (kolom) atau vertikal (baris) yg memisahkan grid menjadi beberapa bagian dan ditandai dengan angka. jumlah line pasti lebih dari 1 dari jumlah baris / kolomnya.
+4. grid cell, perpotongan / pertemuan antar baris dan kolom di dalam grid.
+5. grid area, kumpulan lebih dari 1 cell yg membentuk kotak.
+6. grid track, ukuran / jarak antara 2 grid line (cell) baik secara horizontal maupun vertikal.
+7. grid gap, jarak antara grid track / cell. seperti cell spacing pada properti border di suatu table.
