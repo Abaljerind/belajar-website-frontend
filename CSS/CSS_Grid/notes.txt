@@ -8,3 +8,46 @@ istilah di css grid:
 5. grid area, kumpulan lebih dari 1 cell yg membentuk kotak.
 6. grid track, ukuran / jarak antara 2 grid line (cell) baik secara horizontal maupun vertikal.
 7. grid gap, jarak antara grid track / cell. seperti cell spacing pada properti border di suatu table.
+
+properti yg ada pada css grid, dibagi menjadi 2 yaitu properti yg diberikan untuk container dan items. Berikut properti yg bisa diberikan untuk container:
+- grid-template-columns, mendefinisikan kolom dengan cara menuliskan nilai yg dipisahkan oleh spasi. 
+Contoh grid-template-columns: 1fr 1.5fr; | cara penulisan nya ada 2 tipe yaitu dengan angka saja atau kita bisa memberikan nama untuk line lalu diikuti angka, seperti ini format penulisan nya:
+    display:grid;
+    grid-template-columns: <track-size> ... | <line-name> <track-size> ... ;
+    * <track-size> : bisa berupa px, %, auto, atau fr (fraction) bisa disebut juga bagian.
+    * <line-name> : nama yg bisa diberikan pada track
+
+- grid-template-rows, mendefinisikan baris dengan cara menuliskan nilai yg dipisahkan oleh spasi. 
+Contoh grid-template-rows: 1fr 1.5fr; | cara penulisan nya ada 2 tipe yaitu dengan angka saja atau kita bisa memberikan nama untuk line lalu diikuti angka, seperti ini format penulisan nya:
+    display:grid;
+    grid-template-rows: <track-size> ... | <line-name> <track-size> ... ;
+    * <track-size> : bisa berupa px, %, auto, atau fr (fraction) bisa disebut juga bagian.
+    * <line-name> : nama yg bisa diberikan pada track
+
+- grid-auto-columns
+- grid-auto-rows
+- grid-auto-flow
+- grid-template-areas
+- grid-template
+- grid-column-gap
+- grid-row-gap
+- grid-gap
+- grid
+- justify-items
+- align-items
+- place-items
+- justify-content
+- align-content
+- place-content
+
+Berikut properti yg bisa diberikan untuk items:
+- grid-column-start
+- grid-column-end
+- grid-row-start
+- grid-row-end
+- grid-column
+- grid-row
+- grid-area
+- justify-self
+- align-self
+- place-self
