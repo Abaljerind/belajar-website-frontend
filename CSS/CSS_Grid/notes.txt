@@ -21,7 +21,7 @@ Contoh grid-template-columns: 1fr 1.5fr; <ini berarti jumlah column nya ada 2> |
 Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | cara penulisan nya ada 2 tipe yaitu dengan angka saja atau kita bisa memberikan nama untuk line lalu diikuti angka, seperti ini format penulisan nya:
     display:grid;
     grid-template-rows: <track-size> ... | <line-name> <track-size> ... ;
-    * <track-size> : bisa berupa px, %, auto, atau fr (fraction) bisa disebut juga bagian.
+    * <track-size> : bisa berupa px, %, auto, atau fr (fraction) bisa disebut juga bagian. fr bisa digunakan agar website jadi responsive
     * <line-name> : nama yg bisa diberikan pada track
 
 - grid-auto-columns, mengatur ukuran grid track yg tidak dituliskan pada grid-template atau bisa disebut juga implicit track
