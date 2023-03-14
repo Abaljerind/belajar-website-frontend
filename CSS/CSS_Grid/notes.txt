@@ -83,6 +83,6 @@ Berikut properti yg bisa diberikan untuk items:
 
     NOTE: auto-fill & auto-fit ini cocok digunakan untuk membuat responsive, karena secara otomatis akan menentukan jumlah item yg ada didalam container nya sesuai ukuran yg ada, jika tidak cocok ukuran dengan item nya maka item nya akan dipindahkan ke baris baru lagi.
 
-    perbedaan dari keduanya adalah, pada auto-fit, jika itemnya lebih sedikit dari lebar container nya maka dengan auto-fit akan disesuaikan lebar dari masing masing itemnya.
+    * perbedaan dari keduanya adalah, pada auto-fit, jika itemnya lebih sedikit dari lebar container nya maka grid nya akan berhenti pada item terakhir walaupun ada space / ruang kosong yang lebarnya cukup untuk tambahan item lain. Sedangkan auto-fill jika itemnya lebih sedikit dari lebar container nya maka grid nya akan berhenti pada space / ruang kosong yang lebar nya cukup untuk tambahan item lain.
 
 - minmax,
