@@ -116,7 +116,10 @@ Berikut properti yg bisa diberikan untuk items:
     penulisannya:
     grid-area: <nama dari grid-template-areas> | <row-start> / <column-start> / <row-end> / <column-end>;
 
-- justify-self
+- justify-self, mengatur posisi item pada sebuah cell terhadap sumbu horizontal. 
+    penulisannya:
+    justify-content: start | end | center | stretch [default];
+
 - align-self
 - place-self
 
