@@ -77,5 +77,8 @@ Berikut properti yg bisa diberikan untuk items:
     penulisannya:
     grid-template-columns: min-content | max-content;
 
+- auto-fill & auto-fit, Menentukan jumlah item untuk berada pada grid track. Biasanya digunakan didalam nilai repeat.
+    penulisannya:
+    gird-template-columns: repeat(auto-fit, 150px)
+
 - minmax,
-- auto-fill & auto-fit, 
