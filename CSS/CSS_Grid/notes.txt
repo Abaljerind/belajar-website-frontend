@@ -118,9 +118,12 @@ Berikut properti yg bisa diberikan untuk items:
 
 - justify-self, mengatur posisi item pada sebuah cell terhadap sumbu horizontal. 
     penulisannya:
-    justify-content: start | end | center | stretch [default];
+    justify-self: start | end | center | stretch [default];
 
-- align-self
+- align-self, mengatur posisi item pada sebuah cell terhadap sumbu vertikal. 
+    penulisannya:
+    align-self: start | end | center | stretch [default];
+    
 - place-self
 
 * special function & keyword
