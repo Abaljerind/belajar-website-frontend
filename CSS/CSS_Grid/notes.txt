@@ -109,7 +109,13 @@ Berikut properti yg bisa diberikan untuk items:
     grid-column: <start-line> / <end-line> | <start-line> / span <value>;
     grid-row: <start-line> / <end-line> | <start-line> / span <value>;
 
-- grid-area
+- grid-area, ada 2 buah fungsi:
+    1. menentukan nama area pada item sesuai dengan template yg sudah dibuat sebelumnya melalui properti grid-template-areas.
+    2. bisa digunakan sebagai shorthand untuk grid-column-start, grid-column-end, gird-row-start, dan grid-row-end.
+
+    penulisannya:
+    grid-area: <nama dari grid-template-areas> | <row-start> / <column-start> / <row-end> / <column-end>;
+
 - justify-self
 - align-self
 - place-self
