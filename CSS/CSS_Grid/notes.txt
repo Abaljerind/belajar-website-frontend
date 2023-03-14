@@ -45,7 +45,10 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     grid-template-areas: " <nama-area> | none | '.' "
                          " <nama-area> <nama-area> ";
 
-- grid-template
+- grid-template, shorthand untuk mendefinisikan grid-template-rows, grid-template-areas, dan grid-template-columns dalam 1 deklarasi.
+    penulisannya:
+    grid-template: <grid-template-rows> | <grid-template-areas> / <grid-template-columns>;
+
 - grid-column-gap
 - grid-row-gap
 - grid-gap
