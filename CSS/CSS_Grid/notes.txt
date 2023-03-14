@@ -101,6 +101,7 @@ Berikut properti yg bisa diberikan untuk items:
     <nomor> | <nama> : mengacu pada nomor / nama yg kita beri pada grid line.
     span <nomor> : item akan memanjang / melebar sampai sejumlah nomor. 
         * {biasanya lebih sering penggunaan yg nomor ini ketimbang yg nama}
+        NOTE: span disini artinya item akan memanjang dengan penjumlahan dari nilai start + nilai end setelah span nya.
     span <nama> : item akan memanjang / melebar sampai ke nama grid line tertentu.
 
 - grid-column
