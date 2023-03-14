@@ -84,8 +84,10 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
 - align-content, mengatur posisi seluruh grid container pada sumbu "vertikal". Ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran container nya, jadi ada sisa space kosong. Biasanya terjadi jika kita memberikan grid items nya menggunakan ukuran yg fixed (px)
     penulisannya:
     align-content: start | end | center | stretch | space-around | space-between | space-evenly;
-    
-- place-content
+
+- place-content shorthand untuk menuliskan justify-content dan align-content dalam satu deklarasi.
+    penulisannya:
+    place-content: <justify-content> <align-content>;
 
 Berikut properti yg bisa diberikan untuk items:
 - grid-column-start
