@@ -77,7 +77,10 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     penulisannya:
     place-items: <align-items> <justify-items>;
 
-- justify-content
+- justify-content, mengatur posisi seluruh grid container pada sumbu horizontal. Ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran container nya, jadi ada sisa space kosong. Biasanya terjadi jika kita memberikan grid items nya menggunakan ukuran yg fixed (px)
+    penulisannya:
+    justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
+
 - align-content
 - place-content
 
