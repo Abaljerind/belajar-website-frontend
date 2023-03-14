@@ -90,10 +90,19 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     place-content: <justify-content> <align-content>;
 
 Berikut properti yg bisa diberikan untuk items:
-- grid-column-start
-- grid-column-end
-- grid-row-start
-- grid-row-end
+- grid-column-start | grid-column-end | grid-row-start | grid-row-end, menentukan tempat dari grid item dengan mengacu pada nomor atau nama grid line yang spesifik.
+    penulisannya:
+    grid-column-start: <nomor> | <nama> | span <nomor> | span <nama> | auto;
+    grid-column-end: <nomor> | <nama> | span <nomor> | span <nama> | auto;
+    grid-row-start: <nomor> | <nama> | span <nomor> | span <nama> | auto;
+    grid-row-end: <nomor> | <nama> | span <nomor> | span <nama> | auto;
+
+    keterangan:
+    <nomor> | <nama> : mengacu pada nomor / nama yg kita beri pada grid line.
+    span <nomor> : item akan memanjang / melebar sampai sejumlah nomor. 
+        * {biasanya lebih sering penggunaan yg nomor ini ketimbang yg nama}
+    span <nama> : item akan memanjang / melebar sampai ke nama grid line tertentu.
+
 - grid-column
 - grid-row
 - grid-area
