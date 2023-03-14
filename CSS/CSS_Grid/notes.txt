@@ -104,8 +104,11 @@ Berikut properti yg bisa diberikan untuk items:
         NOTE: span disini artinya item akan memanjang dengan penjumlahan dari nilai start + nilai end setelah span nya.
     span <nama> : item akan memanjang / melebar sampai ke nama grid line tertentu.
 
-- grid-column
-- grid-row
+- grid-column | grid-row, shorthand untuk start dan end pada grid-column & grid-row, jadi tidak perlu menuliskan 4 properti tapi cukup 2 properti saja.
+    penulisannya:
+    grid-column: <start-line> / <end-line> | <start-line> / span <value>;
+    grid-row: <start-line> / <end-line> | <start-line> / span <value>;
+
 - grid-area
 - justify-self
 - align-self
