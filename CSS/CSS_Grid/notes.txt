@@ -48,6 +48,14 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
 - grid-template, shorthand untuk mendefinisikan grid-template-rows, grid-template-areas, dan grid-template-columns dalam 1 deklarasi.
     penulisannya:
     grid-template: <grid-template-rows> | <grid-template-areas> / <grid-template-columns>;
+    
+    * NOTE: wajib rows dulu baru columns, kalau mau menyisipkan areas nya bisa disimpan didepan barisnya nya, seperti berikut:
+    grid-template: 50px 100px / 1fr 2fr 3fr => ini rows / columns
+
+    grid-template: 'header header' 50px 'footer footer' 100px / 1fr 2fr 3fr => baris pertama areas nya header 50px dan baris kedua footer 100px
+
+    * Kalau mau menyisipkan nama maka letakkan nama nya didepan untuk tiap tiap baris dari areas nya dan diakhir baris terakhir diletakkan juga namanya, contohnya:
+    grid-template: [baris1-mulai] 'header header' 50px [baris1-akhir baris2-mulai] 'footer footer' 100px [baris2-akhir] / 1fr 2fr 3fr
 
 - grid-column-gap
 - grid-row-gap
