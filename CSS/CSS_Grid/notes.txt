@@ -64,3 +64,18 @@ Berikut properti yg bisa diberikan untuk items:
 - justify-self
 - align-self
 - place-self
+
+* special function & keyword
+- repeat, menentukan ukuran grid track secara berulang.
+    penulisannya:
+    grid-template-columns: repeat(9, 1fr);
+    atau
+    grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr);
+    penjelasan: angka 9 yg dimaksud adalah untuk jumlah pengulangannya, dan 1fr adalah nilai yg diberikan pada tiap item nya. repeat juga bisa digunakan berulang seperti diatas.
+
+- min-content & max-content, untuk menentukan seberapa besar ukuran grid track nya baik horizontal / vertikal berdasarkan content pada sebuah itemnya.
+    penulisannya:
+    grid-template-columns: min-content | max-content;
+
+- minmax,
+- auto-fill & auto-fit, 
