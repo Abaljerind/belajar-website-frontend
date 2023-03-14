@@ -60,11 +60,13 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
 - grid-gap, untuk membuat gap / jarak pada baris / kolom / keduanya, bisa juga diartikan untuk mendefinisikan ukuran grid-line / jarak antar baris atau kolom. Cara penulisannya ada 2 yaitu:
     Properti yg versi lama: grid-gap | grid-column-gap | grid-row-gap
 
-    Properti yg versi baru: column-gap | row-gap
+    Properti yg versi baru: gap | column-gap | row-gap
+
+- grid, shorthand untuk mendefinisikan properti - properti berikut dalam satu deklarasi:
+    grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, dan grid-auto-flow
 
 - grid-column-gap
 - grid-row-gap
-- grid
 - justify-items
 - align-items
 - place-items
