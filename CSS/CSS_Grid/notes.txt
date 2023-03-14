@@ -85,7 +85,7 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     penulisannya:
     align-content: start | end | center | stretch | space-around | space-between | space-evenly;
 
-- place-content shorthand untuk menuliskan justify-content dan align-content dalam satu deklarasi.
+- place-content, shorthand untuk menuliskan justify-content dan align-content dalam satu deklarasi.
     penulisannya:
     place-content: <justify-content> <align-content>;
 
@@ -123,8 +123,10 @@ Berikut properti yg bisa diberikan untuk items:
 - align-self, mengatur posisi item pada sebuah cell terhadap sumbu vertikal. 
     penulisannya:
     align-self: start | end | center | stretch [default];
-    
-- place-self
+
+- place-self, shorthand untuk menuliskan justify-self dan align-self dalam satu deklarasi.
+    penulisannya:
+    place-self: <align-self> <justify-self>;
 
 * special function & keyword
 - repeat, menentukan ukuran grid track secara berulang.
