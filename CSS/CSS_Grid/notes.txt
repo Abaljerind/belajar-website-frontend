@@ -69,7 +69,10 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     penulisannya:
     justify-items: start | end | center | stretch [default];
 
-- align-items
+- align-items, mensejajarkan grid-items pada sumbu vertikal.
+    penulisannya:
+    align-items: start | end | center | stretch [default];
+
 - place-items
 - justify-content
 - align-content
