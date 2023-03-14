@@ -85,4 +85,6 @@ Berikut properti yg bisa diberikan untuk items:
 
     * perbedaan dari keduanya adalah, pada auto-fit, jika itemnya lebih sedikit dari lebar container nya maka grid nya akan berhenti pada item terakhir walaupun ada space / ruang kosong yang lebarnya cukup untuk tambahan item lain. Sedangkan auto-fill jika itemnya lebih sedikit dari lebar container nya maka grid nya akan berhenti pada space / ruang kosong yang lebar nya cukup untuk tambahan item lain.
 
-- minmax,
+- minmax, untuk menentukan ukuran minimal dan maksimal dari grid track.
+    penulisannya:
+    grid-template-columns: minmax(200px, 300px);
