@@ -57,9 +57,13 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     * Kalau mau menyisipkan nama maka letakkan nama nya didepan untuk tiap tiap baris dari areas nya dan diakhir baris terakhir diletakkan juga namanya, contohnya:
     grid-template: [baris1-mulai] 'header header' 50px [baris1-akhir baris2-mulai] 'footer footer' 100px [baris2-akhir] / 1fr 2fr 3fr
 
+- grid-gap, untuk membuat gap / jarak pada baris / kolom / keduanya, bisa juga diartikan untuk mendefinisikan ukuran grid-line / jarak antar baris atau kolom. Cara penulisannya ada 2 yaitu:
+    Properti yg versi lama: grid-gap | grid-column-gap | grid-row-gap
+
+    Properti yg versi baru: column-gap | row-gap
+
 - grid-column-gap
 - grid-row-gap
-- grid-gap
 - grid
 - justify-items
 - align-items
