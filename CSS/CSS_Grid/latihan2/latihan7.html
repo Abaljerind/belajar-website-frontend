@@ -17,9 +17,8 @@
         width: 60%;
         margin: 50px auto;
         display: grid;
-        border: 5px orange solid;
         /* grid-template-columns: 1fr 2fr 50px; */
-        grid-template-columns: repeat(auto-fit, 100px);
+        grid-template-columns: 1fr minmax(200px, 300px) 1fr;
       }
 
       .item {
@@ -36,9 +35,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="item">1</div>
+      <div class="item">naruto</div>
       <div class="item">2</div>
-      <div class="item">3</div>
+      <div class="item">uzumaki</div>
       <!-- <div class="item">4</div>
       <div class="item">5</div>
       <div class="item">6</div>
