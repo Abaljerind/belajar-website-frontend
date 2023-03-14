@@ -73,7 +73,10 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     penulisannya:
     align-items: start | end | center | stretch [default];
 
-- place-items
+- place-items, shorthand untuk menuliskan justify-items dan align-items dalam satu deklarasi.
+    penulisannya:
+    place-items: <align-items> <justify-items>;
+
 - justify-content
 - align-content
 - place-content
