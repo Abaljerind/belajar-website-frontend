@@ -88,3 +88,5 @@ Berikut properti yg bisa diberikan untuk items:
 - minmax, untuk menentukan ukuran minimal dan maksimal dari grid track.
     penulisannya:
     grid-template-columns: minmax(200px, 300px);
+    atau
+    grid-template-columns: 1fr minmax(200px, 300px) 1fr;
