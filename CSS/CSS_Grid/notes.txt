@@ -40,7 +40,11 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     Cara penulisannya:
     grid-auto-flow: row | column | row dense | column dense;
 
-- grid-template-areas
+- grid-template-areas, mendefinisikan grid template menggunakan nama dari area yang ditulis pada property "grid-area" pada items.
+    penulisannya:
+    grid-template-areas: " <nama-area> | none | '.' "
+                         " <nama-area> <nama-area> ";
+
 - grid-template
 - grid-column-gap
 - grid-row-gap
