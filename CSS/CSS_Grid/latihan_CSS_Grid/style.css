@@ -186,6 +186,34 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .menu {
+    order: -1;
+    justify-items: end;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: rgb(171, 71, 176);
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: -1;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media screen and (max-width: 550px) {
