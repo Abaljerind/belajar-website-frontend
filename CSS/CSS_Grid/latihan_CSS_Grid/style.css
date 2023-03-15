@@ -218,5 +218,11 @@ body {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
+  .header {
+    grid-template-areas:
+      "hero"
+      "feature-1"
+      "feature-2";
+  }
 }
