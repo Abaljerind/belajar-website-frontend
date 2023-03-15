@@ -109,6 +109,7 @@ body {
   justify-content: space-between;
   height: 20px;
   position: relative;
+  z-index: 999;
 }
 
 .menu-toggle span {
@@ -194,25 +195,26 @@ body {
     display: flex;
   }
 
-  nav ul {
+  .menu ul {
+    display: flex;
     position: absolute;
     right: 0;
     height: 100vh;
     top: 0;
-    background-color: rgb(171, 71, 176);
-    width: 80%;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    z-index: -1;
-    transform: translateX(100%);
+    z-index: 1;
+    transform: translateY(-100%);
     opacity: 0;
     transition: all 1s;
   }
 
-  nav ul.slide {
+  .menu ul.slide {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
