@@ -102,6 +102,30 @@ body {
   padding: 5px;
 }
 
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
 /* Responsive Breakpoint */
 @media screen and (max-width: 1024px) {
   .menu {
@@ -134,4 +158,35 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+}
+
+/* hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  position: relative;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(250, 199, 255);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  display: block;
+  position: absolute;
+  background-color: black;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
 }
