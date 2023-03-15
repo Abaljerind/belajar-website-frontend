@@ -14,6 +14,12 @@ body {
   margin: 50px;
 }
 
+/* container */
+.container {
+  display: grid;
+  gap: 10px;
+}
+
 /* header */
 .header {
   display: grid;
@@ -67,6 +73,7 @@ body {
 
 /* navigasi */
 .menu {
+  order: -1;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
@@ -93,4 +100,38 @@ body {
   text-decoration: none;
   text-align: center;
   padding: 5px;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 1024px) {
+  .menu {
+    order: inherit;
+    grid-template-columns: 1fr;
+  }
+
+  .menu .brand {
+    display: none;
+  }
+
+  .hero h2,
+  .hero p {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .hero {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 550px) {
 }
