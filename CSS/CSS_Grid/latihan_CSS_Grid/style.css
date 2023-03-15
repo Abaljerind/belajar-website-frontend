@@ -13,3 +13,54 @@ body {
   font-family: "Sono", Arial, Helvetica, sans-serif;
   margin: 50px;
 }
+
+/* header */
+.header {
+  display: grid;
+  grid-template-areas:
+    "hero hero feature-1"
+    "hero hero feature-2";
+}
+
+.hero {
+  grid-area: hero;
+  min-height: 300px;
+  background-image: url(img/rsz_hero-suit.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+}
+
+/* untuk menghilangkan text di dalam kelas hero */
+.hero h2,
+.hero p {
+  display: none;
+}
+
+.features {
+  background-color: black;
+  color: white;
+  display: grid;
+  /* justify-content: center;
+  align-content: center; */
+  place-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.feature-1 {
+  grid-area: feature-1;
+  background-image: url(img/shirt-jeans.jpg);
+  background-size: cover;
+}
+
+.feature-2 {
+  grid-area: feature-2;
+  background-image: url(img/sweater-jeans.jpg);
+  background-size: cover;
+}
+
+.features .price {
+  font-size: 3em;
+  font-weight: 200;
+}
