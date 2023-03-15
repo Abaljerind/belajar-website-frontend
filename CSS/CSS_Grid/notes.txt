@@ -9,23 +9,23 @@ istilah di css grid:
 6. grid track, ukuran / jarak antara 2 grid line (cell) baik secara horizontal maupun vertikal.
 7. grid gap, jarak antara grid track / cell. seperti cell spacing pada properti border di suatu table.
 
-properti yg ada pada css grid, dibagi menjadi 2 yaitu properti yg diberikan untuk container dan items. Berikut properti yg bisa diberikan untuk container:
-- grid-template-columns, mendefinisikan kolom dengan cara menuliskan nilai yg dipisahkan oleh spasi. 
-Contoh grid-template-columns: 1fr 1.5fr; <ini berarti jumlah column nya ada 2> | cara penulisan nya ada 2 tipe yaitu dengan angka saja atau kita bisa memberikan nama untuk line lalu diikuti angka, seperti ini format penulisan nya:
+* properti yg ada pada css grid, dibagi menjadi 2 yaitu properti yg diberikan untuk container dan items. Berikut properti yg bisa diberikan untuk container:
+    - grid-template-columns, mendefinisikan kolom dengan cara menuliskan nilai yg dipisahkan oleh spasi. 
+    Contoh grid-template-columns: 1fr 1.5fr; <ini berarti jumlah column nya ada 2> | cara penulisan nya ada 2 tipe yaitu dengan angka saja atau kita bisa memberikan nama untuk line lalu diikuti angka, seperti ini format penulisan nya:
     display:grid;
     grid-template-columns: <track-size> ... | <line-name> <track-size> ... ;
     * <track-size> : bisa berupa px, %, auto, atau fr (fraction) bisa disebut juga bagian.
     * <line-name> : nama yg bisa diberikan pada track
 
-- grid-template-rows, mendefinisikan baris dengan cara menuliskan nilai yg dipisahkan oleh spasi. 
-Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | cara penulisan nya ada 2 tipe yaitu dengan angka saja atau kita bisa memberikan nama untuk line lalu diikuti angka, seperti ini format penulisan nya:
+    - grid-template-rows, mendefinisikan baris dengan cara menuliskan nilai yg dipisahkan oleh spasi. 
+    Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | cara penulisan nya ada 2 tipe yaitu dengan angka saja atau kita bisa memberikan nama untuk line lalu diikuti angka, seperti ini format penulisan nya:
     display:grid;
     grid-template-rows: <track-size> ... | <line-name> <track-size> ... ;
     * <track-size> : bisa berupa px, %, auto, atau fr (fraction) bisa disebut juga bagian. fr bisa digunakan agar website jadi responsive
     * <line-name> : nama yg bisa diberikan pada track
 
-- grid-auto-columns, mengatur ukuran grid track yg tidak dituliskan pada grid-template atau bisa disebut juga implicit track
-- grid-auto-rows, mengatur ukuran grid track yg tidak dituliskan pada grid-template atau bisa disebut juga implicit track
+    - grid-auto-columns, mengatur ukuran grid track yg tidak dituliskan pada grid-template atau bisa disebut juga implicit track
+    - grid-auto-rows, mengatur ukuran grid track yg tidak dituliskan pada grid-template atau bisa disebut juga implicit track
     
     #explicit & implicit:
         - explicit adalah nilai baris / kolom yg dituliskan dengan jelas seperti 50px, 10px, 20% dll.
@@ -35,17 +35,17 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     grid-auto-columns: <track-size>;
     grid-auto-rows: <track-size>;
 
-- grid-auto-flow, mengatur penempatan item / cell pada grid track, termasuk yang ditulis secara implicit.
+    - grid-auto-flow, mengatur penempatan item / cell pada grid track, termasuk yang ditulis secara implicit.
 
     Cara penulisannya:
     grid-auto-flow: row | column | row dense | column dense;
 
-- grid-template-areas, mendefinisikan grid template menggunakan nama dari area yang ditulis pada property "grid-area" pada items.
+    - grid-template-areas, mendefinisikan grid template menggunakan nama dari area yang ditulis pada property "grid-area" pada items.
     penulisannya:
     grid-template-areas: " <nama-area> | none | '.' "
                          " <nama-area> <nama-area> ";
 
-- grid-template, shorthand untuk mendefinisikan grid-template-rows, grid-template-areas, dan grid-template-columns dalam 1 deklarasi.
+    - grid-template, shorthand untuk mendefinisikan grid-template-rows, grid-template-areas, dan grid-template-columns dalam 1 deklarasi.
     penulisannya:
     grid-template: <grid-template-rows> | <grid-template-areas> / <grid-template-columns>;
     
@@ -57,40 +57,40 @@ Contoh grid-template-rows: 1fr 1.5fr 2fr; <ini berarti jumlah row nya ada 3> | c
     * Kalau mau menyisipkan nama maka letakkan nama nya didepan untuk tiap tiap baris dari areas nya dan diakhir baris terakhir diletakkan juga namanya, contohnya:
     grid-template: [baris1-mulai] 'header header' 50px [baris1-akhir baris2-mulai] 'footer footer' 100px [baris2-akhir] / 1fr 2fr 3fr
 
-- grid-gap, untuk membuat gap / jarak pada baris / kolom / keduanya, bisa juga diartikan untuk mendefinisikan ukuran grid-line / jarak antar baris atau kolom. Cara penulisannya ada 2 yaitu:
+    - grid-gap, untuk membuat gap / jarak pada baris / kolom / keduanya, bisa juga diartikan untuk mendefinisikan ukuran grid-line / jarak antar baris atau kolom. Cara penulisannya ada 2 yaitu:
     Properti yg versi lama: grid-gap | grid-column-gap | grid-row-gap
 
     Properti yg versi baru: gap | column-gap | row-gap
 
-- grid, shorthand untuk mendefinisikan properti - properti berikut dalam satu deklarasi:
+    - grid, shorthand untuk mendefinisikan properti - properti berikut dalam satu deklarasi:
     grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, dan grid-auto-flow
 
-- justify-items, mensejajarkan grid-items pada sumbu "horizontal".
+    - justify-items, mensejajarkan grid-items pada sumbu "horizontal".
     penulisannya:
     justify-items: start | end | center | stretch [default];
 
-- align-items, mensejajarkan grid-items pada sumbu "vertikal".
+    - align-items, mensejajarkan grid-items pada sumbu "vertikal".
     penulisannya:
     align-items: start | end | center | stretch [default];
 
-- place-items, shorthand untuk menuliskan justify-items dan align-items dalam satu deklarasi.
+    - place-items, shorthand untuk menuliskan justify-items dan align-items dalam satu deklarasi.
     penulisannya:
     place-items: <align-items> <justify-items>;
 
-- justify-content, mengatur posisi seluruh grid container pada sumbu "horizontal". Ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran container nya, jadi ada sisa space kosong. Biasanya terjadi jika kita memberikan grid items nya menggunakan ukuran yg fixed (px)
+    - justify-content, mengatur posisi seluruh grid container pada sumbu "horizontal". Ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran container nya, jadi ada sisa space kosong. Biasanya terjadi jika kita memberikan grid items nya menggunakan ukuran yg fixed (px)
     penulisannya:
     justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
 
-- align-content, mengatur posisi seluruh grid container pada sumbu "vertikal". Ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran container nya, jadi ada sisa space kosong. Biasanya terjadi jika kita memberikan grid items nya menggunakan ukuran yg fixed (px)
+    - align-content, mengatur posisi seluruh grid container pada sumbu "vertikal". Ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran container nya, jadi ada sisa space kosong. Biasanya terjadi jika kita memberikan grid items nya menggunakan ukuran yg fixed (px)
     penulisannya:
     align-content: start | end | center | stretch | space-around | space-between | space-evenly;
 
-- place-content, shorthand untuk menuliskan justify-content dan align-content dalam satu deklarasi.
+    - place-content, shorthand untuk menuliskan justify-content dan align-content dalam satu deklarasi.
     penulisannya:
     place-content: <justify-content> <align-content>;
 
 Berikut properti yg bisa diberikan untuk items:
-- grid-column-start | grid-column-end | grid-row-start | grid-row-end, menentukan tempat dari grid item dengan mengacu pada nomor atau nama grid line yang spesifik.
+    - grid-column-start | grid-column-end | grid-row-start | grid-row-end, menentukan tempat dari grid item dengan mengacu pada nomor atau nama grid line yang spesifik.
     penulisannya:
     grid-column-start: <nomor> | <nama> | span <nomor> | span <nama> | auto;
     grid-column-end: <nomor> | <nama> | span <nomor> | span <nama> | auto;
@@ -104,43 +104,43 @@ Berikut properti yg bisa diberikan untuk items:
         NOTE: span disini artinya item akan memanjang dengan penjumlahan dari nilai start + nilai end setelah span nya.
     span <nama> : item akan memanjang / melebar sampai ke nama grid line tertentu.
 
-- grid-column | grid-row, shorthand untuk start dan end pada grid-column & grid-row, jadi tidak perlu menuliskan 4 properti tapi cukup 2 properti saja.
+    - grid-column | grid-row, shorthand untuk start dan end pada grid-column & grid-row, jadi tidak perlu menuliskan 4 properti tapi cukup 2 properti saja.
     penulisannya:
     grid-column: <start-line> / <end-line> | <start-line> / span <value>;
     grid-row: <start-line> / <end-line> | <start-line> / span <value>;
 
-- grid-area, ada 2 buah fungsi:
+    - grid-area, ada 2 buah fungsi:
     1. menentukan nama area pada item sesuai dengan template yg sudah dibuat sebelumnya melalui properti grid-template-areas.
     2. bisa digunakan sebagai shorthand untuk grid-column-start, grid-column-end, gird-row-start, dan grid-row-end.
 
     penulisannya:
     grid-area: <nama dari grid-template-areas> | <row-start> / <column-start> / <row-end> / <column-end>;
 
-- justify-self, mengatur posisi item pada sebuah cell terhadap sumbu horizontal. 
+    - justify-self, mengatur posisi item pada sebuah cell terhadap sumbu horizontal. 
     penulisannya:
     justify-self: start | end | center | stretch [default];
 
-- align-self, mengatur posisi item pada sebuah cell terhadap sumbu vertikal. 
+    - align-self, mengatur posisi item pada sebuah cell terhadap sumbu vertikal. 
     penulisannya:
     align-self: start | end | center | stretch [default];
 
-- place-self, shorthand untuk menuliskan justify-self dan align-self dalam satu deklarasi.
+    - place-self, shorthand untuk menuliskan justify-self dan align-self dalam satu deklarasi.
     penulisannya:
     place-self: <align-self> <justify-self>;
 
 * special function & keyword
-- repeat, menentukan ukuran grid track secara berulang.
+    - repeat, menentukan ukuran grid track secara berulang.
     penulisannya:
     grid-template-columns: repeat(9, 1fr);
     atau
     grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr);
     penjelasan: angka 9 yg dimaksud adalah untuk jumlah pengulangannya, dan 1fr adalah nilai yg diberikan pada tiap item nya. repeat juga bisa digunakan berulang seperti diatas.
 
-- min-content & max-content, untuk menentukan seberapa besar ukuran grid track nya baik horizontal / vertikal berdasarkan content pada sebuah itemnya.
+    - min-content & max-content, untuk menentukan seberapa besar ukuran grid track nya baik horizontal / vertikal berdasarkan content pada sebuah itemnya.
     penulisannya:
     grid-template-columns: min-content | max-content;
 
-- auto-fill & auto-fit, Menentukan jumlah item untuk berada pada grid track. Biasanya digunakan didalam nilai repeat.
+    - auto-fill & auto-fit, Menentukan jumlah item untuk berada pada grid track. Biasanya digunakan didalam nilai repeat.
     penulisannya:
     gird-template-columns: repeat(auto-fit, 150px)
 
@@ -148,7 +148,7 @@ Berikut properti yg bisa diberikan untuk items:
 
     * perbedaan dari keduanya adalah, pada auto-fit, jika itemnya lebih sedikit dari lebar container nya maka grid nya akan berhenti pada item terakhir walaupun ada space / ruang kosong yang lebarnya cukup untuk tambahan item lain. Sedangkan auto-fill jika itemnya lebih sedikit dari lebar container nya maka grid nya akan berhenti pada space / ruang kosong yang lebar nya cukup untuk tambahan item lain.
 
-- minmax, untuk menentukan ukuran minimal dan maksimal dari grid track.
+    - minmax, untuk menentukan ukuran minimal dan maksimal dari grid track.
     penulisannya:
     grid-template-columns: minmax(200px, 300px);
     atau
