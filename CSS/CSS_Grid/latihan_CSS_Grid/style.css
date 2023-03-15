@@ -115,7 +115,7 @@ body {
   display: block;
   width: 28px;
   height: 3px;
-  background-color: rgb(250, 199, 255);
+  background-color: black;
   border-radius: 3px;
   transition: all 0.5s;
 }
