@@ -1,136 +1,138 @@
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ddd;
-    line-height: 1.65;
-    padding-bottom: 1000px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+  line-height: 1.65;
+  padding-bottom: 1000px;
 }
 
 /* latihan 1 */
 .container-satu {
-    width: 800px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
+  width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .kolom-utama {
-    flex: 3;
-    order: 2;
+  flex: 3;
+  order: 2;
 }
 
 .sidebar-satu {
-    flex: 1;
-    order: 1;
+  flex: 1;
+  order: 1;
 }
 
 .sidebar-dua {
-    flex: 1;
-    order: 3;
+  flex: 1;
+  order: 3;
 }
 
 /* latihan 2 */
 .container-dua {
-    max-width: 800px;
-    margin: 50px auto;
+  max-width: 800px;
+  margin: 50px auto;
 }
 
-.layanan-satu, .layanan-dua, .layanan-tiga {
-    padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+.layanan-satu,
+.layanan-dua,
+.layanan-tiga {
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .layanan-satu {
-    background-color: rgb(119, 119, 255);
+  background-color: rgb(119, 119, 255);
 }
 
 .layanan-dua {
-    background-color: rgb(103, 216, 103);
+  background-color: rgb(103, 216, 103);
 }
 
 .layanan-tiga {
-    background-color: rgb(255, 124, 124);
+  background-color: rgb(255, 124, 124);
 }
 
 /* latihan 3 */
 .container-tiga {
-    max-width: 800px;
-    margin: 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* max-width digunakan agar saat browser di kecilkan ukuran dari isinya bisa ikut mengecil jadi tidak akan fix ukurannya. */
 
 .thumbnail {
-    width: 50%;
+  width: 50%;
 }
 
 /* dengan properti width 100% maka img akan mengikuti ukuran dari thumbnail nya. karna 100% = 800px dari lebarnya sehingga dengan display flex, img nya akan mengikuti lebar container nya. */
 .thumbnail img {
-    width: 100%;
+  width: 100%;
 }
-
 
 /* latihan 4 */
 .container-empat {
-    max-width: 800px;
-    margin: 50px auto;
+  max-width: 800px;
+  margin: 50px auto;
 }
 
 .card {
-    border: 1px solid #aaa;
-    border-radius: 10px;
-    background-color: #eee;
-    overflow: hidden;
-    margin: 10px;
-    flex: 1;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: #eee;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .card .header {
-    height: 150px;
-    background-color: #666;
+  height: 150px;
+  background-color: #666;
 }
 
 .card .content {
-    text-align: center;
-    padding-bottom: 20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .card.besar {
-    transform: scale(1.12);
+  transform: scale(1.03);
 }
-
 
 /* latihan 5 */
 .container-lima {
-    width: 500px;
-    height: 500px;
-    margin: 50px auto;
-    border: 5px solid black;
-    display: flex;
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  border: 5px solid black;
+  display: flex;
 }
 
 .kotak {
-    width: 100px;
-    height: 100px;
-    background-color: brown;
-    color: white;
-    text-align: center;
-    margin: auto;
-    display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  margin: auto;
+  display: flex;
 }
 
 .kotak span {
-    margin: auto;
+  margin: auto;
 }
 
 /* kelas untuk responsive */
@@ -140,21 +142,32 @@ body {
 intinya jika lebarnya dibawah 600px maka display flex dibawah tidak akan dijalankan, tetapi jika lebarnya minimal sudah 600px atau lebih maka display flex dibawah dijalankan.
 
 */
-@media( min-width: 600px) {
-    .container-dua {
-        display: flex;
-        justify-content: space-between;
-    }
+@media (min-width: 600px) {
+  .container-dua {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .layanan-satu, .layanan-dua, .layanan-tiga {
-        width: 30%;
-    }
+  .layanan-satu,
+  .layanan-dua,
+  .layanan-tiga {
+    width: 30%;
+  }
 
-    .thumbnail {
-        width: 25%;
-    }
+  .thumbnail {
+    width: 25%;
+  }
 
-    .container-empat {
-        display: flex;
-    }
+  .container-empat {
+    display: flex;
+  }
+
+  .card {
+    flex: 1;
+    margin: 10px;
+  }
+
+  .card.besar {
+    transform: scale(1.12);
+  }
 }
