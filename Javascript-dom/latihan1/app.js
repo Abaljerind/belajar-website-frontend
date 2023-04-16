@@ -19,3 +19,8 @@ h1.style.fontSize = "50px";
 
 // document.getElementsByClassName()
 // -> HTMLCollections
+const p1 = document.getElementsByClassName("p1")[0];
+p1.innerHTML = "ini diubah dari javascript";
+
+// cara mengubah variable yg berisi element html yg menghasilkan HTMLCollections adalah dengan menambahkan index nya, baik saat men-seleksi elemen atau saat menggunakan variable nya:
+// contoh: p1[0].innerHTML = 'ini contoh nya";
