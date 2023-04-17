@@ -1,6 +1,5 @@
-// DOM SELECTION part 1
+// dom selection part 1
 
-// dom selection
 // document.getElementById()
 const judul = document.getElementById("judul");
 judul.style.color = "salmon";
