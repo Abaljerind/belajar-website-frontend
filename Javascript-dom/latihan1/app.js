@@ -1,3 +1,5 @@
+// DOM SELECTION part 1
+
 // dom selection
 // document.getElementById()
 const judul = document.getElementById("judul");
