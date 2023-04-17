@@ -1,3 +1,5 @@
+// dom selection part 2
+
 // document.querySelector()
 // const p4 = document.querySelector("#b p");
 // p4.style.color = "green";
