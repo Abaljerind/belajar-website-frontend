@@ -20,3 +20,6 @@ a.setAttribute("id", "link");
 
 console.log(a.getAttribute("href"));
 console.log(judul.getAttribute("id"));
+
+// menghilangkan attribute
+// console.log(a.removeAttribute('href'))
