@@ -1,13 +1,20 @@
 // DOM Events
 // ada 2 tipe:
 // 1. Event Handler -> ada 2
-// a. inline html attribute, disimpan sebagai atribute html
+// a. inline html attribute (TIDAK DISARANKAN), disimpan sebagai atribute html
 // contoh <p class="p3" onclick="ubahWarnaP3()">paragraf 3</p>
 
 // b. element method, disimpan sebagai method
 // contoh p2.onclick = ubahWarnaP2;
 
 // 2. addEventListener()
+
+// perbedaan event handler & addEventListener,
+// pada event handler, ketika ada lebih dari 1 event pada elemen yg sama maka event yg pertama akan ditimpa oleh event kedua,
+// sedangkan pada addEventListener, kedua event akan dijalankan bersamaan
+
+// Event List:
+// mouse event, keyboard event, resources event, focus event, view event, form event, css animation & transition event, drag & drop event, dll, bisa cek di https://developer.mozilla.org/en-US/docs/Web/Events
 
 // ---------------------------------------------------------------
 
