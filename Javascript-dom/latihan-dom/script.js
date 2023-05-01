@@ -29,10 +29,28 @@ tAcakWarna.addEventListener("click", function () {
 //
 // ----------------------------------------------------------------------------
 
-// add const sMerah + event listener untuk mengubah warna merah dengan slider nya
+// add const sMerah, sHijau, sBiru + event listener untuk mengubah warna merah dengan slider nya
 const sMerah = document.querySelector("input[name=sMerah]");
+const sHijau = document.querySelector("input[name=sHijau]");
+const sBiru = document.querySelector("input[name=sBiru]");
 
-sMerah.addEventListener("change", function () {
+sMerah.addEventListener("input", function () {
   const r = sMerah.value;
-  document.body.style.backgroundColor = `rgb(${r},100,100)`;
+  const g = sHijau.value;
+  const b = sBiru.value;
+  document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+});
+
+sHijau.addEventListener("input", function () {
+  const r = sMerah.value;
+  const g = sHijau.value;
+  const b = sBiru.value;
+  document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+});
+
+sBiru.addEventListener("input", function () {
+  const r = sMerah.value;
+  const g = sHijau.value;
+  const b = sBiru.value;
+  document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
 });
