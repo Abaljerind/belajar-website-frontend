@@ -60,3 +60,18 @@ sectionA.removeChild(link);
 
 //
 // replaceChild()
+// kita perlu tau 'parent' nya, lalu kita tangkap 'elemen' yang mau kita 'replace' nya, terakhir kita perlu buat 'elemen baru'
+const sectionB = document.getElementById("b");
+
+// p4 adalah elemen yang mau kita replace
+const p4 = sectionB.querySelector("p");
+
+// h2Baru adalah elemen pengganti nya, yg perlu dibuat
+const h2Baru = document.createElement("h2");
+
+const teksH2Baru = document.createTextNode("Judul baru!");
+
+h2Baru.appendChild(teksH2Baru);
+
+// terakhir kita replace dengan p4
+sectionB.replaceChild(h2Baru, p4);
