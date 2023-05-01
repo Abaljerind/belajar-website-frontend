@@ -75,3 +75,9 @@ h2Baru.appendChild(teksH2Baru);
 
 // terakhir kita replace dengan p4
 sectionB.replaceChild(h2Baru, p4);
+
+//
+// menandai elemen baru
+pBaru.style.backgroundColor = "lightgreen";
+liBaru.style.backgroundColor = "lightgreen";
+h2Baru.style.backgroundColor = "lightgreen";
