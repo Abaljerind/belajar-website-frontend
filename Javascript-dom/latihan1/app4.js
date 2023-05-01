@@ -48,3 +48,15 @@ const ul = document.querySelector("section#b ul");
 const li2 = ul.querySelector("li:nth-child(2)");
 
 ul.insertBefore(liBaru, li2);
+
+// --------------------------------------------------------------
+// contoh removeChild() dan replaceChild()
+// untuk melakukan removeChild(), kita harus tau 'parent' nya siapa, lalu 'elemen' yang akan kita remove apa
+
+const link = sectionA.getElementsByTagName("a")[0];
+// note: karena parent nya sudah dibuat diatas yaitu 'sectionA' jadi kita hanya perlu elemen yang akan kita remove saja.
+
+sectionA.removeChild(link);
+
+//
+// replaceChild()
