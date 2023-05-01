@@ -17,6 +17,7 @@
 // teori pembuatan node => kita buat elemennya dulu, lalu buat isinya berupa teks, lalu kita minta js untuk memasukkan teks tersebut ke dalam elemen dan menyimpannya di dalam body yang kita inginkan.
 
 // --------------------------------------------------------------
+// contoh buat elemen baru dengan appendChild
 
 // buat elemen baru
 const pBaru = document.createElement("p");
@@ -32,3 +33,18 @@ const sectionA = document.querySelector("section#a");
 
 sectionA.appendChild(pBaru);
 // done, pBaru akan muncul dengan teks Paragraf baru.
+
+// --------------------------------------------------------------
+// contoh buat elemen baru dengan insertBefore()
+
+const liBaru = document.createElement("li");
+
+const teksLiBaru = document.createTextNode("item baru");
+
+liBaru.appendChild(teksLiBaru);
+
+// khusus untuk insertBefore(), kita perlu elemen parent / pembungkusnya & juga elemen berikut nya dimana elemen yang kita ingin tempatkan ada di atas / sebelum elemen berikut tersebut.
+const ul = document.querySelector("section#b ul");
+const li2 = ul.querySelector("li:nth-child(2)");
+
+ul.insertBefore(liBaru, li2);
