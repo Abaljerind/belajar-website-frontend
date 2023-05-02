@@ -36,5 +36,9 @@ body {
 
 .fade {
   opacity: 0;
-  animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s forwards;
+}
+
+.active {
+  opacity: 0.5s;
 }
