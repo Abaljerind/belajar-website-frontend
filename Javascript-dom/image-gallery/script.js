@@ -7,5 +7,9 @@ container.addEventListener("click", function (e) {
   if (e.target.className == "thumb") {
     // kalau iya, maka ganti src di class jumbo dengan isi dari src target yang di klik
     jumbo.src = e.target.src;
+    jumbo.classList.add("fade");
+    setTimeout(function () {
+      jumbo.classList.remove("fade");
+    }, 500);
   }
 });
