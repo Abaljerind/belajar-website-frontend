@@ -5,3 +5,20 @@ const generateRandomColor = () => {
 
   return `rgb(${r},${g},${b})`;
 };
+
+const buttons = document.querySelectorAll("button");
+
+for (const button of buttons) {
+  button.addEventListener("click", colorize);
+}
+
+const headings = document.querySelectorAll("h1");
+
+for (const heading of headings) {
+  heading.addEventListener("click", colorize);
+}
+
+function colorize() {
+  this.style.backgroundColor = generateRandomColor();
+  this.style.color = generateRandomColor();
+}
