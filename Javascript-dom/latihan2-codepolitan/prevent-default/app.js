@@ -44,3 +44,19 @@ input.addEventListener("input", (e) => {
 
   console.log("input berhasil");
 });
+
+// akhir contoh prevent-default
+
+// contoh event delegation -> ketika suatu interaksi yang user lakukan dengan sejumlah besar element child yang dibungkus di dalam element parent nya. 'maka kita membuat event listener nya di element parent nya', BUKAN pada setiap element child nya secara individu.
+
+// event dibawah ini hanya akan menghapus list ketika list nya di klik, dimana datanya diambil berdasarkan id note dengan tag html nya 'ul'. intinya kalau yang diambil adalah element parent nya maka element anak / child nya akan bisa diakses juga dengan menggunakan 'e.target.nodeName'
+list.addEventListener("click", function (e) {
+  // console.log(e.target.nodeName);
+
+  // hanya menghapus element yg nama nodeName nya = 'LI'
+  e.target.nodeName === "LI" && e.target.remove();
+  // console.dir(e.target);
+
+  // kalau mau menghapus semua elemen yang ada di dalam tag 'ul' yang id nya 'note' bisa dengan code dibawah
+  // e.target.remove();
+});
