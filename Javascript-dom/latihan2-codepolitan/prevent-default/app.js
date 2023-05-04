@@ -47,6 +47,9 @@ input.addEventListener("input", (e) => {
 
 // akhir contoh prevent-default
 
+//
+// event delegation
+
 // contoh event delegation -> ketika suatu interaksi yang user lakukan dengan sejumlah besar element child yang dibungkus di dalam element parent nya. 'maka kita membuat event listener nya di element parent nya', BUKAN pada setiap element child nya secara individu.
 
 // event dibawah ini hanya akan menghapus list ketika list nya di klik, dimana datanya diambil berdasarkan id note dengan tag html nya 'ul'. intinya kalau yang diambil adalah element parent nya maka element anak / child nya akan bisa diakses juga dengan menggunakan 'e.target.nodeName'
