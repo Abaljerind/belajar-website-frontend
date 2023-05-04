@@ -33,3 +33,14 @@ form.addEventListener("submit", function (e) {
   //   agar input nya kembali kosong setelah kita masukkan text tambahkan code dibawah
   input.value = "";
 });
+
+// contoh penggunaan event input & change
+// input.addEventListener("change", (e) => {
+//   console.log("input berubah");
+// });
+
+input.addEventListener("input", (e) => {
+  document.querySelector("h1").innerText = input.value;
+
+  console.log("input berhasil");
+});
