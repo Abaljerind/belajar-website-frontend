@@ -42,4 +42,44 @@ Dengan membuat Web Service yang khususnya kita buat sekarang adalah REST, kita b
  - number
  - null
 
-*** Cek kode di folder htdocs di xampp
+*** Cek cara membuat file json sederhana di folder htdocs di xampp. Untuk mengakses file json dari browser, pastikan xampp sudah menyala dan berjalan, lalu buka chrome dan ketikkan 'localhost' atau '127.xxxxxx', contoh: http://localhost/rest-api/coba.json
+
+* Pada Javascript ada 2 method yang harus dipahami:
+ - JSON.stringify(), untuk mengubah object menjadi JSON.
+    contoh:
+    var data = {
+        a: '1',
+        b: '2',
+        c: '3'
+    }
+
+    console.log(JSON.stringify(data));
+
+    hasilnya:
+    {"a":"1","b":"2","c":"3"}
+
+ - JSON.parse(), untuk mengubah JSON menjadi object dengan cara me-request file JSON lalu mengubahnya menjadi object (menggunakan XMLHttpRequest)
+    contoh:
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if( xhr.readyState === 4 && xhr.status === 200 ) {
+            var data = JSON.parse(this.responseText);
+            console.log(data);
+        }
+    }
+    xhr.open('GET', 'data.json', true);
+    xhr.send();
+
+* Cara mengakses JSON ada beberapa cara:
+ - ajax -> dengan menggunakan vanila Javascript / Javascript murni yaitu XMLHttpRequest diatas atau bisa pakai JQuery seperti dibawah.
+
+    contoh:
+    // mengakses JSON dengan JQuery
+    // syaratnya harus ada JQUERY nya, cari jquery cdn di google, lalu pilih yang uncompressed dan paste di file html diatas script kita.
+    // hasil dari penggunaan JQuery dibawah adalah object yang sudah di parsing oleh $.getJSON nya.
+
+    $.getJSON("coba.json", function (data) {
+        console.log(data);
+    });
+
+* ajax itu asynchronous
