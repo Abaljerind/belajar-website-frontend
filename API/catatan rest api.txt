@@ -4,3 +4,23 @@
     - SOAP, Simple Object Access Protocol.
     - REST, REpresentational State Transfer.
 Dengan membuat Web Service yang khususnya kita buat sekarang adalah REST, kita bisa membuat banyak aplikasi, seperti Web Applications, Legacy Applications, Application servers, Data, Cloud Resources, Partner Applications, Cloud-based Service dan Mobile Applications.
+
+* REST API -> Gaya arsitektural perangkat lunak yang didalamnya mendefinisikan aturan aturan untuk membuat web service.
+
+* URL -> alamat dari sebuah 'resource' yang dapat diakses di internet. contoh: https://www.google.com/
+
+* HTTP Method / Verbs / Endpoints:
+ - Get, mengambil Data
+ - Post, menambah Data
+ - Put, mengubah Data           => tidak bisa menggunakan browser
+ - Delete, menghapus Data        => tidak bisa menggunakan browser
+
+* Stateless -> ketidakadaan sebuah 'state' dalam sebuah aplikasi. Jadi,
+ - Setiap request HTTP dilakukan secara terisolasi
+ - Maksudnya, server tidak boleh menyimpan state apapun mengenai sesi dari client, jadi tidak ada 'sessions' di API. Maksudnya, REST API tidak boleh tau siapa yang sedang login.
+ - Setiap request dari client harus berisi semua informasi yang dibutuhkan oleh server, termasuk informasi autentikasi nya, maksudnya setiap kali client mengirim request si client harus mengirim dulu autentikasi nya siapa? client nya itu siapa? / Identitas si client.
+
+* Untuk menerapkan RESTful API harus memenuhi syarat sebagai berikut:
+ - harus menggunakan HTTP method yang benar
+ - URL / Endpoints nya harus menggunakan 'kata benda', BUKAN kata kerja. Contoh: PUT localhost/ci-app/mahasiswa/38
+ - dan harus Stateless
