@@ -1,0 +1,6 @@
+* API -> Application Programming Interface, adalah sekumpulan fungsi, subroutine, protokol komunikasi, atau tools untuk membuat perangkat lunak. Bisa juga disebut, sebuah antarmuka yang berupa kumpulan 'fungsi' yang dapat di 'panggil' / dijalankan oleh program lain. 
+
+* Web API / Web Service, sebuah sistem perangkat lunak yang dibuat untuk mendukung interoperabilitas / interaksi antar 2 aplikasi yang berbeda melalui sebuah jaringan, biasanya menggunakan HTTP. Yang di dalamnya ada 2 API yaitu:
+    - SOAP, Simple Object Access Protocol.
+    - REST, REpresentational State Transfer.
+Dengan membuat Web Service yang khususnya kita buat sekarang adalah REST, kita bisa membuat banyak aplikasi, seperti Web Applications, Legacy Applications, Application servers, Data, Cloud Resources, Partner Applications, Cloud-based Service dan Mobile Applications.
