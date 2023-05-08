@@ -24,3 +24,22 @@ Dengan membuat Web Service yang khususnya kita buat sekarang adalah REST, kita b
  - harus menggunakan HTTP method yang benar
  - URL / Endpoints nya harus menggunakan 'kata benda', BUKAN kata kerja. Contoh: PUT localhost/ci-app/mahasiswa/38
  - dan harus Stateless
+
+* JSON (Javascript Object Notation) -> sebuah 'file format standar' yang menggunakan tulisan yang dapat dibaca oleh manusia 'untuk pertukaran data', yang didalamnya berisi pasangan antara 'key' dan 'value'.
+
+* JSON -> format pertukaran data tekstual yang sangat ringan. Sintaksnya sangat sederhana dan jelas dibanding XML. JSON dapat digunakan oleh banyak bahasa pemrograman. Tiap bahasa pemrograman tersebut punya cara nya tersendiri untuk berinteraksi dengan JSON. JSON dibuat berdasarkan format object pada Javascript. JSON juga digunakan untuk file konfigurasi (tidak disarankan karna tidak support sintaks komentar). Tipe file eksitensi nya ".JSON"
+
+* JSON tidak boleh memiliki method (function yang ada di dalam suatu object)
+
+* Penulisan JSON:
+ { "key" : "value" }
+
+* Tipe data dari 'value' pada JSON:
+ - boolean
+ - array
+ - string
+ - object
+ - number
+ - null
+
+*** Cek kode di folder htdocs di xampp
