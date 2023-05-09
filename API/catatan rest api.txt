@@ -83,3 +83,14 @@ Dengan membuat Web Service yang khususnya kita buat sekarang adalah REST, kita b
     });
 
 * ajax itu asynchronous
+
+* Bekerja dengan JSON di luar domain kita. Kalau JSON yang ingin kita kelola ada di luar domain, maka akan terkena yang namanya "Same-origin policy".
+
+* Same-origin policy -> aturan / kebijakan browser untuk mengakses dan menampilkan data / script / document dari tempat lain "diluar domain nya." Karena sebenarnya kita tidak bisa begitu saja mengakses sesuatu yang ada diluar server kita, nah dengan same-origin policy ini membuat kita tidak bisa mengakses data (khususnya .json) dari luar domain / website kita. Kalau kita memaksa untuk mengakses data .json dari luar domain kita, maka akan muncul error pada console bahwa pengaksesan tersebut di blokir oleh 'CORS'.
+
+* CORS (Cross Origin Resource Sharing). Agar tidak terkena blokir oleh CORS kita harus mengkonfigurasi CORS pada server kita.
+
+* CORS -> mekanisme yang membuat kita dapat mengakses sebuah resource (data, document, script) dari domain lain. Caranya adalah dengan membuat server memperbolehkan adanya akses data dari luar domain dengan cara memodifikasi 'Access-Control-Allow-Origin' yang biasanya menggunakan file .htaccess kalau kita punya akses untuk membuat file tersebut. Jadi kalau kita punya akses membuat file nya kita tinggal tambahkan saja script berikut:
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
