@@ -94,3 +94,10 @@ Dengan membuat Web Service yang khususnya kita buat sekarang adalah REST, kita b
     <IfModule mod_headers.c>
         Header set Access-Control-Allow-Origin "*"
     </IfModule>
+
+* Public API -> sebuah API (REST API) yang dapat diakses secara publik, yang di dalamnya tersedia aturan untuk developer agar dapat mengakses data.
+
+* Otentikasi (Auth) Public API:
+    - tanpa Otentikasi
+    - key / token, bersifat limited
+    - OAuth, contoh login via google di facebook
