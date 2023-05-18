@@ -58,3 +58,4 @@
     - Command Line, kita install dengan menggunakan command line. Kita juga harus memberikan perintah untuk melakukan kompilasi secara manual.
     - VS Code Extension, dengan Extension di VS Code kita tetap harus melakukan kompilasi secara manual.
 
+ # Dengan menggunakan aplikasi / Extension Sass ini, kita hanya perlu membuat file scss nya, karna nantinya file tersebut akan dikompilasi menjadi file css, jadi nama file scss nya harus sama dengan nama yang kita masukkan pada tag link di file html nya.
