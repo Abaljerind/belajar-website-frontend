@@ -1,0 +1,60 @@
+* SASS (Syntactically Awesome Style Sheets) -> adalah salah satu dari CSS Pre Processor.
+
+* CSS Pre Processor -> adalah bahasa script yang dikompilasi dalam bentuk 'css' sebelum diterapkan pada file html. CSS Pre Processor ini ada untuk menutupi kekurangan dari css, dengan masing masing dari CSS Pre Processor nya membuat yang namanya:
+ - variable, untuk menyimpan warna misalnya. Yang paling populer itu ada Sass, Stylus, dan Less.
+
+ - mixin, untuk membuat serangkaian style yang bisa kita pakai berulang kali, mirip dengan function. bisa disebut custom function.
+
+ - import & uses, untuk membuat file css jadi modular, jadi gampang di kelola. Kalau kita punya 1 file css tidak perlu melakukan import & uses ini, tapi kalau lebih dari 1 file css nya maka kita bisa membagi bagi file css nya sesuai dengan kebutuhan. Misal file css a untuk bagian header, file css b untuk bagian section, file css c untuk bagian sidebar dan seterusnya.
+ 
+ - operator & built-in function, dengan operator kita bisa melakukan operasi matematika, lalu built in function (fungsi bawaan yang dirancang untuk membantu dalam mengelola nilai nilai css secara dinamis, melakukan operasi matematika, mengubah tipe data, dan memodifikasi nilai nilai css.) contoh built-in function: 
+    # rgb(), untuk warna.
+    # rgba(), untuk warna dengan opacity
+    # darken(), untuk menggelapkan sebuah warna dengan mengurangi kecerahannya sebesar presentase yang ditentukan 
+    # lighten(), untuk mencerahkan sebuah warna
+    # mix(), mencampurkan 2 warna dengan rasio yang ditentukan
+    # invert(), membalikkan sebuah warna dengan mengubah komponen rgb nya 
+    # round(), membulatkan bilangan koma
+    # unit(), mengubah nilai numerik menjadi tipe data yang spesifik seperti pixel, persen atau em.
+    # concat(), menggabungkan string
+
+ - nested css, css bersarang untuk mengelompokkan elemen elemen nya.
+
+* Alasan menggunakan Sass:
+    - mempermudah penulisan
+    - mempermudah pengelolaan
+    - memiliki banyak fungsi built-in
+    - kita dapat membuat fungsi sendiri
+    - kita dapat memodifikasi framework css (bootstrap / materialize)
+    - walaupun untuk penggunaan pribadi tidak diperlukan (dengan syarat kita memahami dengan benar mengenai css), tetapi di bidang industri penggunaan Sass ini sangat banyak digunakan.
+
+* Sass menyediakan 2 cara penulisan, yaitu yang tipe nya SASS dan SCSS, keduanya sama sama baik dan bisa digunakan karna nantinya akan dikompilasi menjadi CSS juga, bedanya untuk SASS itu penulisannya benar benar polos tanpa ; atau {}, tetapi untuk SCSS penulisannya mirip dengan CSS.
+
+    Contoh SASS: contoh.sass
+        nav
+            ul
+                margin: 0
+                padding: 0
+                list-style: none
+
+            li
+                display: inline-block
+
+    Contoh SCSS: contoh.scss
+        nav {
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            li {
+                display: inline-block;
+            }
+        }
+
+* Cara install Sass dikomputer kita ada 3 cara:
+    - Aplikasi, install sebagai Aplikasi pada komputer kita.
+    - Command Line, kita install dengan menggunakan command line. Kita juga harus memberikan perintah untuk melakukan kompilasi secara manual.
+    - VS Code Extension, dengan Extension di VS Code kita tetap harus melakukan kompilasi secara manual.
+
