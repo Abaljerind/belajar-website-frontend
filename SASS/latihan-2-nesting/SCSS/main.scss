@@ -1,0 +1,57 @@
+// .main {
+//   background-color: lightblue;
+
+//   .main-heading {
+//     font-size: 2em;
+//   }
+
+//   .main-paragraph {
+//     font-size: 1.4em;
+//   }
+// }
+
+// contoh ketika kita punya elemen yang sama di tetapi berbeda parent / pembungkusnya. Contoh dibawah, h1 dan p ada di masing masing .main dan footer jadi penulisannya bisa seperti berikut.
+// .main,
+// footer {
+//   h1,
+//   p {
+//     letter-spacing: 1px;
+//   }
+// }
+
+// & adalah parent selector, kita bisa mentarget elemen parent pada saat kita melakukan nesting. & (parent selector) juga bisa digunakan untuk menambahkan pseudo-class. Berikut contohnya:
+// .main {
+//   .container & {
+//     // .container & diatas akan mengakses parent dari .main
+//     background-color: lightblue;
+//   }
+//   .main-heading {
+//     font-size: 2em;
+//   }
+
+//   //   contoh pseudo class dgn &
+//   // cara baca, ketika kita sorot / hover .main nya background color nya berubah jadi salmon
+//   &:hover {
+//     background-color: salmon;
+//   }
+// }
+
+//   dengan & juga kita bisa mengenerate otomatis nama dari parent selector nya. berikut contohnya dimana & yang pertama untuk nestingnya dan & kedua untuk mengenerate otomatis nama parent selector nya
+.main {
+  & &-heading {
+    font-size: 2em;
+  }
+  & &-paragraph {
+    font-size: 1.4em;
+  }
+}
+
+// contoh interpolasi, intinya sama seperti contoh diatas hanya disingkat saja penulisannya
+.footer {
+  #{&}-heading {
+    font-size: 1.4em;
+  }
+  #{&}-paragraph {
+    font-size: 1em;
+  }
+}
