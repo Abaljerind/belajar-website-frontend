@@ -1,0 +1,74 @@
+// Base
+$warna-dasar: salmon;
+h1 {
+  color: $warna-dasar;
+  font-family: arial;
+  font-size: 3em;
+  text-align: center;
+}
+
+// Built-in function: color
+/* contekan: adjust-color($color, 
+    $red: null, $green: null, $blue: null,
+    $hue: null, $saturation: null, $lightness: null,
+    $whiteness: null, $blackness: null, $alpha: null
+
+    setelah $color itu semua optional. Semua isi nilai diatas itu mulai 1 sampai 255 dan juga bisa + atau -
+) */
+
+// h1 {
+//   color: adjust-color($color: $warna-dasar, $green: 100, $blue: 100, $red: -50);
+// }
+
+// selain adjust-color, ada juga yang namanya adjust-hue, berikut contokannya. Nilai pada degrees nya bisa + atau - juga
+// color: adjust-hue($color: #000000, $degrees: 0);
+// h1 {
+//   color: adjust-hue($warna-dasar, 30deg);
+// }
+
+// complement(color) -> warna yang berseberangan / terbalik dari warna aslinya sebesar 180 derajat
+// h1 {
+//   color: complement($color: $warna-dasar);
+// }
+
+// darken($color, $amount) -> menggelapkan warna, dari yang kurang jelas seperti pink jadi merah contohnya.
+// h1 {
+//   color: darken($color: $warna-dasar, $amount: 20%);
+// }
+
+// lighten($color, $amount) -> kebalikan darken
+// h1 {
+//   color: lighten($color: $warna-dasar, $amount: 10%);
+// }
+
+// saturate($color, $amount) -> kecerahan / kemurnian dari suatu warna
+// h1 {
+//   color: saturate($color: $warna-dasar, $amount: 40%);
+// }
+
+// desaturate($color, $amount) -> kebalikan saturate
+// h1 {
+//   color: desaturate($color: $warna-dasar, $amount: 40%);
+// }
+
+// greyscale($color) -> akan memberikan efek desaturate 100%
+// h1 {
+//   color: grayscale($color: $warna-dasar);
+// }
+
+// mix(color1, color2, weight: defaultnya 50% <ini optional>) -> menggabungkan 2 warna
+// h1 {
+//   color: mix($warna-dasar, blue, 80%);
+// }
+
+// fade in(color, amount) -> membuat elemen yang transparant menjadi solid
+// h1 {
+//     color: fade-in(rgba(250, 128, 114, 0.2), 0.5);
+// }
+//   hasilnya opacity / alpha nya akan dijumlahkan 0.2 + 0.5
+
+// fade out(color, amount) -> membuat elemen yang solid menjadi transparant
+h1 {
+  color: fade-out($warna-dasar, 0.4);
+}
+// hasilnya opacity / alpha nya akan dikurangi dengan amount yang kita input, 0.4 - 1 = 0.6

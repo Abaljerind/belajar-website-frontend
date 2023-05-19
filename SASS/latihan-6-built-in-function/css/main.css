@@ -1,0 +1,17 @@
+h1 {
+  color: salmon;
+  font-family: arial;
+  font-size: 3em;
+  text-align: center;
+}
+
+/* contekan: adjust-color($color, 
+    $red: null, $green: null, $blue: null,
+    $hue: null, $saturation: null, $lightness: null,
+    $whiteness: null, $blackness: null, $alpha: null
+
+    setelah $color itu semua optional. Semua isi nilai diatas itu mulai 1 sampai 255 dan juga bisa + atau -
+) */
+h1 {
+  color: rgba(250, 128, 114, 0.6);
+}/*# sourceMappingURL=main.css.map */
