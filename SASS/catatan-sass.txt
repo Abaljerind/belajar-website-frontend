@@ -66,3 +66,28 @@
     - Styled Component / CSS in JS
 
 * Nesting pada Sass -> membuat hirarki visual yang jelas untuk selector CSS kita.
+
+* Perilaku variable pada Sass:
+ - pada variabel yang menggunakan dash ( - ), akan disamakan dengan underscore ( - ), contoh: $primary-color akan sama dengan $primary_color
+ 
+ - varibale di sass memiliki scope seperti global scope dan local scope ( variable yang dideklarasikan di dalam tag tertentu saja )
+
+ - variabel local scope bisa kita ubah paksa menjadi global scope dengan cara menambahkan !global diakhir value variable nya. 
+    contoh: $text-color: salmon !global;
+
+- jika ada variable yang memiliki nama yang sama dideklarasikan di scope yang  berbeda, 1 di global dan 1 di local, maka hasilnya akan sama seperti yang dilakukan dengan bahasa pemrograman lain seperti javascript. 
+    contoh:
+    $text-color: salmon;
+
+    body {
+        $text-color: blue;
+        color: $text-color; // ini akan tetap berwarna biru
+
+        // kecuali kalau $text-color diberi !global maka nilai salmon akan berubah menjadi blue
+        $text-color: blue !global;
+        color: $text-color;
+    }
+
+    h1 {
+        color: $text-color; // ini akan tetap salmon mengikuti variabel global.
+    }
