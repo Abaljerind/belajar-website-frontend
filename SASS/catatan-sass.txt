@@ -156,4 +156,11 @@
 
 * Modules -> membuat code sass kita modular / lebih mudah dikelola. Untuk menggunakan modules, kita butuh 2 buah key. Untuk membuat file modules, kita perlu menambahkan underscore ( _ ), karena dengan underscore maka extension sass nya tidak akan memproses file tersebut menjadi file css.
     - @import,
+        contoh import:
+            @import "modules/mixin";
+            @import "modules/header";
+            @import "modules/container";
+            @import "modules/footer";
+
+
     - @use, 
