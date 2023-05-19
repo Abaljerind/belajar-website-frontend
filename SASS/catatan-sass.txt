@@ -165,3 +165,53 @@
     ... Kekurangan menggunakan import sehingga tidak disarankan unutk digunakan bisa di cek melalui documentation. Walaupun memang menggunakan @use juga masih ada kekurangan tetapi disarankan menggunakan @use ketimbang @import.
 
     - @use, Salah satu kekurangan terbesar dari @use adalah kalau kita tidak bisa menggunakan nya dengan extension dari vs code, jadi harus install dengan aplikasi atau command line, lalu wajib menambahkan PATH ke system variables pc kita. Bisa dicek di documentation nya.
+
+* Flow Control -> mengatur alur kendali dari script SASS kita. Ada 4 cara yaitu:
+    - @if, @else, @else if
+    - @for
+    - @while
+    - @each
+
+    Contoh:
+
+    // if
+    @mixin profile-pic($size, $circle: false) {
+        width: $size;
+        height: $size;
+        border: 5px solid white;
+        box-shadow: 1px 1px 3px rgba(#000, @alpha: 0.3);
+    }
+
+    @if $circle {
+        border-radius: 50%;
+    }
+
+    .square-profile {
+        @include profile(200px, $circle: false);
+    }
+    
+    .circle-profile {
+        @include profile(80px, $circle: true);
+    }
+
+    // else 
+    $light-bg: #eaeaea;
+    $light-text: #333;
+    $dark-bg: #999;
+    $dark-text: #ddd;
+
+    @mixin color-mode($lightm-mode: true) {
+        @if $light-mode {
+            background-color: $light-bg;
+            color: $light-text;
+        } else {
+            background-color: $dark-bg;
+            color: $dark-text
+        }
+    }
+
+    .nav {
+        @include color-mode($light-mode: false);
+    }
+
+    // else if, for, dan while sama seperti yang ada di bahasa pemrograman lain.
