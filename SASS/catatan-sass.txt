@@ -91,3 +91,17 @@
     h1 {
         color: $text-color; // ini akan tetap salmon mengikuti variabel global.
     }
+
+* // Map -> mirip object di javascript
+    // Berikut ini cara penulisannya:
+
+    $alert: (
+    "danger": red,
+    "success": green,
+    "warning": orange,
+    );
+
+    // untuk menggunakan map berikut caranya:
+    h1 {
+    color: map-get($alert, "success");
+    }
