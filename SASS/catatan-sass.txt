@@ -164,4 +164,4 @@
 
     ... Kekurangan menggunakan import sehingga tidak disarankan unutk digunakan bisa di cek melalui documentation. Walaupun memang menggunakan @use juga masih ada kekurangan tetapi disarankan menggunakan @use ketimbang @import.
 
-    - @use, 
+    - @use, Salah satu kekurangan terbesar dari @use adalah kalau kita tidak bisa menggunakan nya dengan extension dari vs code, jadi harus install dengan aplikasi atau command line, lalu wajib menambahkan PATH ke system variables pc kita. Bisa dicek di documentation nya.
