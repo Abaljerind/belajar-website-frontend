@@ -109,6 +109,7 @@
 * Mixin -> kumpulan style yang dapat kita gunakan berulang-ulang. Cara mengimplementasikan Mixin:
     - @mixin, digunakan ketika kita membuat mixin nya
     - @include, digunakan ketika kita mau memanggil kumpulan style / mixin nya
+ 
  Contoh mixin:
     // simple mixin
         @mixin inline-list {
@@ -152,3 +153,7 @@
                 line-height: 60px;
             }
         }
+
+* Modules -> membuat code sass kita modular / lebih mudah dikelola. Untuk menggunakan modules, kita butuh 2 buah key,
+    - @import,
+    - @use, 
