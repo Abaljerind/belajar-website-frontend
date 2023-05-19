@@ -1,0 +1,22 @@
+// CSS Variable
+// kalau kita mau menjadikan variable bisa diakses semua elemen (global variable) kita berikan pada root dengan cara seperti dibawah
+// :root {
+//   // untuk membuat variable harus menggunakan -- seperti dibawah
+//   --primary-color: #ff7d7d;
+//   --secondary-color: lightblue;
+//   --text-color: #171f50;
+// }
+
+// cara menggunakan variabel
+// body {
+//   background-color: var(--primary-color);
+// }
+
+// cara menggunakan variabel
+// h1 {
+//   color: var(--text-color);
+// }
+
+// p {
+//   color: var(--text-color);
+// }
