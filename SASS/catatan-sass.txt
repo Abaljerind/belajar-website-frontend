@@ -109,3 +109,46 @@
 * Mixin -> kumpulan style yang dapat kita gunakan berulang-ulang. Cara mengimplementasikan Mixin:
     - @mixin, digunakan ketika kita membuat mixin nya
     - @include, digunakan ketika kita mau memanggil kumpulan style / mixin nya
+ Contoh mixin:
+    // simple mixin
+        @mixin inline-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+            }
+        }
+
+        .header ul {
+        @include inline-list();
+            li {
+                background-color: black;
+                padding: 0.7em;
+                a {
+                color: white;
+                    }
+                }
+            }
+
+    // argument pada mixin dengan parameter default
+        @mixin flex-box($direction: row, $space: center) {
+            display: flex;
+            justify-content: $space;
+            align-items: center;
+            flex-direction: $direction;
+        }
+
+        .container {
+            @include flex-box(row-reverse, space-evenly);
+            width: 600px;
+            height: 400px;
+            background-color: #eaeaea;
+            .box {
+                width: 60px;
+                height: 60px;
+                background-color: lightgreen;
+                text-align: center;
+                line-height: 60px;
+            }
+        }
