@@ -215,3 +215,21 @@
     }
 
     // else if, for, dan while sama seperti yang ada di bahasa pemrograman lain.
+
+* Built-in function / modules -> fungsi fungsi bawaan yang bisa kita gunakan antara lain:
+    - color terdiri dari:
+        - adjust
+        - complement
+        - darken
+        - lighten
+        - saturate
+        - desaturate
+        - greyscale
+        - mix
+        - fade in
+        - fade out
+    - list
+    - map
+    - math
+    - selector
+    - string
