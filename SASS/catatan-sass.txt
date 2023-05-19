@@ -105,3 +105,7 @@
     h1 {
     color: map-get($alert, "success");
     }
+
+* Mixin -> kumpulan style yang dapat kita gunakan berulang-ulang. Cara mengimplementasikan Mixin:
+    - @mixin, digunakan ketika kita membuat mixin nya
+    - @include, digunakan ketika kita mau memanggil kumpulan style / mixin nya
