@@ -23,15 +23,26 @@
 
 // SASS Variable
 // untuk SASS variable, kita gunakan $ didepan nama variable nya
-$primary-color: #f4f1de;
-$secondary-color: #ff8c65;
-$text-color: lightskyblue;
+// $primary-color: #f4f1de;
+// $secondary-color: #ff8c65;
+// $text-color: lightskyblue;
 
-// cara menggunakan variable
-body {
-  background-color: $primary-color;
-}
+// // cara menggunakan variable
+// body {
+//   background-color: $primary-color;
+// }
+
+// h1 {
+//   color: $text-color;
+// }
+
+// Map -> mirip object di javascript
+$alert: (
+  "danger": red,
+  "success": green,
+  "warning": orange,
+);
 
 h1 {
-  color: $text-color;
+  color: map-get($alert, "success");
 }
