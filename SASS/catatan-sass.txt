@@ -162,5 +162,6 @@
             @import "modules/container";
             @import "modules/footer";
 
+    ... Kekurangan menggunakan import sehingga tidak disarankan unutk digunakan bisa di cek melalui documentation. Walaupun memang menggunakan @use juga masih ada kekurangan tetapi disarankan menggunakan @use ketimbang @import.
 
     - @use, 
