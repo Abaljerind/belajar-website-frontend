@@ -1,0 +1,18 @@
+* Tailwind CSS -> sebuah utility-first framework yang mempunyai banyak class. utility-first adalah sebuah class yang berfungsi untuk melakukan persis 1 hal saja, 
+    contoh: 
+        .p-6 {
+            padding: 1.5rem;
+        }
+    untuk memberikan padding sebesar 1.5rem, jadi isinya hanya 1 property css saja sesuai namanya, tidak lebih dari itu. Tailwind CSS juga bisa membantu kita membuat website modern tanpa harus meninggalkan HTML kita, jadi tidak perlu membuat file css.
+
+* Berikut beberapa utility nya:
+    - Preflight, mirip dengan css reset
+    - layout
+    - flexbox & grid
+    - spacing & sizing
+    - typhography
+    - background & borders
+    - effect & filters
+    - transition, transformation & animation
+    - tables
+    - dll.
