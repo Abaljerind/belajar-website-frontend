@@ -16,3 +16,30 @@
     - transition, transformation & animation
     - tables
     - dll.
+
+* Berikut fitur fitur unggulan dari Tailwind:
+    - interactivity, memberi interaksi pada website dengan utility class nya.
+    - responsive design, responsive halaman website
+    - dark mode, dengan mudah dapat ditambahkan
+    - reusability, ketika elemen html nya ingin dipakai berulang kali
+    - custom styles
+    - functions & directives
+
+* Untuk bisa menggunakan Tailwind, kita harus memahami mengenai npm (node.js). Berikut sedikit materi mengenai npm:
+    * NPM (Node Package Manager) -> sebuah tempat dimana programmer node.js bisa menyimpan module module mereka, dan karena disimpan di npm, kita juga bisa menggunakan module module tersebut. Bisa cek di www.npmjs.com. Untuk menggunakan suatu package dari npm, kita bisa gunakan perintah install,
+        Contoh install:
+            npm i validator || npm install validator
+
+        Contoh uninstall:
+            npm uninstall validator
+
+        Cara menggunakan package nya bisa dilihat dari halaman yang ada di website npmjs nya itu sendiri, berikut contoh penggunaan validator:
+
+            const validator = require('validator');
+            console.log(validator.isEmail('naruto@gmail.com'));
+            // output: true
+            // output akan false jika '@' nya dihilangkan, atau domainnya bukan 'com' tapi misalnya 'c' atau yang asal asalan maka juga akan false.
+
+            const validator diatas untuk menampung package validator nya, lalu dibaris selanjutnya, dengan menggunakan nama const nya kita cek dengan fungsi 'isEmail' nilai yang ada di dalam tanda kurung nya yaitu 'naruto@gmail.com'. Ada banyak fungsi yang ada didalam 'validator' package tersebut, bisa dicek di halaman npmjs nya.
+        
+        Inti penggunaan package package di dalam npmjs adalah kita harus membaca dokumentasi dari tiap tiap package yang ingin kita gunakan.
