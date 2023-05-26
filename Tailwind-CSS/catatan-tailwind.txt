@@ -124,7 +124,7 @@
 
  NOTE: minified hanya digunakan jika kita sudah selesai membuat website kita. Lalu jangan lupa juga untuk 'mengganti nama file css yang ada di file index.html kita'.
 
-* Contoh penggunaan utility Bagian 'Spacing' dan customization utility (class) yang tidak ada di tailwindcss
+* Contoh penggunaan utility Bagian 'Spacing' dan 'customization utility' (class) yang tidak ada di tailwindcss
 
     - contoh margin:
     <div class="m-13">Margin</div>
@@ -156,3 +156,47 @@
                 <div>02</div>
                 <div>03</div>
             </div>
+
+
+* Contoh penggunaan utility Bagian 'Sizing' terdapat beberapa utility berikut:
+
+    - Width, 
+    - Min-Width
+    - Max-Width
+    - Height
+    - Min-Height
+    - Max-Height
+
+    Berikut contoh kodenya:
+        <h2>Sizing</h2>
+        <div class="w-32 h-32">Kotak 1</div>
+        w-32 artinya lebarnya 32 / 8 rem, untuk h-32 artinya tingginya 32 / 8 rem
+
+        <div class="max-w-xs min-h-screen">Kotak 2</div>
+        max-w-xs diatas artinya ukuran maksimum untuk lebar elemennya yang nilainya sebesar 20rem, dan min-h-screen artinya tinggi nya selalu 100% dari viewport height nya, nilainya min-height: 100vh;
+
+* Contoh penggunaan utility Bagian 'Typhography' terdapat beberapa utility berikut:
+
+    - font family, untuk menambahkan font baru yang tidak disediakan oleh tailwindcss, kita bisa menambahkannya seperti biasa, copy link font yang diinginkan dari google fonts misalnya atau dari web lain, lalu paste di file index.html 'sebelum' script tailwind nya. Setelah itu kita bisa menambahkan di file 'tailwind.config.js' di bagian extend di dalam theme, berikut contohnya:
+        
+        theme: {
+            extend: {
+                spacing: {
+                    13: "3.25rem",
+                },
+                fontFamily: {
+                    inter: ["Inter"], // kata 'inter' akan menjadi key, dan valuenya ["Inter"] sesuai yang ada di google fonts.
+                },
+            },
+        },
+
+    Berikut contoh penggunaan nya:
+        <section class="mb-96 font-inter max-w-3xl mx-auto">
+
+    - font size
+    - font smoothing
+    - font style
+    - font weight
+    - dll, bisa cek di dokumentasinya
+
+* Contoh penggunaan utility Bagian 'Colors' terdapat beberapa utility berikut:
