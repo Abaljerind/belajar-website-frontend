@@ -46,8 +46,10 @@
 
 * Installasi Tailwind ada banyak cara, tapi cara yang mudah ada 2:
     - Tailwind cli,
-    - play cdn, Disarankan digunakan hanya pada saat proses pengembangan (dev) saja. Karena size dari file yang diload itu sekitar 500kb jadi bisa membebani kinerja loading web nya, lalu juga kita tidak bisa melihat contekan dengan ctrl + spasi.
+    - play cdn, Disarankan digunakan hanya pada saat proses pengembangan (dev) saja. Karena size dari file yang diload itu sekitar 500kb jadi bisa membebani kinerja loading web nya.
  Keduanya bisa di cek di dokumentasi web nya.
+
+** Untuk menggunakan cara yang 'play CDN', kita hanya perlu menambah script berikut, '<script src="https://cdn.tailwindcss.com"></script>' dibagian head, lalu kita buat file kosong dengan nama 'tailwind.config.js' dan sudah bisa langsung digunakan.
 
 ** Sebelum melakukan installasi tailwindcss, dikarenakan kita menggunakan 'npm' maka kita harus melakukan init dulu pada folder yang akan kita gunakan dengan perintah 'npm init -y', -y akan mengisi nilai yang diminta secara default oleh npm nya sendiri.
 
