@@ -522,7 +522,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.-ml-8 {
+  margin-left: -2rem;
+}
+
+.border {
+  border-width: 1px;
 }

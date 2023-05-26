@@ -7,8 +7,34 @@
     <title>Belajar TailwindCSS</title>
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        border: 1px solid salmon;
+      }
+    </style>
   </head>
   <body>
-    <h1 class="text-6xl">Mari Belajar TailwindCSS</h1>
+    <h1>Mari Belajar TailwindCSS</h1>
+
+    <section>
+      <h2>Spacing</h2>
+      <div class="-ml-8">Margin</div>
+      <!-- untuk memberikan minus (-), kita bisa tambahkan tanda - nya didepan seperti contoh diatas. -->
+
+      <!-- kalau kita ingin menggunakan suatu nilai yang tidak disediakan oleh tailwind nya, kita bisa menambahkan kustomisasi di file 'tailwind.config.js' nya di dalam extend: {} yang dibungkus oleh theme: {}, dengan 'nama utility yang kita ingin tambah nilainya'. Misalnya kita ingin menggunakan margin yang lebar name nya itu 13 (ml-13 jadinya), tetapi karena tidak disediakan oleh tailwind, maka kita bisa gunakan contoh berikut:
+        
+        module.exports = {
+            theme: {
+                extend: {
+                spacing: {
+                    '13': '3.25rem',
+                    '15': '3.75rem',
+                    '128': '32rem',
+                    '144': '36rem',
+                }
+                }
+            }
+        }
+    --></section>
   </body>
 </html>
