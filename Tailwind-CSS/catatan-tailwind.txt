@@ -124,24 +124,35 @@
 
  NOTE: minified hanya digunakan jika kita sudah selesai membuat website kita. Lalu jangan lupa juga untuk 'mengganti nama file css yang ada di file index.html kita'.
 
-* Contoh penggunaan utility margin dan customization utility (class) yang tidak ada di tailwindcss
+* Contoh penggunaan utility Bagian 'Spacing' dan customization utility (class) yang tidak ada di tailwindcss
 
-<div class="m-13">Margin</div>
-       untuk memberikan minus (-), kita bisa tambahkan tanda - nya didepan seperti contoh diatas.
+    - contoh margin:
+    <div class="m-13">Margin</div>
+        untuk memberikan minus (-), kita bisa tambahkan tanda - nya didepan seperti contoh diatas.
 
-       kalau kita ingin menggunakan suatu nilai yang tidak disediakan oleh tailwind nya, kita bisa menambahkan kustomisasi di file 'tailwind.config.js' nya di dalam extend: {} yang dibungkus oleh theme: {}, dengan 'nama utility yang kita ingin tambah nilainya'. Misalnya kita ingin menggunakan margin yang lebar name nya itu 13 (m-13 jadinya), tetapi karena tidak disediakan oleh tailwind, maka kita bisa gunakan contoh berikut:
-        
-        module.exports = {
-            theme: {
-                extend: {
-                spacing: {
-                    '13': '3.25rem',
-                    '15': '3.75rem',
-                    '128': '32rem',
-                    '144': '36rem',
-                }
+        kalau kita ingin menggunakan suatu nilai yang tidak disediakan oleh tailwind nya, kita bisa menambahkan kustomisasi di file 'tailwind.config.js' nya di dalam extend: {} yang dibungkus oleh theme: {}, dengan 'nama utility yang kita ingin tambah nilainya'. Misalnya kita ingin menggunakan margin yang lebar name nya itu 13 (m-13 jadinya), tetapi karena tidak disediakan oleh tailwind, maka kita bisa gunakan contoh berikut:
+            
+            module.exports = {
+                theme: {
+                    extend: {
+                    spacing: {
+                        '13': '3.25rem',
+                        '15': '3.75rem',
+                        '128': '32rem',
+                        '144': '36rem',
+                    }
+                    }
                 }
             }
-        }
 
-** Untuk padding, kita tidak bisa menggunakan nilai minus ( - ) dan juga tidak ada auto, tetapi margin punya nilai minus ( - ) dan punya nilai auto untuk membuat elemen ke tengah tengah halaman.
+    - Untuk padding, kita tidak bisa menggunakan nilai minus ( - ) dan juga tidak ada auto, tetapi margin punya nilai minus ( - ) dan punya nilai auto untuk membuat elemen ke tengah tengah halaman.
+        Contoh padding:
+            <div class="p-8">Padding</div>
+
+    - Space Between, hanya bisa digunakan jika display nya flex
+        Contoh Space Between:
+            <div class="flex space-x-4 ...">
+                <div>01</div>
+                <div>02</div>
+                <div>03</div>
+            </div>
