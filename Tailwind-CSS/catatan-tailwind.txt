@@ -46,5 +46,76 @@
 
 * Installasi Tailwind ada banyak cara, tapi cara yang mudah ada 2:
     - Tailwind cli,
-    - play cdn
+    - play cdn, Disarankan digunakan hanya pada saat proses pengembangan (dev) saja. Karena size dari file yang diload itu sekitar 500kb jadi bisa membebani kinerja loading web nya, lalu juga kita tidak bisa melihat contekan dengan ctrl + spasi.
  Keduanya bisa di cek di dokumentasi web nya.
+
+* Setelah kita lakukan installasi Tailwind dengan cli, lalu kita jalankan perintah 'npx tailwindcss init', maka akan dibuatkan secara otomatis file tailwind.config.js untuk kita gunakan melakukan konfigurasi. Yang perlu kita ubah 'saat ini' adalah bagian 'content' saja. Berikut cara baca config content dari website Tailwind nya, 
+
+    - [NOTE: Perlu diingat bahwa ini hanya salah satu cara menulis isi dari content saja.]
+    
+    module.exports = {
+      content: ["./src/**/*.{html,js}"], -> digunakan untuk kasih tau file web kita ada dimana.
+     
+      Cara baca: 
+        ./ adalah root nya
+        /src/ adalah difolder apa nanti kita simpan
+        /**/ akan mengecek semua folder yang ada didalam src nya
+        /*.{html,js} akan mengecek semua file yang ada didalam nya juga selama ekstensi file nya 'html' dan 'js'
+
+    - Tapi, kalau kita hanya punya 1 file index.html saja yang ada didalam folder yang sama dengan file config tailwindcss kita, maka kita cukup menuliskan isi content nya begini saja:
+        content: ['./index.html'],
+
+    Untuk config selanjutnya bisa dicek di dokumentasi website nya.
+
+* Penjelasan mengenai langkah ketiga installasi tailwindcss dari website nya:
+
+    @tailwind base;
+    /* base digunakan untuk mereset css */
+    
+    @tailwind components;
+    /* components, tailwind akan meminta components didalam library nya, seperti container, grid system, dll */
+    
+    @tailwind utilities;
+    /* tailwind akan memanggil directives utilities yang isinya class class utility yang nantinya akan kita gunakan */
+
+    /* jadi nantinya ini akan dijalankan lebih dulu sebelum nantinya akan dibuat sebuah file css baru yang file tersebut akan digunakan oleh web kita.
+
+    Untuk saat ini, kita hanya butuh 3 saja, tetapi kedepannya kalo kita punya component yang kita buat sendiri / konfigurasi lain bisa ditaruh disini
+
+    */
+
+* Setelah menjalankan langkah ketiga diatas, selanjutnya kita akan menjalankan build process untuk membuat file css yang akan digunakan oleh web kita. Kode dibawah dijalankan 'di terminal'. Perlu diingat bahwa lokasinya berbeda antara kode dibawah ini dengan lokasi file input.css milik kita, jadi harap diperhatikan.
+    npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+    file output.css diatas nantinya akan dibuat secara otomatis setelah kode dijalankan. Setelah dijalankan, nantinya diterminal vs code kita, kode tadi akan terus dijalankan jadi dibiarkan saja, nah kita bisa cek ada file output.css yang bisa kita hubungkan dan gunakan ke file index.html kita.
+
+    berikut contoh yang saya gunakan untuk latihan-1-sederhana:
+        npx tailwindcss -i ./input.css -o ./output.css --watch
+
+* Kalau mau rapih file file yang kita gunakan, kita bisa buat folder 'src' yang mana bisa kita letakkan file 'input.css', kita juga bisa buat folder 'css' didalam src nya dan letakkan file 'input.css' di dalam css. Lalu file index.html juga bisa kita masukkan ke folder 'public', karena prosesnya diulangi maka file 'output.css' bisa kita delete. 
+
+    Berikut adalah config baru yang file file nya sudah dirapihkan:
+
+    module.exports = {
+      content: ["./public/**/*.{html,js}"],
+
+    npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch
+
+* Langkah terakhir setelah build process, adalah menghubungkan file index.html dengan file style.css / 'nama file output' yang kita buat saat build process. Dan akhirnya kita sudah bisa menggunakan tailwindcss lewat file html nya.
+
+** PENTING: Kalau kita ga mau mengetikkan kode untuk process build yang panjang, yang kodenya berikut ini:
+    npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch
+
+    Kita bisa buka file 'package.json' lalu dibagian scripts kita tambahkan baris berikut:
+
+    "scripts": {
+        "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+
+    Untuk yang "test" bisa dihapus saja tidak apa apa, lalu untuk menjalankannya di terminal, kita hanya perlu ketikkan 'npm run dev' dan voila perintah nya akan dijalankan sama seperti kode yang kita ketikkan secara manual sebelumnya.
+
+** Terakhir, karna saat proses pembuatan website kita biasanya ada dalam mode dev, dan file style.css / output hasil build process nya masih besar ukurannya (tergantung seberapa banyak style yang kita gunakan, walaupun ukurannya masih kecil seperti 10kb / 15kb) karena didalamnya ada banyak kode css yang tidak kita gunakan juga, maka kita bisa lakukan 'minified', dengan cara jalankan perintah berikut diterminal:
+    npx tailwindcss -o ./public/css/final.css --minify
+
+ NOTE: minified hanya digunakan jika kita sudah selesai membuat website kita. Lalu jangan lupa juga untuk 'mengganti nama file css yang ada di file index.html kita'.
