@@ -216,3 +216,88 @@
         <section class="mb-10 bg-green-200">
 
         <div class="mb-4 text-lg text-gray-500">
+
+*** PENTING: Jika diatas tadi dijelaskan bahwa kalau ada value dari utility yang disediakan oleh TailwindCSS tidak tersedia, maka kita harus membuat utility custom sendiri, TETAPI perlu diingat, kita hanya butuh custom utility tersebut 'hanya dan jika' utility nya akan kita gunakan lebih dari 1 kali.
+    Jadi Kalau custom utility nya hanya digunakan 1 kali saja, kita bisa menggunakan yang namanya arbitrary / nilai sembarang / nilai custom buatan kita sendiri menggunakan kurung siku [], berikut contohnya:
+
+        <div class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px]"></div>
+
+
+* Contoh penggunaan utility Bagian 'Background':
+    - Background Attachment, ada 3 value:
+        - bg-local, misal ada elemen p yang isinya tulisan yang panjang di dalam image yang ukurannya kotak, saat kita berikan kotak tersebut efek overflow-scroll maka tulisan dan gambar / image nya akan menempel sehingga saat di scroll gambarnya akan ikut bergerak bersamaan dengan tulisannya, jika tulisannya cukup panjang maka gambarnya akan di repeat sepanjang tulisannya.
+        
+        - bg-scroll, adalah kebalikan dari bg-local dan juga sama seperti overflow-y-scroll, dimana tulisannya akan bisa discroll tapi gambarnya diam ditempat.
+
+        - bg-fixed, sedikit mirip dengan bg-scroll, tetapi bedanya jika kita scroll diluar dari gambarnya maka gambarnya juga akan ikut bergerak seperti discroll juga walaupun sedikit, mirip seperti efek paralax.
+    
+    - Background Size, ada 3 value:
+        - bg-auto, menampilkan gambar dengan ukuran sesuai size nya.
+        - bg-cover, menampilkan gambar dengan melakukan scale (memperbesar / memperkecil) gambar nya sampai memenuhi semua background.
+        - bg-contain, menampilkan gambar dengan melakukan scale pada background image sampai gambarnya memenuhi salah satu sisi dari elemennya tanpa melakukan crop / stretch.
+
+    - Background Repeat, ada 6 value:
+        - bg-repeat,
+        - bg-no-repeat, tidak ada repeat sama sekali.
+        - bg-repeat-x,
+        - bg-repeat-y,
+        - bg-repeat-round,
+        - bg-repeat-space,
+
+    - Background Position, ada banyak:
+        - bg-bottom, gambar akan menempel kebawah
+        - bg-center, gambar akan menempel ketengah tengah
+        - bg-left, gambar akan menempel ke kiri
+        - bg-right, gambar akan menempel ke kanan
+        - bg-top, gambar akan menempel ke atas
+        - dll
+
+    - Background Clip,
+    - Background Color, 
+    - Background Origin,
+    - Gradient Color Stops,
+
+* Contoh penggunaan utility Bagian 'Borders':
+    - Border-radius,
+    - Border-width,
+    - Border-color,
+    - Border-style,
+    - Divide-width, digunakan ketika kita ingin membuat banyak elemen sekaligus yang punya batasnya.
+    - Outline-width, area diluar border atau garis tepi.
+    - Ring-width, seolah olah kita memberikan efek box-shadow
+    - Ring-color, agar Ring-width nya bisa kita berikan warna.
+    - dll
+
+* Contoh penggunaan utility Bagian 'Effects':
+
+    - Box shadow,
+    - Box shadow color,
+    - Opacity,
+    - Mix Blend mode, efek menggabungkan warna antara warna elemen dengan background nya, atau bisa dibilang bahwa elemen didepannya ngeblend (menyatu) dengan backgroundnya. Untuk mix blend mode, digunakan pada elemen yang ada didepan backgroundnya. Isinya ada:
+
+        - mix-blend-multiply, membuat efek seolah olah elemen yang ada didepan background nya memberikan efek multiply ke backgroundnya, berikut contohnya:
+            <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8" style="background-image: url(./img/1.jpg)">
+                <div class="w-full h-full bg-blue-300 'mix-blend-multiply'"></div>
+            </div>
+        
+        - mix-blend-screen,
+        - mix-blend-overlay,
+        - mix-blend-darken,
+        - dll.
+
+    - Background Blend mode, mirip dengan mix blend mode, tetapi bedanya dari background-image ngeblend (menyatu) ke background-color nya. Mirip semacam filter pada efek kamera di hp. Untuk background blend mode, digunakan pada background nya.
+        
+        Contohnya:
+            <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 'bg-blend-overlay'" style="background-image: url(./img/1.jpg)">
+                <div class="w-full h-full bg-blue-300"></div>
+            </div>
+
+* Contoh penggunaan utility Bagian 'Filters', memberikan efek ke sebuah elemen:
+    - blur, blur-sm hover:blur-none
+    - brightness, 100 itu normal, dibawah 100 jadi lebih gelap, diatas 100 jadi lebih terang.
+    - contrast,
+    - drop shadow,
+    - backdrop blur, memberikan efek blur didepan elemen lain, yang biasanya background image. Jadi backdrop blur digunakan pada elemen yang ada didepan background.
+    - dll.
+
+*** NOTE: untuk memposisikan suatu elemen berada ditengah tengah halaman / elemen lain, kita bisa memberikan display flex pada pembungkus / parentnya, lalu gunakan 'm-auto'.
