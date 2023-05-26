@@ -533,3 +533,7 @@ video {
 .border {
   border-width: 1px;
 }
+
+.p-8 {
+  padding: 2rem;
+}
