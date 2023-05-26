@@ -2,3 +2,8 @@ Folder ini belajar mengenai Utility:
     - Spacing & Sizing,
     - Typhography,
     - Colors
+
+    
+    background & border
+    rounding & shadow
+    effect & filters
