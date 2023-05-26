@@ -49,6 +49,8 @@
     - play cdn, Disarankan digunakan hanya pada saat proses pengembangan (dev) saja. Karena size dari file yang diload itu sekitar 500kb jadi bisa membebani kinerja loading web nya, lalu juga kita tidak bisa melihat contekan dengan ctrl + spasi.
  Keduanya bisa di cek di dokumentasi web nya.
 
+** Sebelum melakukan installasi tailwindcss, dikarenakan kita menggunakan 'npm' maka kita harus melakukan init dulu pada folder yang akan kita gunakan dengan perintah 'npm init -y', -y akan mengisi nilai yang diminta secara default oleh npm nya sendiri.
+
 * Setelah kita lakukan installasi Tailwind dengan cli, lalu kita jalankan perintah 'npx tailwindcss init', maka akan dibuatkan secara otomatis file tailwind.config.js untuk kita gunakan melakukan konfigurasi. Yang perlu kita ubah 'saat ini' adalah bagian 'content' saja. Berikut cara baca config content dari website Tailwind nya, 
 
     - [NOTE: Perlu diingat bahwa ini hanya salah satu cara menulis isi dari content saja.]
