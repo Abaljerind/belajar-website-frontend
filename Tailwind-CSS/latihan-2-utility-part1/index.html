@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belajar TailwindCSS</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet" />
+
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
-    <style>
-      * {
-        border: 1px solid salmon;
-      }
-    </style>
   </head>
   <body>
     <h1>Mari Belajar TailwindCSS</h1>
 
-    <section>
+    <section class="mb-10">
       <h2>Spacing</h2>
       <div class="m-13">Margin</div>
       <!-- untuk memberikan minus (-), kita bisa tambahkan tanda - nya didepan seperti contoh diatas. -->
@@ -37,6 +37,30 @@
         }
     -->
       <div class="p-8">Padding</div>
+    </section>
+
+    <section class="mb-10">
+      <h2>Sizing</h2>
+      <div class="w-32 h-32">Kotak 1</div>
+    </section>
+
+    <section class="mb-96 font-inter max-w-3xl mx-auto">
+      <h2 class="mb-2 text-4xl font-bold">Belajar Mengenai Typhography pada TailwindCSS</h2>
+      <div class="mb-4 text-lg">By Naruto Uzumaki, 1 Januari 2023</div>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet <a href="#" class="underline font-semibold">consectetur</a> adipisicing elit. Quaerat fuga laboriosam rerum magni laudantium doloribus ab modi
+        corrupti, architecto consequuntur recusandae sunt illum laborum saepe sequi natus aliquid minima accusantium doloremque quam et molestias dignissimos odio? Qui fugit
+        commodi molestias tempora quos officia? Laborum id deserunt eaque culpa, vero libero?
+      </p>
+
+      <blockquote class="mb-4 italic font-thin text-xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit quae iusto sint neque autem similique iste architecto voluptate consequuntur.
+      </blockquote>
+
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illo nam ut? Sequi numquam sed officia, tempora recusandae earum quis facere obcaecati atque quia dolore
+        hic ullam quod quidem ab?
+      </p>
     </section>
   </body>
 </html>
