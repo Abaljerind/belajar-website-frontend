@@ -301,3 +301,39 @@
     - dll.
 
 *** NOTE: untuk memposisikan suatu elemen berada ditengah tengah halaman / elemen lain, kita bisa memberikan display flex pada pembungkus / parentnya, lalu gunakan 'm-auto'.
+
+* Pseudo-class & Dark mode,
+
+    *NOTE: untuk membuat elemen button berada ditengah, buat display nya menjadi block dulu, karna default display nya adalah inline. Berarti 'semua elemen html yang display nya inline bisa kita letakkan ditengah jika kita ganti display nya menjadi block dulu' lalu berikan 'margin pada sumbu x auto'.
+
+    - Biasanya pada Pseudo-class ada 3 yang sering kita gunakan, yaitu: hover, active, focus, ada juga yang lain seperti First, last, odd, even, form states dan lain lain pada TailwindCSS.  Selain Pseudo-class ada juga Pseudo-elemen, media and feature queries, attribute selectors, dan custom modifiers pada TailwindCSS.
+
+        Berikut contohnya:
+            <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter mx-auto block hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300">Simpan</button>
+
+    - Grouping, bagaimana caranya kita mau memberikan sebuah style pada elemen ketika elemen parentnya yang kita kasih Pseudo-class. Di dokumentasi TailwindCSS disebutnya sebagai 'Styling based on parent state.
+        Berikut contohnya:
+            <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group">
+                <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white">My Card</h5>
+                <p class="text-slate-600 group-hover:text-white">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, quidem officiis nemo error aliquam ipsum repudiandae atque eos non porro velit excepturi dolorem sapiente quasi ab reprehenderit ullam distinctio minus.
+                </p>
+            </div>
+
+        Untuk menggunakan grouping ini, kita harus berikan dulu nama 'group' pada elemen parent nya, untuk contoh diatas, group diberikan pada elemen 'div'. Lalu pada elemen child / anaknya kita gunakan 'group-hover:<utility nya mau apa>', kalau contoh diatas, pada 'tag h5 dan p', kita berikan 'group-hover:text-white', efeknya nanti saat kursor masuk ke dalam elemen div (parentnya) warna text nya akan berubah jadi putih.
+
+    - Highlighted text, jadi kita bisa mengganti perilaku ketika kita menyorot (klik kanan pada mouse dan tahan) / menyeleksi text dalam halaman kita.
+        Contohnya:
+            <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900">
+        
+        Pada saat text di seleksi dengan mouse, maka warna background yang biasanya biru, akan berubah menjadi warna lime dan warna text nya juga berubah menjadi warna abu abu gelap / slate.
+
+    - First-line and first-letter, untuk mengubah baris pertama / huruf pertama dari suatu paragraf. Berikut contohnya:
+        <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3">
+
+        first-line:uppercase akan mengubah baris pertama menjadi huruf kapital semua. Lalu first-line:tracking-widest akan memberikan ruang / melebarkan baris pertamanya. first-letter:text-7xl akan mengubah huruf pertama menjadi sebesar 72px. Lalu first-letter:float-left akan mengubah huruf pertama agar dapat dikelilingi oleh text yang lain. Terakhir first-letter:mr-3 untuk memberikan jarak ke arah kanan sebesar 12px.
+
+    - Memberikan style pada sebuah elemen input bisa menggunakan before & after atau placeholder text. Contohnya bisa dilihat di file index.html dibagian 'contoh styling pada elemen input'. 
+
+        *Note: efek pseudo-class juga bisa ditumpuk menjadi satu jika ada elemen yang ingin kita berikan efek pseudo-class. Contoh:
+            invalid:focus:ring-pink-700 -> invalid: adalah pseudo-class khusus pada elemen input. Invalid digunakan untuk memberikan semacam efek warning pada elemen input ketika nilai yang dimasukkan ke dalam input tidak sesuai dengan type input nya.
