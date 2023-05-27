@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,7 +13,7 @@
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
     <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
 
     <section class="mb-10 bg-gradient-to-br from-indigo-200 via-red-400 to-yellow-300">
@@ -70,15 +70,17 @@
     <hr class="my-20" />
 
     <!-- contoh pseudo-code -->
-    <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter mx-auto block hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300">
+    <button
+      class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter mx-auto block hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100"
+    >
       Simpan
     </button>
 
     <!-- contoh Styling based on parent state, highlighted-text, dan first-line & first-letter -->
-    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-sky-500 group font-serif">
-      <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white">My Card</h5>
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-sky-500 group font-serif dark:hover:bg-slate-300">
+      <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
       <p
-        class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3"
+        class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800"
       >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, quidem officiis nemo error aliquam ipsum repudiandae atque eos non porro velit excepturi dolorem sapiente
         quasi ab reprehenderit ullam distinctio minus.
@@ -94,8 +96,9 @@
             id="email"
             type="email"
             placeholder="masukkan email..."
-            class="px-3 py-2 border shadow rounded w-full block text-sm placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700"
+            class="px-3 py-2 border shadow rounded w-full block text-sm placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
           />
+          <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
         </label>
       </form>
     </div>
