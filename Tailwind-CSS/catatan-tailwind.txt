@@ -337,3 +337,34 @@
 
         *Note: efek pseudo-class juga bisa ditumpuk menjadi satu jika ada elemen yang ingin kita berikan efek pseudo-class. Contoh:
             invalid:focus:ring-pink-700 -> invalid: adalah pseudo-class khusus pada elemen input. Invalid digunakan untuk memberikan semacam efek warning pada elemen input ketika nilai yang dimasukkan ke dalam input tidak sesuai dengan type input nya.
+
+* Peer dengan sibling, kalau tadi ada grouping dengan parent, maka sekarang ada Peer dengan sibling, yaitu elemen disebelahnya. Ini di TailwindCSS nya disebutnya 'Styling based on sibling state' yaitu perubahan style ketika elemen siblingnya / sodaranya (bersebelahan di html nya). Peer itu artinya elemen yang 1 level sebelah sebelahan. 
+    - Cara menggunakan peer / Styling based on sibling state ini, pertama dengan memberikan elemen disebelahnya (kiri / kanan) class "peer", lalu di elemen yang ingin kita berikan stylenya tadi kita gunakan peer-<pseudo-code>:<utility>. Berikut contohnya:
+        <input
+            id="email"
+            type="email"
+            placeholder="masukkan email..."
+            class="px-3 py-2 border shadow rounded w-full block text-sm placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+          />
+          <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+        
+        Di tag input kita tambahkan class peer, lalu di tag p kita tambahkan class peer-invalid:visible yang sebelumnya kita tambahkan class invisible, jadi ketika text yang kita masukkan ke dalam input bukan bertipe email maka tag p nya akan muncul, tetapi jika text yang kita masukkan pada input bertipe email maka tag p nya akan hilang.
+
+** Dark mode, untuk mengubah tampilan nya agar menjadi gelap. Cara penggunaannya dengan menambahkan class dark:<warna bg / text nya mau apa>, contoh: dark:bg-slate-900, lalu di tag p nya kita berikan dark:text-white atau dark:text-slate-400
+
+    Untuk menggunakan dark mode kita perlu menambahkan 'key dark mode' pada file 'tailwind.config.js' seperti berikut:
+        module.exports = {
+            darkMode: "class",
+            content: ["./index.html"],
+
+    Lalu juga pada file html nya, dibagian tag html diatas kita berikan class dark seperti berikut:
+        <html lang="en" class="dark">
+            <head>
+    Dengan menambah class dark pada tag html diatas kita bisa mengubah seluruh tampilan menjadi dark, dan kita bisa kembali ke mode light juga dengan cara menghapus 'dark' nya.
+
+    Nah selanjutnya baru kita bisa ubah isi di dalam tag body dengan menambahkan class berikut:
+        <body class="dark:bg-slate-800 dark:text-slate-200">
+
+    Terakhir, kita bisa menambahkan pseudo-class dark: pada tag tag lain di dalam tag body, berikut contohnya:
+        <button
+      class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter mx-auto block hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 "dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">Simpan</button>
