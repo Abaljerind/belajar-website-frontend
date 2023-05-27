@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,6 +12,11 @@
 
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3;
+      }
+    </style>
   </head>
   <body class="dark:bg-slate-800 dark:text-slate-200">
     <h1 class="text-8xl font-bold text-center my-10">Mari Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
@@ -69,6 +74,19 @@
 
     <hr class="my-20" />
 
+    <!-- contoh toggle sederhana untuk dark mode dan light mode -->
+
+    <div class="flex justify-center">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
     <!-- contoh pseudo-code -->
     <button
       class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter mx-auto block hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100"
@@ -76,7 +94,7 @@
       Simpan
     </button>
 
-    <!-- contoh Styling based on parent state, highlighted-text, dan first-line & first-letter -->
+    <!-- contoh Styling based on parent state, highlighted-text, dan first-line & first-letter & -->
     <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-sky-500 group font-serif dark:hover:bg-slate-300">
       <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
       <p
@@ -87,7 +105,7 @@
       </p>
     </div>
 
-    <!-- contoh styling pada elemen input -->
+    <!-- contoh styling pada elemen input & dark mode -->
     <div class="max-w-lg border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5">
       <form action="">
         <label for="email">
@@ -104,5 +122,15 @@
     </div>
 
     <div class="mb-96"></div>
+
+    <!-- contoh dark mode dengan toggle sederhana -->
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
+      });
+    </script>
   </body>
 </html>
