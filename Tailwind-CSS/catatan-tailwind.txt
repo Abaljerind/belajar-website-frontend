@@ -368,3 +368,57 @@
     Terakhir, kita bisa menambahkan pseudo-class dark: pada tag tag lain di dalam tag body, berikut contohnya:
         <button
       class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter mx-auto block hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 "dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">Simpan</button>
+
+* Utility pada Bagian "Transform", ada beberapa:
+    - scale, memperbesar / memperkecil elemen, lebih kecil dari 100 elemen mengecil, lebih besar dari 100 elemen membesar.
+    - rotate, memutar elemen
+    - translate, mengubah posisi elemen seperti menggeser geser elemennya
+    - skew, untuk membuat elemennya miring / condong
+    - transform origin, mengubah sumbunya elemennya, misal pada saat kita memutar (rotate) elemen nah kita ubah origin nya / sumbu putar nya
+
+    ** Jika kita ingin membuat efek dengan rotate, scale, dan transition yang tidak patah patah, maka kita harus membungkus elemen tersebut ke dalam elemen parent, lalu gunakan utility group, seperti contoh dibawah ini:
+            
+            <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 group">
+                <div class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition"></div>
+            </div>
+
+    Dengan menggunakan group seperti diatas, maka jika kita hover elemennya tidak akan patah patah, kenapa? karena yang kita hover adalah elemen parentnya yang diam, bukan elemen yang sendirian saja, kalau elemen diatas dipindahkan keluar dari elemen parent nya maka akan patah patah karena yang dihover sedang bergerak juga. Berikut contoh elemen yg sama tetapi tidak dibungkus oleh elemen parentnya.
+
+        <div class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-125 hover:rotate-180 transition origin-top-left hover:bg-pink-500"></div>
+
+* Utility pada Bagian "Transitions & Animation", ada beberapa:
+    - transition property,
+    - transition duration,
+    - transition timing function,
+        - ease-linear, waktunya sama dari awal sampai akhir.
+        - ease-in, awalnya lambat lalu semakin cepat.
+        - ease-out, awalnya cepat lalu semakin lambat.
+        - ease-in-out, awalnya lambat, lalu cepat, lalu lambat lagi.
+    - transition delay,
+    - animation, sudah dibuatkan susunan animasinya dan juga keyframes nya.
+        - animate-spin, membuat elemen yang kita pilih itu berputar secara terus menerus.
+        - animate-ping, seperti fade out, jadi elemennya membesar, seperti radar.
+        - animate-pulse, seperti berdenyut.
+        - animate-bounce, jadinya elemennya akan memantul
+
+        ** Jika kita kurang suka dengan animation yang disediakan, maka kita bisa buat sendiri di file tailwind.config.js seperti berikut:
+            module.exports = {
+                    theme: {
+                        extend: {
+                        animation: {
+                            'spin-slow': 'spin 3s linear infinite',
+                        }
+
+        ** Kita juga bisa membuat animation kita sendiri yang berbeda dari apa yang disediakan oleh tailwindcss dengan cara yang sama yaitu 'mengedit' file tailwind.config.js nya. Seperti berikut contohnya:
+        *NOTE: kita perlu membuat keyframes baru terlebih dahulu sebelum membuat animation nya.
+
+            animation: {
+                "spin-slow": "spin 3s linear infinite",
+                wiggle: "goyang 1s ease-in-out infinite",
+            },
+            keyframes: {
+                goyang: {
+                "0%, 100%": { transform: "rotate(-3deg)" },
+                "50%": { transform: "rotate(3deg)" },
+                },
+            },
