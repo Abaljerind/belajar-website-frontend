@@ -508,7 +508,11 @@
                     @apply translate-x-3;
                 }
 
-        - @apply, digunakan untuk melakukan penyimpanan utility utility class yang sudah ada di tailwind untuk dimasukkan ke custom css kita secara inline. Perlu diingat bahwa "group" tidak bisa dimasukkan ke dalam @apply. 
+        - @apply, digunakan untuk melakukan penyimpanan utility utility class yang sudah ada di tailwind untuk dimasukkan ke custom css kita secara inline. Perlu diingat bahwa "group" tidak bisa dimasukkan ke dalam @apply dan kita juga tidak bisa menambahkan arbitrary class / class buatan kita, oleh karna itu kita perlu mengeluarkan dan memindahkan group dan arbitrary class yang ada ke bagian akhir di dalam class pada file htmlnya dan tidak memasukkannya ke dalam file input css dibagian @layer diposisi manapun entah itu base, component atau utilities. Berikut contoh penerapannya jika group dan arbitrary class ada di file html kita,
+            
+            <div class="h-15 group grid-card">
+                h-15 adalah arbitrary class, dan group tentu tidak bisa dimasukkan seperti penjelasan diatas.
+
         - @config,
 
     - Functions dibagi menjadi 2 antara lain,
