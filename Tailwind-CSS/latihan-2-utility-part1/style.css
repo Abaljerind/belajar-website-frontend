@@ -712,6 +712,10 @@ video {
   aspect-ratio: 4/3;
 }
 
+.aspect-\[3\/4\] {
+  aspect-ratio: 3/4;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -829,6 +833,14 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .overflow-hidden {
@@ -1533,12 +1545,40 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:col-start-4 {
+    grid-column-start: 4;
+  }
+
+  .md\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .md\:row-start-2 {
+    grid-row-start: 2;
+  }
+
+  .md\:aspect-\[3\/4\] {
+    aspect-ratio: 3/4;
+  }
+
   .md\:w-80 {
     width: 20rem;
   }
 
   .md\:max-w-5xl {
     max-width: 64rem;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:p-2 {
+    padding: 0.5rem;
   }
 
   .md\:text-5xl {
@@ -1554,6 +1594,10 @@ video {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
   }
 
   .lg\:w-1\/2 {
@@ -1578,5 +1622,11 @@ video {
 
   .lg\:p-12 {
     padding: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
   }
 }
