@@ -1561,9 +1561,35 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:mt-9 {
+    margin-top: 2.25rem;
+  }
+
+  .md\:h-96 {
+    height: 24rem;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:max-w-5xl {
+    max-width: 64rem;
+  }
+
   .md\:bg-green-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
