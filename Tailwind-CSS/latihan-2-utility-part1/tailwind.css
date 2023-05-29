@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+@layer base {
+  h1 {
+    font-size: 10rem;
+  }
+}
+
+@layer utilities {
   #toggle:checked ~ label div.toggle-circle {
     @apply translate-x-3;
   }
