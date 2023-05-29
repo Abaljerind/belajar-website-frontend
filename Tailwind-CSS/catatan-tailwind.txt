@@ -485,3 +485,14 @@
     **NOTE: selalu ingat bahwa kita harus memberikan display grid / flex pada elemen pembungkus / parentnya dulu, jangan langsung pada elemen anaknya, kalau suatu elemen tidak punya elemen parent maka kita buat dengan div atau span saja. Setelah kita berikan parentnya flex maka kita bisa menggunakan elemen turunan dari flex / grid nya pada elemen anaknya.
 
 * Utility grid. Dengan grid kita dapat memindahkan posisi elemen dengan mudah, contohnya dengan menggunakan col-start-4 dan row-start-2 maka akan memindahkan elemen ke kolom ke 4 baris ke 2.
+
+* Functions & Directives, merupakan referensi untuk functions custom (buatan kita) dan directives (arahan khusus) tailwind untuk css kita.
+    - Directives adalah keyword yang bisa kita gunakan didalam tailwind yang didepannya memiliki "at-rules" (contoh: @tailwind, tailwind nya adalah rulesnya) yang bisa kita gunakan didalam css yang menawarkan fungsi fungsi yang spesial di project tailwind kita. Directives dibagi menjadi 4 antara lain,
+        - @tailwind,
+        - @layer,
+        - @apply,
+        - @config,
+
+    - Functions dibagi menjadi 2 antara lain,
+        - theme(),
+        - screen(), 
