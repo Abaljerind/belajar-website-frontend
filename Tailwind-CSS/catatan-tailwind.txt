@@ -515,6 +515,12 @@
 
         - @config,
 
-    - Functions dibagi menjadi 2 antara lain,
-        - theme(),
-        - screen(), 
+    - Functions, jadi tailwind memberikan kita beberapa custom functions yang bisa kita gunakan di css untuk mengakses nilai nilai yang spesifik untuk tailwindnya yang dibagi menjadi 2 antara lain,
+        - theme(), ketika kita mau mengakses nilai yang kita buat di dalam variable theme() di config nya. Bisa dicek di file 'tailwind.config.js' ada beberapa functions yang sudah kita buat. Contoh penggunaannya,   
+                            h1 {
+                                @apply text-5xl;
+                                color: theme(colors.wpu);
+                            }
+
+        - screen(), kalau kita mau membuat media queries sendiri, ketika kita mau membuat media queries didalam konfigurasi kita tapi kita ga memasukkan nilai pixelnya, tapi kita bisa memasukkan sm, md, lg, xl, 2xl yang mana nantinya tailwind akan menerjemahkan sesuai dengan breakpoint nya. Contoh:
+            @media screen(sm) { ... }
