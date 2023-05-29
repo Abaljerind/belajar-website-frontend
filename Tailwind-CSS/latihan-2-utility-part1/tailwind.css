@@ -8,6 +8,12 @@
   }
 }
 
+@layer components {
+  .grid-card {
+    @apply bg-sky-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] overflow-hidden relative hover:scale-95 transition-all duration-500;
+  }
+}
+
 @layer utilities {
   #toggle:checked ~ label div.toggle-circle {
     @apply translate-x-3;

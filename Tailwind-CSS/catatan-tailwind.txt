@@ -488,9 +488,27 @@
 
 * Functions & Directives, merupakan referensi untuk functions custom (buatan kita) dan directives (arahan khusus) tailwind untuk css kita.
     - Directives adalah keyword yang bisa kita gunakan didalam tailwind yang didepannya memiliki "at-rules" (contoh: @tailwind, tailwind nya adalah rulesnya) yang bisa kita gunakan didalam css yang menawarkan fungsi fungsi yang spesial di project tailwind kita. Directives dibagi menjadi 4 antara lain,
-        - @tailwind,
-        - @layer,
-        - @apply,
+        - @tailwind, mempunyai 3 tipe dengan 1 tambahan variants:
+        a. @tailwind base, style style utama yang menjadi dasar dari tailwind nya. Reset disini, ukuran dasarnya ada disini.
+        b. @tailwind components, dengan ini tailwind akan menambahkan class class komponen kalau ada atau class class komponen yang didaftarkan oleh plugins. Kalau kita belum buat komponen maka tailwind tidak akan generate apapun.
+        c. @tailwind utilities, disini tailwind akan memasukkan class class utility tiap kali kita gunakan.
+        d. @tailwind variants, variants itu misalnya seperti hover, focus, responsive, dark mode dan lain lain.
+
+
+        - @layer, digunakan kalau kita mau memodifikasi isi dari 3 directives diatas (a,b,c). Misalnya kita mau buat style dasar buatan kita sendiri, misalnya h1 dibawah akan punya ukuran yang langsung besar tanpa harus dikasih class 'text-2xl' atau yang lainnya gitu. Nah kita bisa simpan di "base" seperti dibawah ini:
+            @layer base {
+                h1 {
+                    @apply text-2xl;
+                }
+            }
+        "base" diatas bisa kita ubah sesuai yang kita mau, karena kalau kita menyimpan style nya di "base" maka style nya akan disimpan di file output di bagian atas, lalu kalau "components" akan disimpan dibagian tengah, dan kalau "utilities" akan disimpan dibagian akhir dan ini akan berpengaruh dibagian "specifity" atau "urutan eksekusinya".
+
+        ** PENTING: Jadi silahkan simpan modifikasi kita sesuai dengan peruntukkan nya, kalau mau ubah ubah style default simpan di "base", kalau dia merupakan komponen maka simpan di "components" misalnya card, media dan button atau bahkan sebuah class utility tailwind yang sudah digunakan berulang ulang / memiliki nilai yang sama lebih dari 1, serta yang lainnya. Atau kita mau menambah utility baru, contohnya 
+            #toggle:checked ~ label div.toggle-circle {
+                    @apply translate-x-3;
+                }
+
+        - @apply, digunakan untuk melakukan penyimpanan utility utility class yang sudah ada di tailwind untuk dimasukkan ke custom css kita secara inline. Perlu diingat bahwa "group" tidak bisa dimasukkan ke dalam @apply. 
         - @config,
 
     - Functions dibagi menjadi 2 antara lain,
