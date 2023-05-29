@@ -422,3 +422,32 @@
                 "50%": { transform: "rotate(3deg)" },
                 },
             },
+
+* Utility pada bagian "Layout" ada banyak tapi yang dicoba sekarang hanya beberapa:
+    - container, untuk memberikan lebar yang fix pada sebuah bagian / elemen. ada banyak tipenya, dari yang none, sampai 2xl, dan dengan menggunkan container ini, kita sudah bisa mendapatkan efek responsive langsung berdasarkan layarnya, walaupun kita hanya menggunakan 'container' saja tetapi efek responsive nya akan langsung mengikuti lebar dari perangkat yang digunakan.
+        Contoh:
+            <div class="container px-8 mx-auto">
+    
+    - float, agar mendapatkan efek wrapping.
+        Contoh:
+            <img src="img/1.jpg" alt="Komputer" width="125" class="float-left mr-3" />
+    
+    - position, untuk menempatkan posisi pada elemen yang kita punya. Perlu diingat jika kita memberikan suatu elemen position non static, maka kita juga harus memberikan pembungkus / elemen parentnya posisi non static juga, biasanya digunakan relative. Kita juga bisa memberikan nilai negatif dengan menambahkan tanda minus ( - ) didepan kata top, right, left / bottom.
+        Contoh:
+            <div class="border rounded-lg shadow-lg p-10 'relative'">
+                <div class="w-10 h-10 bg-sky-200 rounded-full flex 'absolute -top-5 -right-5'"><span class="text-xl m-auto">✖️</span></div>
+
+        Contoh position agar pas ditengah tengah elemen, dengan menambah translate yang nilainya negatif:
+            <div class="border rounded-lg shadow-lg p-10 'relative'">
+                <div class="w-10 h-10 bg-sky-200 rounded-full flex 'absolute -top-5 left-1/2 -translate-x-1/2' cursor-pointer"><span class="text-xl m-auto">⬆️</span></div>
+
+        Contoh position dengan flex agar bisa kembali ke atas ketika di klik dengan tag a dan juga dengan utility 'scroll-smooth' yang diberikan pada tag html nya:
+            <html lang="en" class="scroll-smooth">
+                <div class="border rounded-lg shadow-lg p-10 'relative'">
+                <div class="w-10 h-10 bg-sky-200 rounded-full flex 'fixed bottom-5 right-5' cursor-pointer"><a href="#" class="text-xl m-auto">⬆️</a></div>
+    
+    - Columns, untuk mengontrol jumlah kolom yang ada didalam suatu elemen pembungkus. Kita hanya perlu menambahkan utility dengan nama 'columns-<jumlahnya mau berapa>' saja.
+        Contoh dibawah adalah suatu div yang punya 2 / lebih tag img yang kita berikan utility columns-3 yang akan membagi img nya menjadi 3 buah kolom:
+            <div class="container mx-auto border rounded-lg shadow-lg p-10 mt-20 'columns-3'">
+                <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4" />
+                <img src="https://source.unsplash.com/600x400" alt="Image" class="mb-4" />
