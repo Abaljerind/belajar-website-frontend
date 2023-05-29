@@ -481,3 +481,7 @@
         sm:text-base -> untuk mengembalikan text ke ukuran normal.
 
 * Utility flexbox. Untuk memberikan efek flexbox, kita hanya perlu memberikan kata 'flex', nah jika di refresh halaman webnya kalau tampilan webnya berubah jadi sejajar ke kanan semua, maka kita perlu membungkus semua tag html tersebut ke dalam "div baru", kenapa? agar yang diberikan "efek flex-item" hanya '1 block div itu saja bukan semua tag html tadi yang belum dimasukkan ke dalam div baru tersebut'. Hasilnya akan berubah kembali menjadi berurutan kebawah seperti semula, yang berbeda hanya elemen elemen tag html didalamnya sudah dikelompokkan menjadi 'flex-item'. Sehingga kita bisa membuat 'flex-item' kedua dengan div baru lagi dan nantinya kita bisa mengubah urutan dengan menukar posisi kedua 'flex-item' tersebut dengan row-reverse atau column-reverse.
+
+    **NOTE: selalu ingat bahwa kita harus memberikan display grid / flex pada elemen pembungkus / parentnya dulu, jangan langsung pada elemen anaknya, kalau suatu elemen tidak punya elemen parent maka kita buat dengan div atau span saja. Setelah kita berikan parentnya flex maka kita bisa menggunakan elemen turunan dari flex / grid nya pada elemen anaknya.
+
+* Utility grid. Dengan grid kita dapat memindahkan posisi elemen dengan mudah, contohnya dengan menggunakan col-start-4 dan row-start-2 maka akan memindahkan elemen ke kolom ke 4 baris ke 2.
