@@ -524,3 +524,7 @@
 
         - screen(), kalau kita mau membuat media queries sendiri, ketika kita mau membuat media queries didalam konfigurasi kita tapi kita ga memasukkan nilai pixelnya, tapi kita bisa memasukkan sm, md, lg, xl, 2xl yang mana nantinya tailwind akan menerjemahkan sesuai dengan breakpoint nya. Contoh:
             @media screen(sm) { ... }
+
+
+*** PENTING: Plugin untuk tailwindcss agar lebih rapih, berikut cara install nya:
+    npm i -D prettier-plugin-tailwindcss
