@@ -8,6 +8,15 @@
 
     <!-- css from tailwind -->
     <link href="dist/output.css" rel="stylesheet" />
+
+    <!-- js script from tailwind to store theme in browser -->
+    <script>
+      if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <!-- header start -->
