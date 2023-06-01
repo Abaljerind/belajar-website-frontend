@@ -1,11 +1,16 @@
 // navbar-fixed -> window.onscroll akan menjalankan function ketika window atau layar browser kita scroll
 window.onscroll = function () {
   const header = document.querySelector("header");
+  const toTop = document.querySelector("#to-top");
   const fixedNav = header.offsetTop; // jarak dari posisi header terhadap topnya, harusnya saat tampilan berada dipaling atas windownya itu posisinya 0, dan akan bertambah seiring kita scroll windownya.
   if (window.pageYOffset > fixedNav) {
     header.classList.add("navbar-fixed");
+    toTop.classList.remove("hidden");
+    toTop.classList.add("flex");
   } else {
     header.classList.remove("navbar-fixed");
+    toTop.classList.remove("flex");
+    toTop.classList.add("hidden");
   }
 };
 
