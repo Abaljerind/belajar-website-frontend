@@ -60,6 +60,16 @@
 
  # Dengan menggunakan aplikasi / Extension Sass ini, kita hanya perlu membuat file scss nya, karna nantinya file tersebut akan dikompilasi menjadi file css, jadi nama file scss nya harus sama dengan nama yang kita masukkan pada tag link di file html nya.
 
+### Cara compile file sass / scss 
+    - dengan command line (cmd),
+    contoh:
+        sass source/stylesheets/index.scss build/stylesheets/index.css
+
+    - dengan vs code extension,
+    contoh:
+        ketika kita sudah membuat file dengan ekstensi .scss / .sass maka dibagian bawah dari vs code akan muncul text Watch Sass yang berguna untuk melakukan kompilasi file ke bentuk css. File scss / sass tersebut akan terus dikompilasi selama icon Watch Sass nya masih on dan akan melakukan kompilasi ketika kita melakukan save pada file scss / sass nya.
+
+
 * Alasan untuk tidak menggunakan SASS:
     - Banyak fitur SASS yang sekarang sudah dimiliki oleh CSS
     - Tidak untuk project kecil
