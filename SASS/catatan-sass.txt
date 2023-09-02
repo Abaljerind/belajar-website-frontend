@@ -243,3 +243,233 @@
     - math
     - selector
     - string
+
+
+-------------------------------------------------------------
+
+*** Catatan berdasarkan website sass bagian Learn. ***
+
+* Variables, digunakan untuk menyimpan suatu nilai yang ingin digunakan selama penggunaan stylesheets. Nilai yang bisa disimpan antara lain colors, font stacks, atau nilai CSS manapun yang mau digunakan secara berulang. Sass menggunakan tanda $ / dollar, untuk membuat sesuatu menjadi variabel. Contoh:
+
+    $font-stack: Helvetica, sans-serif;
+    $primary-color: #333;
+
+    body {
+        font: 100% $font-stack;
+        color: $primary-color;
+    }
+
+yang akan menghasilkan file css ketika di compile, menjadi:
+
+    body {
+        font: 100% Helvetica, sans-serif;
+        color: #333;
+    }
+
+Dengan menggunakan variable pada sass, maka kode style css kita bisa menjadi powerful ketika mengerjakan styling dengan brand warna dan membuat warna nya tetap konsisten selama pembuatan web.
+
+* Nesting, ketika menuliskan kode HTML, biasanya kita bisa melihat tampilan hirarki / tumpukkan tag tag HTML yang berbeda tetapi ada di dalam suatu pembungkus / wrap, pada CSS hal ini tidak ada. Dengan sass kita bisa membuat tampilan hirarki yang sama seperti pada HTML. Perlu diingat, jika kode yang dibuat terlalu nested / terlalu dalam hirarki nya, maka kode CSS yang dihasilkan juga akan semakin rumit dan sulit untuk dikelola, ini bisa menyebabkan kesulitan dalam pemeliharaan kode CSS dan umumnya dianggap sebagai bad practice. Berikut contoh style untuk navigasi pada suatu web:
+
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li { display: inline-block; }
+
+        a {
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+        }
+    }
+
+yang akan menghasilkan file css ketika di compile, menjadi:
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    nav li {
+        display: inline-block;
+    }
+    nav a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+
+Bisa diperhatikan bahwa selector ul, li dan a berada didalam selector 'nav'. Ini adalah cara yang bagus untuk mengorganisir file CSS dan membuatnya mudah dibaca.
+
+* Partials, seperti namanya yang artinya 'sebagian', kita bisa membuat file sass yang berisikan sedikit snippets dari CSS yang dimasukkan didalam file sass yang lain. Ini adalah cara yang bagus untuk membagi CSS yang digunakan dan membantu agar lebih mudah pengelolaan nya. Sebuah file partial adalah sebuah file sass dengan nama yang diawali dengan 'underscore' / _ . Contoh bisa diberikan nama '_partial.scss. Underscore ini memberitahukan kepada 'sass' bahwa file tersebut hanyalah sebuah file partial dan tidak seharusnya di kompilasi menjadi sebuah file CSS. file file partial sass ini bisa digunakan dengan rule / aturan penulisan '@use'.
+
+* Modules, dengan sass, kita tidak harus menuliskan semua kode CSS nya di dalam 1 file. Kita bisa pisah pisahkan kode nya dengan menggunakan aturan @use, dengan aturan (rule) ini kita bisa memuat file sass yang lain sebagai sebuah module, yang berarti kita bisa arahkan ke variable, mixins, dan functions di dalam file sass kita dengan sebuah 'namespace' berdasarkan nama file nya. Dengan modules ini juga bisa menghasilkan file CSS yang di kompilasi seperti file sass pada umumnya. Berikut adalah contohnya:
+
+    // _base.scss -> file module.
+    $font-stack: Helvetica, sans-serif;
+    $primary-color: #333;
+
+    body {
+        font: 100% $font-stack;
+        color: $primary-color;
+    }
+
+    // styles.scss -> cara menggunakan file module diatas dengan @use.
+    @use 'base';
+
+    .inverse {
+        background-color: base.$primary-color;
+        color: white;
+    }
+
+    yang akan menghasilkan file css ketika di compile, menjadi:
+
+    body {
+        font: 100% Helvetica, sans-serif;
+        color: #333;
+    }
+
+    .inverse {
+        background-color: #333;
+        color: white;
+    }
+
+Bisa diperhatikan kita menggunakan @use 'base'; didalam file styles.scss nya. Ketika menggunakan sebuah file seperti ini, kita tidak perlu memasukkan extensi dari file nya, karna sass nya sudah bisa melakukan hal tersebut. Dan perlu diperhatikan juga bahwa untuk file modules (yang dipisah / partials) ini, kita perlu memberikan nama dengan awalan underscore seperti diatas.
+
+* Mixins, memudahkan kita dalam membuat kelompok kode CSS yang ingin digunakan secara berulang ulang di seluruh website kita. Dengan mixins kita bahkan bisa memberikan nilai agar mixin yang dibuat lebih fleksibel. Berikut contohnya:
+
+    @mixin theme($theme: DarkGray) {
+        background: $theme;
+        box-shadow: 0 0 1px rgba($theme, .25);
+        color: #fff;
+    }
+
+    .info {
+        @include theme;
+    }
+    .alert {
+        @include theme($theme: DarkRed);
+    }
+    .success {
+        @include theme($theme: DarkGreen);
+    }
+
+    yang akan menghasilkan file css ketika di compile, menjadi:
+
+    .info {
+        background: DarkGray;
+        box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+        color: #fff;
+    }
+
+    .alert {
+        background: DarkRed;
+        box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+        color: #fff;
+    }
+
+    .success {
+        background: DarkGreen;
+        box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);
+        color: #fff;
+    }
+
+Untuk membuat sebuah mixin, kita menggunakan @mixin dan berikan nama mixin nya. Pada contoh diaatas kita memberikan nama mixin theme. Kita juga menggunakan variable $theme sebagai parameter dengan nilai default nya yaitu DarkGray, tetapi parameter tersebut juga bisa kita ubah nilai nya ketika kita menggunakan mixin tersebut. Setelah mixin selesai dibuat, kita bisa menggunakan nya sebagai deklarasi CSS yang di awali dengan @include dan diikuti oleh nama dari mixin nya, seperti contoh diatas. Kita juga bisa memberikan nilai pada parameter / variable dari $theme nya dengan nilai yang lain, ini juga disebut sebagai argument.
+
+* Extend / Inheritance, dengan menggunakan @extend bisa membuat kita membagikan sebuah kumpulan properti CSS dari 1 selector ke selector yang lain. Di dalam contoh dibawah kita akan membuat sebuah style sederhana dari pesan pesan error, warning, dan success menggunakan fitur yang saling berhubungan dengan extend yaitu 'placeholder classes'. Sebuah placeholder class adalah sebuah class bertipe spesial yang hanya mencetak / print ketika dilakukan extend, dan bisa membantu kompilasi kode CSS kita dengan aman dan bersih. Berikut contohnya:
+
+    /* CSS dibawah ini adalah placeholder class dan akan dicetak / print karna %message-shared telah di extend */
+    %message-shared {
+        border: 1px solid #ccc;
+        padding: 10px;
+        color: #333;
+    }
+    
+    // CSS dibawah ini adalah placeholder class dan tidak akan dicetak / print karena %equal-heights tidak pernah di extend
+    %equal-heights {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .message {
+        @extend %message-shared;
+    }
+
+    .success {
+        @extend %message-shared;
+        border-color: green;
+    }
+
+    .error {
+        @extend %message-shared;
+        border-color: red;
+    }
+
+    .warning {
+        @extend %message-shared;
+        border-color: yellow;
+    }
+
+    yang akan menghasilkan file css ketika di compile, menjadi:
+
+    /* CSS dibawah ini akan dicetak / print karena %message-shared telah di extend */
+    .warning, .error, .success, .message {
+        border: 1px solid #ccc;
+        padding: 10px;
+        color: #333;
+    }
+
+    .success {
+        border-color: green;
+    }
+
+    .error {
+        border-color: red;
+    }
+
+    .warning {
+        border-color: yellow;
+    }
+
+Apa yang kode diatas katakan adalah .message, .success, .error dan .warning untuk berperilaku seperti %message-shared. Ini berarti dimanapun %message-shared muncul maka .message, .success, .error, dan .warning akan muncul juga seperti isi dari %message-shared. Sihirnya terjadi ketika CSS selesai dikompilasi, dimana tiap class nya tadi akan mempunyai properti CSS sama seperti %message-shared. Ini membantu kita menghindari penulisan nama class yang banyak pada elemen HTML.
+
+Bisa diperhatikan diatas bahwa %equal-heights tidak dikompilasi, karena %equal-heights tidak pernah di extend.
+
+* Operators, melakukan perhitungan matematika dengan CSS sangat berguna. Sass punya operator matematika standar seperti +, -, *, math.div() dan %. Contoh dibawah ini adalah perhitungan matematika sederhana untuk menghitung lebar article dan aside.
+
+    @use "sass:math";
+
+    .container {
+        display: flex;
+    }
+
+    article[role="main"] {
+        width: math.div(600px, 960px) * 100%;
+    }
+
+    aside[role="complementary"] {
+        width: math.div(300px, 960px) * 100%;
+        margin-left: auto;
+    }
+
+    yang akan menghasilkan file css ketika di compile, menjadi:
+
+    .container {
+        display: flex;
+    }
+
+    article[role=main] {
+        width: 62.5%;
+    }
+
+    aside[role=complementary] {
+        width: 31.25%;
+        margin-left: auto;
+    }
+
+    Dari contoh diatas, kita sudah membuat sebuah tampilan yang responsive dengan sederhana berdasarkan lebar layar 960px. Melakukan perhitungan dengan sass membantu kita melakukan sesuatu seperti mengambil nilai pixel dan mengubahnya menjadi bentuk persen tanpa banyak usaha.
+
+    -------------------------------------------------------------
