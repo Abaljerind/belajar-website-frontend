@@ -4,6 +4,7 @@ body {
   padding: 20px;
 }
 
+/* menu */
 .menu {
   width: 80%;
   background-color: burlywood;
@@ -62,4 +63,26 @@ hr {
 
 .bottom-line {
   margin-top: 25px;
+}
+
+/* footer */
+
+footer {
+  font-size: 14px;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
 }
