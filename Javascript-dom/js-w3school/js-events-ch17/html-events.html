@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+  </head>
+  <body>
+    <p id="demo">Text</p>
+
+    <!-- pada event di tag button dibawah ini, ketika button nya di klik maka javascript akan mengubah isi dari elemen dengan id 'demo' sesuai dengan function javascript tanggal / Date() tersebut. -->
+    <button onclick="document.getElementById('demo').innerHTML = Date()">
+      The time is?
+    </button>
+
+    <!-- dibawah ini contoh event yang mengubah isi elemen nya sendiri ketika di klik menggunakan 'this'. -->
+    <p>Mengganti isi dari text button</p>
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+  </body>
+</html>
