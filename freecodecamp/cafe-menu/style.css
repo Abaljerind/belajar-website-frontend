@@ -3,6 +3,15 @@ body {
   font-family: sans-serif;
 }
 
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
 h1,
 h2,
 p {
@@ -26,13 +35,10 @@ h2 {
   font-style: italic;
 }
 
-.menu {
-  width: 80%;
-  background-color: burlywood;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  max-width: 500px;
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
 }
 
 .flavor,
