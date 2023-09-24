@@ -88,3 +88,14 @@ let dPadded = d.padStart(4, "0");
 
 let e = "4";
 let ePadded = e.padEnd(5, "#");
+
+// extracting string characters
+// charAt()
+let f = "halo dunia";
+let fChar = f.charAt(5);
+
+// charCodeAt() -> mengembalikan karakter unicode berupa UTF-16
+let fCharCode = f.charCodeAt(0);
+
+// property Access -> mirip charAt()
+let fPropertyAccess = f[0];
