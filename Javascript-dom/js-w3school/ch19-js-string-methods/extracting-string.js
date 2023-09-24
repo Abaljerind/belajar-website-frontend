@@ -82,7 +82,7 @@ let a = "Hello World!";
 let b = a.toUpperCase();
 let c = a.toLowerCase();
 
-// padStart(panjang maksimal, nilai yang ingin ditambah) -> menambah nilai didepan value awal.
+// padStart(panjang maksimal, nilai yang ingin ditambah) & padEnd -> menambah nilai didepan value awal.
 let d = "5";
 let dPadded = d.padStart(4, "0");
 
