@@ -40,3 +40,9 @@ let smartphone = gadget.slice(-28, -18);
 let laptop = gadget.slice(-16, -10);
 
 let komputer = gadget.slice(-8);
+
+// substring(start, end) -> tidak ada minus, jika kurang dari 0 maka dianggap 0
+let buah = "apple, banana, kiwi";
+let buahLength = buah.length;
+
+let contoh = buah.substring(7, 13);
