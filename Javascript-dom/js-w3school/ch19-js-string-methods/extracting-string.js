@@ -46,3 +46,15 @@ let buah = "apple, banana, kiwi";
 let buahLength = buah.length;
 
 let contoh = buah.substring(7, 13);
+
+// replace()
+let textVisit = "Please visit Microsoft";
+let newText = textVisit.replace("Microsoft", "Hospital");
+
+// contoh replace dengan case insensitive (/i)
+let newText2 = textVisit.replace(/MICROSOFT/i, "w3school");
+
+// contoh replace dengan global match (/g)
+let textVisit2 =
+  "Please visit Microsoft & Microsoft. Feel free to contact us in Microsoft";
+let newText3 = textVisit2.replace(/Microsoft/g, "w3school");
