@@ -76,3 +76,8 @@ text4 = text4.replaceAll("like", "love");
 text4 = text4.replaceAll("naruto shippuden,", "");
 text4 = text4.replaceAll("valorant,", "Dota 2");
 text4 = text4.replaceAll("games", "games on pc");
+
+// toUpperCase() & toLowerCase
+let a = "Hello World!";
+let b = a.toUpperCase();
+let c = a.toLowerCase();
