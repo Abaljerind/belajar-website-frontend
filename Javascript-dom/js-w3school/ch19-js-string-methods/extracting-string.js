@@ -81,3 +81,10 @@ text4 = text4.replaceAll("games", "games on pc");
 let a = "Hello World!";
 let b = a.toUpperCase();
 let c = a.toLowerCase();
+
+// padStart(panjang maksimal, nilai yang ingin ditambah) -> menambah nilai didepan value awal.
+let d = "5";
+let dPadded = d.padStart(4, "0");
+
+let e = "4";
+let ePadded = e.padEnd(5, "#");
