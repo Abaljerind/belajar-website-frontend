@@ -58,3 +58,21 @@ let newText2 = textVisit.replace(/MICROSOFT/i, "w3school");
 let textVisit2 =
   "Please visit Microsoft & Microsoft. Feel free to contact us in Microsoft";
 let newText3 = textVisit2.replace(/Microsoft/g, "w3school");
+
+// replaceAll()
+let text2 = "I love cats. Cats are very easy to love. Cats are very popular.";
+text2 = text2.replaceAll("Cats", "Turtle");
+text2 = text2.replaceAll("cats", "turtle");
+
+let text3 =
+  "I love to watch tv series, because it is so good. My Favorite series are Prison Break and The Big Bang Theory.";
+text3 = text3.replaceAll("tv series", "anime");
+text3 = text3.replaceAll("Prison Break", "Bleach");
+text3 = text3.replaceAll("The Big Bang Theory", "Naruto");
+
+let text4 =
+  "I like to play games, because it's refreshing. My Favorite games are naruto shippuden, valorant, and GTA V";
+text4 = text4.replaceAll("like", "love");
+text4 = text4.replaceAll("naruto shippuden,", "");
+text4 = text4.replaceAll("valorant,", "Dota 2");
+text4 = text4.replaceAll("games", "games on pc");
