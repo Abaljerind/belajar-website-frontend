@@ -4,3 +4,7 @@ text.startsWith("Hello");
 text.startsWith("hello");
 text.startsWith("universe");
 text.startsWith("welcome");
+
+// dengan posisi kata yang berbeda
+text.startsWith("world", 6);
+text.startsWith("to the", 21);
