@@ -5,6 +5,16 @@ text.startsWith("hello");
 text.startsWith("universe");
 text.startsWith("welcome");
 
-// dengan posisi kata yang berbeda
+// dengan posisi kata yang berbeda di awal kata yang dicari
 text.startsWith("world", 6);
 text.startsWith("to the", 21);
+
+// endsWith() -> kebalikan dari startsWith()
+let fullName = "John Doe";
+fullName.endsWith("Doe");
+fullName.endsWith("John");
+
+// dengan posisi kata yang berbeda di akhir kata yang dicari
+text.endsWith("to the", 27);
+text.endsWith("to the universe", 36);
+text.endsWith("world", 11);
