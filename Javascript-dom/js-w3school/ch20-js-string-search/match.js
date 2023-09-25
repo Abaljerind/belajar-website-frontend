@@ -9,3 +9,11 @@ text.match(/ain/g);
 
 // regEx case insensitive
 text.match(/ain/gi);
+
+// matchAll() ->
+let textCat = "I love cats. Cats are very easy to love. Cats are very popular.";
+const iterator = textCat.matchAll("Cats");
+
+// regEx global & case insensitive
+const iterator2 = textCat.matchAll(/Cats/g);
+const iterator3 = textCat.matchAll(/Cats/gi);
