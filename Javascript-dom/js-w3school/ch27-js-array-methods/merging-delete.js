@@ -10,3 +10,12 @@ console.log(fruits);
 
 let shiftUndefined = fruits.shift();
 console.log(fruits);
+
+// merging with concat()
+const members = ["naruto", "sasuke", "sakura"];
+const team7 = ["team 7", "kakashi"];
+console.log(members.concat(team7));
+
+const members2 = ["kiba", "hinata", "shino"];
+const team9 = ["team 9", "kurenai"];
+console.log(members2.concat(team9));
