@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Each</title>
+  </head>
+  <body>
+    <p>Calling a function once for each element in an array</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const numbers = [33, 21, 7, 5, 88, 1, 52];
+      let text = "";
+      numbers.forEach(myFunction);
+
+      function myFunction(value) {
+        text = text + value + "<br>";
+      }
+    </script>
+  </body>
+</html>
