@@ -6,6 +6,7 @@
     <title>For Each</title>
   </head>
   <body>
+    <h2>forEach() Method</h2>
     <p>Calling a function once for each element in an array</p>
 
     <p id="demo"></p>
@@ -14,6 +15,8 @@
       const numbers = [33, 21, 7, 5, 88, 1, 52];
       let text = "";
       numbers.forEach(myFunction);
+
+      document.getElementById("demo").innerHTML = text;
 
       function myFunction(value) {
         text = text + value + "<br>";
