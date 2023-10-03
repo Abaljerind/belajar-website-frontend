@@ -16,3 +16,12 @@ console.log(
     return a - b;
   })
 );
+
+// reverse sort()
+console.log(
+  points.sort(function (a, b) {
+    return b - a;
+  })
+);
+
+console.log(fruits.reverse());
