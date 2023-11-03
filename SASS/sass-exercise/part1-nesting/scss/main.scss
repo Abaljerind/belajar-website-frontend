@@ -195,11 +195,17 @@ header {
 // main
 
 main {
-  width: 600px;
-  padding: 0 12px;
-  box-sizing: border-box;
+  display: flex;
+  background-color: lightblue;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 32px;
 
   article {
+    max-width: 600px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    flex: 2;
     h2 {
       font-size: 1.6em;
       margin-top: 12px;
@@ -231,6 +237,31 @@ main {
       text-indent: 12px;
     }
   }
+
+  // aside
+
+  aside {
+    max-width: 300px;
+    float: right;
+    flex: 1;
+    h4 {
+      font-size: 1.2em;
+      margin-bottom: 3px;
+    }
+
+    img {
+      width: 96px;
+      height: 96px;
+      float: left;
+      margin-right: 12px;
+    }
+  }
+
+  // end aside
 }
 
 // end main
+
+// footer
+
+// end footer

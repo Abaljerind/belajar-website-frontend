@@ -186,9 +186,17 @@ header ul > li:hover {
 }
 
 main {
-  width: 600px;
+  display: flex;
+  background-color: lightblue;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 32px;
+}
+main article {
+  max-width: 600px;
   padding: 0 12px;
   box-sizing: border-box;
+  flex: 2;
 }
 main article h2 {
   font-size: 1.6em;
@@ -215,4 +223,19 @@ main article p {
   margin-top: 12px;
   margin-left: 6px;
   text-indent: 12px;
+}
+main aside {
+  max-width: 300px;
+  float: right;
+  flex: 1;
+}
+main aside h4 {
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+main aside img {
+  width: 96px;
+  height: 96px;
+  float: left;
+  margin-right: 12px;
 }/*# sourceMappingURL=main.css.map */
