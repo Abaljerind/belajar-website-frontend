@@ -1,3 +1,58 @@
-body {
-  background-color: lightblue;
+// .main {
+//   background-color: lightblue;
+
+//   .main-heading {
+//     font-size: 2em;
+//   }
+
+//   .main-paragraph {
+//     font-size: 1.4em;
+//   }
+// }
+
+// .main,
+// footer {
+//   h1,
+//   p {
+//     letter-spacing: 1px;
+//   }
+// }
+
+// &
+// parent selector
+// .main {
+//   .container & {
+//     background-color: lightblue;
+//   }
+
+//   .main-heading {
+//     font-size: 2em;
+//   }
+
+// untuk pseudo-class bisa menggunakan & juga
+//   &:hover {
+//     background-color: salmon;
+//   }
+// }
+
+// menggunakan parent selector (&) untuk men-generate parent element nya
+
+.main {
+  & &-heading {
+    font-size: 2em;
+  }
+
+  & &-paragraph {
+    font-size: 1.4em;
+  }
+}
+
+.footer {
+  & &-heading {
+    font-size: 2em;
+  }
+
+  & &-paragraph {
+    font-size: 1.4em;
+  }
 }
