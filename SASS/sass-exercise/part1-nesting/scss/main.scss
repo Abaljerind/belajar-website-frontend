@@ -180,6 +180,7 @@ header {
   }
 }
 
+// hero
 .hero {
   margin-top: 12px;
   background-image: url("https://wallpapers.com/images/hd/national-flag-of-palestine-2fr136dmhmybdnca.jpg");
@@ -189,3 +190,43 @@ header {
   border-top: 6px solid black;
   border-bottom: 6px solid green;
 }
+// end hero
+
+// main
+
+main {
+  width: 600px;
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  h2 {
+    font-size: 1.6em;
+    margin-top: 12px;
+    margin-bottom: 3px;
+  }
+
+  .description {
+    margin-top: 0;
+    font-size: 0.9em;
+
+    a {
+      text-decoration: none;
+      padding: 3px 1px;
+      color: blue;
+    }
+
+    a:hover {
+      background-color: green;
+      transition-duration: 500ms;
+      color: white;
+    }
+  }
+
+  article p {
+    margin-top: 12px;
+    margin-left: 6px;
+    text-indent: 12px;
+  }
+}
+
+// end main

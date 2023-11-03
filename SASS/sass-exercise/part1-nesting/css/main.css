@@ -183,4 +183,34 @@ header ul > li:hover {
   background-size: cover;
   border-top: 6px solid black;
   border-bottom: 6px solid green;
+}
+
+main {
+  width: 600px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+main h2 {
+  font-size: 1.6em;
+  margin-top: 12px;
+  margin-bottom: 3px;
+}
+main .description {
+  margin-top: 0;
+  font-size: 0.9em;
+}
+main .description a {
+  text-decoration: none;
+  padding: 3px 1px;
+  color: blue;
+}
+main .description a:hover {
+  background-color: green;
+  transition-duration: 500ms;
+  color: white;
+}
+main article p {
+  margin-top: 12px;
+  margin-left: 6px;
+  text-indent: 12px;
 }/*# sourceMappingURL=main.css.map */
