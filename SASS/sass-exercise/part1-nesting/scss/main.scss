@@ -199,33 +199,37 @@ main {
   padding: 0 12px;
   box-sizing: border-box;
 
-  h2 {
-    font-size: 1.6em;
-    margin-top: 12px;
-    margin-bottom: 3px;
-  }
-
-  .description {
-    margin-top: 0;
-    font-size: 0.9em;
-
-    a {
-      text-decoration: none;
-      padding: 3px 1px;
-      color: blue;
+  article {
+    h2 {
+      font-size: 1.6em;
+      margin-top: 12px;
+      margin-bottom: 3px;
     }
 
-    a:hover {
-      background-color: green;
-      transition-duration: 500ms;
-      color: white;
-    }
-  }
+    .description {
+      margin-top: 0;
+      font-size: 0.9em;
+      margin-left: 12px;
+      text-indent: -12px;
 
-  article p {
-    margin-top: 12px;
-    margin-left: 6px;
-    text-indent: 12px;
+      a {
+        text-decoration: none;
+        padding: 3px 1px;
+        color: blue;
+      }
+
+      a:hover {
+        background-color: green;
+        transition-duration: 500ms;
+        color: white;
+      }
+    }
+
+    p {
+      margin-top: 12px;
+      margin-left: 6px;
+      text-indent: 12px;
+    }
   }
 }
 

@@ -190,21 +190,23 @@ main {
   padding: 0 12px;
   box-sizing: border-box;
 }
-main h2 {
+main article h2 {
   font-size: 1.6em;
   margin-top: 12px;
   margin-bottom: 3px;
 }
-main .description {
+main article .description {
   margin-top: 0;
   font-size: 0.9em;
+  margin-left: 12px;
+  text-indent: -12px;
 }
-main .description a {
+main article .description a {
   text-decoration: none;
   padding: 3px 1px;
   color: blue;
 }
-main .description a:hover {
+main article .description a:hover {
   background-color: green;
   transition-duration: 500ms;
   color: white;
