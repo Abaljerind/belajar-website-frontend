@@ -174,3 +174,13 @@ header {
     transition-duration: 500ms;
   }
 }
+
+.hero {
+  margin-top: 12px;
+  background-image: url("https://wallpapers.com/images/hd/national-flag-of-palestine-2fr136dmhmybdnca.jpg");
+  height: 380px;
+  background-position: center center;
+  background-size: cover;
+  border-top: 6px solid black;
+  border-bottom: 6px solid green;
+}
