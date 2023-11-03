@@ -167,8 +167,11 @@ header ul > li:last-child {
 header a {
   text-decoration: none;
 }
+header li:hover a {
+  color: white;
+}
 header ul > li:hover {
-  background-color: salmon;
+  background-color: green;
   transition-duration: 500ms;
 }
 

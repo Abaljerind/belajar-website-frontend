@@ -169,8 +169,13 @@ header {
     text-decoration: none;
   }
 
+  //   simple grouping
+  li:hover a {
+    color: white;
+  }
+
   ul > li:hover {
-    background-color: salmon;
+    background-color: green;
     transition-duration: 500ms;
   }
 }
