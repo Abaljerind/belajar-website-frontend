@@ -135,12 +135,16 @@ table {
 
 body {
   width: 960px;
-  padding: 20px;
+  padding: 20px 0;
   box-sizing: border-box;
   margin: 0 auto;
   font-family: sans-serif;
 }
 
+header {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
 header h1 {
   font-size: 2em;
   font-weight: bold;
@@ -155,7 +159,7 @@ header ul > li {
   border-right: 1px solid black;
 }
 header ul > li:nth-child(1) {
-  padding-left: 0;
+  margin-left: -12px;
 }
 header ul > li:last-child {
   border-right: none;
