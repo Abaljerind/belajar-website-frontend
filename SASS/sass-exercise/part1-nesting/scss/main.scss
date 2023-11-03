@@ -145,4 +145,30 @@ header {
     letter-spacing: 0.5px;
     margin-bottom: 12px;
   }
+
+  ul {
+    display: flex;
+  }
+
+  ul > li {
+    padding: 6px 12px;
+    border-right: 1px solid black;
+  }
+
+  ul > li:nth-child(1) {
+    padding-left: 0;
+  }
+
+  ul > li:last-child {
+    border-right: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul > li:hover {
+    background-color: salmon;
+    transition-duration: 500ms;
+  }
 }
