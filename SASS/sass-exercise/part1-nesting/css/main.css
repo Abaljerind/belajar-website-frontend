@@ -187,7 +187,6 @@ header ul > li:hover {
 
 main {
   display: flex;
-  background-color: lightblue;
   width: 100%;
   justify-content: space-between;
   padding-bottom: 32px;
@@ -241,4 +240,13 @@ main aside img {
   float: left;
   margin-right: 12px;
   margin-top: 3px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 12px 0;
+}
+footer p {
+  text-align: center;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
