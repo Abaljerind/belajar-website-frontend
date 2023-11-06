@@ -132,7 +132,7 @@ table {
 
 body {
   width: 960px;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   box-sizing: border-box;
   margin: 0 auto;
   font-family: sans-serif;
@@ -244,7 +244,9 @@ main {
     max-width: 300px;
     float: right;
     flex: 1;
+    margin-right: 12px;
     h4 {
+      margin-top: 36px;
       font-size: 1.2em;
       margin-bottom: 3px;
     }
@@ -254,6 +256,7 @@ main {
       height: 96px;
       float: left;
       margin-right: 12px;
+      margin-top: 3px;
     }
   }
 
