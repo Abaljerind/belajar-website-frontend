@@ -1,15 +1,30 @@
 // SASS Variable
 // global scope
-$secondary-color: rgba(34, 152, 255, 0.656);
-$text-color: salmon;
-$primary-color: green;
+// $secondary-color: rgba(34, 152, 255, 0.656);
+// $text-color: salmon;
+// $primary-color: green;
+
+// body {
+//   // local scope
+//   $primary-color: #f4f1de;
+//   background-color: $primary-color;
+// }
+
+// h1 {
+//   color: $primary-color;
+// }
+
+// Map
+$alert: (
+  "danger": red,
+  "success": lightgreen,
+  "warning": orange,
+);
 
 body {
-  // local scope
-  $primary-color: #f4f1de;
-  background-color: $primary-color;
+  background-color: map-get($map: $alert, $key: warning);
 }
 
 h1 {
-  color: $primary-color;
+  color: map-get($map: $alert, $key: success);
 }
