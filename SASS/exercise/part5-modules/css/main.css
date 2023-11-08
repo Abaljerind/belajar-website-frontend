@@ -14,23 +14,6 @@
   color: white;
 }
 
-.footer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.footer ul li {
-  display: inline-block;
-}
-.footer ul li {
-  padding: 0.4em;
-  background-color: salmon;
-}
-.footer ul li a {
-  color: white;
-  text-decoration: none;
-}
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -46,4 +29,21 @@
   background-color: #bada55;
   text-align: center;
   line-height: 60px;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer ul li {
+  display: inline-block;
+}
+.footer ul li {
+  padding: 0.4em;
+  background-color: salmon;
+}
+.footer ul li a {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
