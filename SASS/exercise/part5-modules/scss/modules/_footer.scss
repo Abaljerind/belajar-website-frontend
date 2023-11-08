@@ -1,5 +1,7 @@
+@use "mixin";
+
 .footer ul {
-  @include inline-list();
+  @include mixin.inline-list();
 
   li {
     padding: 0.4em;
