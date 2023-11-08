@@ -1,7 +1,7 @@
-@use "mixin";
+@use "submodules/mixin" as m;
 
 .container {
-  @include mixin.flex-box(row-reverse, space-between);
+  @include m.flex-box(row-reverse, space-between);
   width: 600px;
   height: 400px;
   background-color: #eaeaea;

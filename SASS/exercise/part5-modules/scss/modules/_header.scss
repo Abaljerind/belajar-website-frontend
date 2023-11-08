@@ -1,7 +1,7 @@
-@use "mixin";
+@use "submodules/mixin" as m;
 
 .header ul {
-  @include mixin.inline-list();
+  @include m.inline-list();
 
   li {
     background-color: black;
