@@ -1,1 +1,32 @@
-/*# sourceMappingURL=main.css.map */
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header ul li {
+  display: inline-block;
+}
+.header ul li {
+  background-color: black;
+  padding: 0.7em;
+}
+.header ul li a {
+  color: white;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer ul li {
+  display: inline-block;
+}
+.footer ul li {
+  padding: 0.4em;
+  background-color: salmon;
+}
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */
