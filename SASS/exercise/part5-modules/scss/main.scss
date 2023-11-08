@@ -2,3 +2,9 @@
 // @import "modules/header";
 // @import "modules/container";
 // @import "modules/footer";
+
+// karena module mixin sudah ditambahkan langsung ditiap file module maka tidak perlu lagi digunakan di file ini.
+// @use "modules/mixin";
+@use "modules/header";
+@use "modules/container";
+@use "modules/footer";
