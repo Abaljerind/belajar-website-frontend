@@ -1,11 +1,10 @@
-function Introduction() {
+function Introduction(property) {
   return (
     <div>
       <h1>Introduction</h1>
-      <p>
-        halo, nama saya naruto uzumaki, selamat anda telah sampai dipembelajaran
-        react js
-      </p>
+
+      {/* disini, introduction.js menerima data yang dikirim dari App.js */}
+      <p>halo, nama saya adalah: {property.name}</p>
     </div>
   );
 }
