@@ -6,8 +6,10 @@ function App() {
     <div>
       <h1>Selamat datang di SESI 1 React JS</h1>
       <p>halo, saya sedang belajar react-js disini</p>
-      <Introduction />
-      <Introduction />
+
+      {/* mengirim data name dari App.js ke introduction.js */}
+      <Introduction name="naruto uzumaki" />
+      <Introduction name="hinata hyuga" />
     </div>
   );
 }
