@@ -1,6 +1,7 @@
-function Navbar() {
+function Navbar(props) {
   return (
     <div>
+      <h1>{props.navHeading}</h1>
       <ul>
         <li>
           <a href="#">Home</a>
@@ -10,6 +11,9 @@ function Navbar() {
         </li>
         <li>
           <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">{props.navText}</a>
         </li>
       </ul>
     </div>
