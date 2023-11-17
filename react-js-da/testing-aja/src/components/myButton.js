@@ -1,8 +1,8 @@
 // contoh penggunaan component menggunakan arrow function
-const MyButton = () => {
+const MyButton = (props) => {
   return (
     <div>
-      <button>Click me! 👈</button>
+      <button onClick={() => props.clicked()}>Click me! 👈</button>
     </div>
   );
 };
