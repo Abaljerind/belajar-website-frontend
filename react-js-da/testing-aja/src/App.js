@@ -14,6 +14,16 @@ const App = () => {
     return alert("button dipencet!");
   };
 
+  const paragraf = () => {
+    return (
+      <div>
+        <h3>mantap bro!</h3>
+        <i>horeee</i>
+        <marquee>berhasil~</marquee>
+      </div>
+    );
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -21,7 +31,7 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Halo selamat datang! 😊</p>
         <MyButton clicked={clicked} />
-        <Footer />
+        <Footer paragraf={paragraf} />
       </header>
     </div>
   );
