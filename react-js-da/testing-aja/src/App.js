@@ -9,13 +9,18 @@ const App = () => {
   const navHeading = "Navigation Bar";
   const navText = "Sosial Media";
 
+  // mengirim argument menggunakan function untuk component MyButton
+  const clicked = () => {
+    return alert("button dipencet!");
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <Navbar navText={navText} navHeading={navHeading} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>Halo selamat datang! 😊</p>
-        <MyButton />
+        <MyButton clicked={clicked} />
         <Footer />
       </header>
     </div>
