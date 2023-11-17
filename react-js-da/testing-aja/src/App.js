@@ -6,10 +6,13 @@ import Footer from "./components/footer";
 
 // contoh penggunaan arrow function
 const App = () => {
+  const navHeading = "Navigation Bar";
+  const navText = "Sosial Media";
+
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar />
+        <Navbar navText={navText} navHeading={navHeading} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>Halo selamat datang! 😊</p>
         <MyButton />
