@@ -11,7 +11,7 @@ function App() {
   // useEffect() -> untuk render setiap perubahan object yang terjadi didalam browsernya.
   useEffect(() => {
     alert("helo!");
-  });
+  }, []);
 
   return (
     <>
