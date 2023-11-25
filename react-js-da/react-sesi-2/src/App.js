@@ -1,17 +1,30 @@
-import Introduction from "./components/introduction";
-import Profile from "./components/profile";
+// parent component
+import React, { useState } from "react";
 
 function App() {
+  // kiri -> getter
+  // kanan -> setter
+  // didalam tanda kurung useState() -> nilai default dari state yang kita punya
+  // state -> anggap saja data sementara, bisa tipe data apa saja
+  const [getPacarSaya, setPacarSaya] = useState(1);
+
   return (
     <>
-      <h1>Selamat datang di SESI 1 React JS</h1>
-      <p>halo, saya sedang belajar react-js disini</p>
+      <h1>saya punya: {getPacarSaya} pacar.</h1>
+      {/* pada function setPacarSaya() dibawah, terdapat callback function untuk menambah data dengan parameter "previousData" */}
+      <button onClick={() => setPacarSaya((previousData) => previousData + 1)}>
+        Tambah pacar
+      </button>
 
-      <Profile />
-
-      {/* mengirim data name dari App.js ke introduction.js */}
-      <Introduction name="naruto uzumaki" />
-      <Introduction name="hinata hyuga" />
+      <button
+        onClick={() =>
+          setPacarSaya((previousData) =>
+            previousData === 0 ? 0 : previousData - 1
+          )
+        }
+      >
+        Putusin pacar
+      </button>
     </>
   );
 }
