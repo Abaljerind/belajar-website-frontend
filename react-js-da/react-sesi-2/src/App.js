@@ -1,5 +1,5 @@
 // parent component
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
   // kiri -> getter
@@ -7,6 +7,11 @@ function App() {
   // didalam tanda kurung useState() -> nilai default dari state yang kita punya
   // state -> anggap saja data sementara, bisa tipe data apa saja
   const [getPacarSaya, setPacarSaya] = useState(1);
+
+  // useEffect() -> untuk render setiap perubahan object yang terjadi didalam browsernya.
+  useEffect(() => {
+    alert("helo!");
+  });
 
   return (
     <>
