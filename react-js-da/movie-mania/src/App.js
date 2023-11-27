@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import "./App.css";
+import { getMovieList, searchMovie } from "./api";
 
 const App = () => {
+  useEffect(() => {
+    getMovieList();
+  }, []);
+
   const search = (q) => {
     console.log(q);
   };
