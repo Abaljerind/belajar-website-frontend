@@ -1,6 +1,10 @@
 import "./App.css";
 
-function App() {
+const App = () => {
+  const search = (q) => {
+    console.log(q);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +13,7 @@ function App() {
           type="search"
           placeholder="cari film yang anda inginkan..."
           className="Movie-search"
+          onChange={({ target }) => search(target.value)}
         />
         <div className="Movie-container">
           <div className="Movie-wrapper">
@@ -21,6 +26,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
