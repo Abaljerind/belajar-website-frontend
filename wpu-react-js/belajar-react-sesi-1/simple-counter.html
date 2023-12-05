@@ -13,6 +13,24 @@
       const container = document.getElementById("root");
       const root = ReactDOM.createRoot(container);
 
+      //   component MyButton
+      function MyButton({ text, onClick, value }) {
+        const buttonStyle =
+          text !== "Reset" ? {} : { margin: 20, display: "block" };
+
+        return (
+          <button onClick={onClick} style={buttonStyle}>
+            {text}
+          </button>
+        );
+      }
+
+      //   component MyValue
+      function MyValue({ value }) {
+        return <h1 style={{ margin: 20 }}>{value}</h1>;
+      }
+
+      //   component HomePage
       function HomePage() {
         const [value, setValue] = React.useState(0);
 
@@ -28,11 +46,10 @@
 
         return (
           <>
-            <button onClick={handleAdd}>+</button>
-            <button onClick={handleMin}>-</button>
-            <button onClick={handleReset}>Reset</button>
-
-            <h1>{value}</h1>
+            <MyButton onClick={handleAdd} text="+" value={value} />
+            <MyButton onClick={handleMin} text="-" value={value} />
+            <MyButton onClick={handleReset} text="Reset" value={value} />
+            <MyValue value={value} />
           </>
         );
       }
