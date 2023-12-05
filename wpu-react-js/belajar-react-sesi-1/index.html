@@ -20,10 +20,17 @@
       }
 
       function HomePage() {
+        const students = ["naruto", "sasuke", "sakura"];
+
         return (
           <>
-            <Header />
             <Header name="Sasuke" />
+            <ul>
+              {students.map((student) => (
+                // key untuk menandai tiap elemen <li> agar walaupun isinya bisa ada yang sama tetapi key nya berbeda, walaupun misalnya ditambahkan di array nama yg sama misal naruto, maka akan tetap nilainya sama juga dengan nama naruto yang lainnya
+                <li key={student}>{student}</li>
+              ))}
+            </ul>
           </>
         );
       }
