@@ -13,14 +13,15 @@
       const container = document.getElementById("root");
       const root = ReactDOM.createRoot(container);
 
-      function Header() {
-        return <h1>Belajar React Bareng Saya 🚀</h1>;
+      function Header(props) {
+        return <h1>Belajar React Bareng {props.name} 🚀</h1>;
       }
 
       function HomePage() {
         return (
           <>
-            <Header />
+            <Header name="Naruto" />
+            <Header name="Sasuke" />
           </>
         );
       }
