@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Belajar React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+
+      function HomePage() {
+        const [value, setValue] = React.useState(0);
+
+        function handleAdd() {
+          setValue(value + 1);
+        }
+        function handleMin() {
+          setValue(value - 1);
+        }
+        function handleReset() {
+          setValue(0);
+        }
+
+        return (
+          <>
+            <button onClick={handleAdd}>+</button>
+            <button onClick={handleMin}>-</button>
+            <button onClick={handleReset}>Reset</button>
+
+            <h1>{value}</h1>
+          </>
+        );
+      }
+
+      root.render(<HomePage />);
+    </script>
+  </body>
+</html>
