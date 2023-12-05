@@ -13,14 +13,16 @@
       const container = document.getElementById("root");
       const root = ReactDOM.createRoot(container);
 
-      function Header(props) {
-        return <h1>Belajar React Bareng {props.name} 🚀</h1>;
+      // Header(props), lalu ketika dipanggil datanya dengan perintah, {props.name} ini disebut "object props", teknik default saat memanggil data dari component lain.
+      // sedangkan {name} dibawah ini, menggunakan "object destructuring" yang mana menggunakan kurung kurawal langsung setelah tanda kurung biasa.
+      function Header({ name }) {
+        return <h1>Belajar React Bareng {name ? name : "Saya"} 🚀</h1>;
       }
 
       function HomePage() {
         return (
           <>
-            <Header name="Naruto" />
+            <Header />
             <Header name="Sasuke" />
           </>
         );
