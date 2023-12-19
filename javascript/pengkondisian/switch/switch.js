@@ -1,16 +1,18 @@
-let angka = prompt("masukkan angka :");
+let item = prompt(
+  "masukkan nama makanan atau minuman: \n (cth: nasi, daging, susu, beef burger, softdrink)"
+);
 
-switch (angka) {
-  case "1":
-    alert("anda memasukkan angka 1");
+switch (item) {
+  case "nasi":
+  case "daging":
+  case "susu":
+    alert("makanan atau minuman sehat");
     break;
-  case "2":
-    alert("anda memasukkan angka 2");
-    break;
-  case "3":
-    alert("anda memasukkan angka 3");
+  case "beef burger":
+  case "softdrink":
+    alert("makanan atau minuman tidak sehat");
     break;
   default:
-    alert("angka yang anda masukkan salah");
+    alert("anda memasukkan nama makanan atau minuman yang salah!");
     break;
 }
