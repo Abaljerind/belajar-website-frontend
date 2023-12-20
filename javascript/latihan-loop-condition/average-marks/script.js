@@ -1,21 +1,31 @@
-let david = 80;
-let vinoth = 77;
-let divya = 88;
-let ishitha = 95;
-let thomas = 68;
+let students = [
+  ["David", 80],
+  ["Vinoth", 77],
+  ["Divya", 88],
+  ["Ishitha", 95],
+  ["Thomas", 68],
+];
 
-let average = (david + vinoth + divya + ishitha + thomas) / 5;
+let average = 0;
 
-if (average < 60) {
-  alert(average + " Grade F");
-} else if (average < 70) {
-  alert(average + " Grade D");
-} else if (average < 80) {
-  alert(average + " Grade C");
-} else if (average < 90) {
-  alert(average + " Grade B");
-} else if (average < 100) {
-  alert(average + " Grade A");
+for (let i = 0; i < students.length; i++) {
+  average += students[i][1];
+}
+
+let avgInt = parseInt(average / 5);
+
+console.log("Total nilai rata rata kelima murid adalah " + avgInt);
+
+if (avgInt < 60) {
+  console.log("Nilai " + avgInt + " Grade F");
+} else if (avgInt < 70) {
+  console.log("Nilai " + avgInt + " Grade D");
+} else if (avgInt < 80) {
+  console.log("Nilai " + avgInt + " Grade C");
+} else if (avgInt < 90) {
+  console.log("Nilai " + avgInt + " Grade B");
+} else if (avgInt < 100) {
+  console.log("Nilai " + avgInt + " Grade A");
 } else {
-  alert("Silahkan belajar kembali.");
+  console.log("Silahkan belajar kembali.");
 }
