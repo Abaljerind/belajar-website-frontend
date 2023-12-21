@@ -1,8 +1,8 @@
-function Introduction() {
+function Introduction(props) {
   return (
     <div>
       <h1>Introduction</h1>
-      <p>Pengenalan, halo nama saya naruto uzumaki!</p>
+      <p>Pengenalan, halo nama saya: {props.nama}</p>
     </div>
   );
 }
