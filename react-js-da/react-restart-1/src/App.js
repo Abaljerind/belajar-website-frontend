@@ -6,7 +6,8 @@ function App() {
     <div>
       <h1>Sesi 1</h1>
       <p>Halo saya belajar react js</p>
-      <Introduction />
+      <Introduction nama="naruto uzumaki" />
+      <Introduction nama="hinata hyuga" />
     </div>
   );
 }
