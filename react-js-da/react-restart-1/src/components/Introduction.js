@@ -1,8 +1,12 @@
 function Introduction(props) {
+  const introStyle = {
+    color: "blue",
+    textDecoration: "underline",
+  };
+
   return (
     <div>
-      <h1>Introduction</h1>
-      <p>Pengenalan, halo nama saya: {props.nama}</p>
+      <h1 style={introStyle}>Hello World</h1>
     </div>
   );
 }
