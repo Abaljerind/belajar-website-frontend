@@ -1,5 +1,6 @@
 import Introduction from "./components/Introduction";
 import Navigation from "./components/Navigation";
+import NewsFeed from "./components/NewsFeed";
 import TextBody from "./components/TextBody";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Introduction />
       <Navigation />
       <TextBody />
+      <NewsFeed />
     </div>
   );
 }
