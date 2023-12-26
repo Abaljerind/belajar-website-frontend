@@ -1,11 +1,17 @@
 function Football(props) {
-  const shoot = () => {
-    alert("Great Shot!");
+  // dibawah ini adalah arrow function
+  //   const shoot = () => {
+  //     alert("Great Shot!");
+  //   };
+
+  // mengirim argument ke sebuah event handler seperti onClick menggunakan arrow function.
+  const shoot = (goal) => {
+    alert(goal);
   };
 
   return (
     <>
-      <button onClick={shoot}>{props.shot}</button>
+      <button onClick={() => shoot("Goal!!")}>{props.shot}</button>
     </>
   );
 }
