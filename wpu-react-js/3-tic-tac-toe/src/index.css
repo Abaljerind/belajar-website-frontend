@@ -18,3 +18,12 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* width dan height didapat dari lebar dan tinggi .square dikali 3, karna mau dibuat ukuran 3 kali 3 */
+  width: 105px;
+  height: 105px;
+}
