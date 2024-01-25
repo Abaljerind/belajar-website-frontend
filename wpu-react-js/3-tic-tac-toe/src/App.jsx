@@ -17,6 +17,11 @@ export default function Board() {
   const [xIsnext, setXIsNext] = useState(true); // nilai awal bernilai true karna giliran pertama adalah X
 
   function handleClick(i) {
+    // pengkondisian untuk menentukan apakah square nya ada isinya atau tidak, kalo ada isinya maka tidak bisa diubah.
+    if (squares[i]) {
+      return;
+    }
+
     const nextSquares = squares.slice();
 
     // pengkondisian untuk menentukan giliran
