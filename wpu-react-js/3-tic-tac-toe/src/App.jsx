@@ -8,13 +8,10 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-export default function Board() {
+function Board(xIsnext, squares, onPlay) {
   // useState dibawah akan membuat array yang punya 9 space dengan nilai null. fill() digunakan untuk mengisi nilai pada array nya.
-  // cara dibawah ini disebut lifting useState, karena komponen utama nya (Board()) akan mengetahui apa saja perubahan yang terjadi pada Square(), komponen turunan.
-  const [squares, setSquares] = useState(Array(9).fill(null));
-
-  // menambahkan useState untuk menentukan giliran
-  const [xIsnext, setXIsNext] = useState(true); // nilai awal bernilai true karna giliran pertama adalah X
+  // cara dibawah ini disebut lifting state up, karena komponen utama nya (Board()) akan mengetahui apa saja perubahan yang terjadi pada Square(), komponen turunan.
+  // const [squares, setSquares] = useState(Array(9).fill(null)); // => diganti dengan useState untuk history, jadi di lifting state up lagi.
 
   function handleClick(i) {
     // pengkondisian untuk menentukan apakah square nya ada isinya atau tidak, kalo ada isinya maka tidak bisa diubah dan event onSquareClick berhenti, atau event onSquareClick bisa berhenti jika muncul pemenangnya yang mendapatkan data dari squares yang sudah di klik.
@@ -33,8 +30,8 @@ export default function Board() {
 
     // pengkondisian dengan ternary
     nextSquares[i] = xIsnext ? "X" : "O";
-    setSquares(nextSquares);
-    setXIsNext(!xIsnext);
+
+    onPlay(nextSquares);
   }
 
   const winner = calculateWinner(squares);
@@ -60,6 +57,50 @@ export default function Board() {
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
     </>
+  );
+}
+
+// membuat komponen baru sebagai pembungkus yang paling atas untuk fungsi history
+export default function Game() {
+  // menambahkan useState untuk menentukan giliran
+  const [xIsnext, setXIsNext] = useState(true); // nilai awal bernilai true karna giliran pertama adalah X
+
+  // useState untuk history
+  const [history, setHistory] = useState([Array(9).fill(null)]);
+
+  // untuk mengetahui keadaan board saat ini, yaitu keadaan array dari history yang paling akhir.
+  const currentSquares = history[history.length - 1];
+
+  function handlePlay(nextSquares) {
+    // dibawah ini, mengcopy array dan menambahkan array baru di akhirnya.
+    setHistory([...history, nextSquares]);
+    setXIsNext(!xIsnext);
+  }
+
+  const moves = history.map((squares, move) => {
+    let description = "";
+    if (move > 0) {
+      description = "Go to move: #" + move;
+    } else {
+      description = "Go to game start!";
+    }
+
+    return (
+      <li key={move}>
+        <button onClick={() => jumpTo(move)}>{description}</button>
+      </li>
+    );
+  });
+
+  return (
+    <div className="game">
+      <div className="game-board">
+        <Board xIsnext={xIsnext} squares={currentSquares} onPlay={handlePlay} />
+      </div>
+      <div className="game-info">
+        <ol>{moves}</ol>
+      </div>
+    </div>
   );
 }
 
