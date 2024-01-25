@@ -13,10 +13,23 @@ export default function Board() {
   // cara dibawah ini disebut lifting useState, karena komponen utama nya (Board()) akan mengetahui apa saja perubahan yang terjadi pada Square(), komponen turunan.
   const [squares, setSquares] = useState(Array(9).fill(null));
 
+  // menambahkan useState untuk menentukan giliran
+  const [xIsnext, setXIsNext] = useState(true); // nilai awal bernilai true karna giliran pertama adalah X
+
   function handleClick(i) {
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+
+    // pengkondisian untuk menentukan giliran
+    // if (xIsnext) {
+    //   nextSquares[i] = "X";
+    // } else {
+    //   nextSquares[i] = "O";
+    // }
+
+    // pengkondisian dengan ternary
+    nextSquares[i] = xIsnext ? "X" : "O";
     setSquares(nextSquares);
+    setXIsNext(!xIsnext);
   }
 
   return (
