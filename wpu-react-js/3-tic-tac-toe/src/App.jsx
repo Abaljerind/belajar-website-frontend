@@ -63,18 +63,26 @@ function Board(xIsnext, squares, onPlay) {
 // membuat komponen baru sebagai pembungkus yang paling atas untuk fungsi history
 export default function Game() {
   // menambahkan useState untuk menentukan giliran
-  const [xIsnext, setXIsNext] = useState(true); // nilai awal bernilai true karna giliran pertama adalah X
+  // const [xIsnext, setXIsNext] = useState(true); // nilai awal bernilai true karna giliran pertama adalah X
 
   // useState untuk history
   const [history, setHistory] = useState([Array(9).fill(null)]);
 
+  const xIsnext = currentMove % 2 === 0;
+  const [currentMove, setCurrentMove] = useState(0);
+
   // untuk mengetahui keadaan board saat ini, yaitu keadaan array dari history yang paling akhir.
-  const currentSquares = history[history.length - 1];
+  const currentSquares = history[currentMove];
+
+  function jumpTo(nextMove) {
+    setCurrentMove(nextMove);
+  }
 
   function handlePlay(nextSquares) {
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     // dibawah ini, mengcopy array dan menambahkan array baru di akhirnya.
-    setHistory([...history, nextSquares]);
-    setXIsNext(!xIsnext);
+    setHistory(nextHistory);
+    setCurrentMove(nextHistory.length - 1);
   }
 
   const moves = history.map((squares, move) => {
