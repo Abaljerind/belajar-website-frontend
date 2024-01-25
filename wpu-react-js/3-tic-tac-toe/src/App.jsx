@@ -8,7 +8,7 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-function Board(xIsnext, squares, onPlay) {
+function Board({ xIsNext, squares, onPlay }) {
   // useState dibawah akan membuat array yang punya 9 space dengan nilai null. fill() digunakan untuk mengisi nilai pada array nya.
   // cara dibawah ini disebut lifting state up, karena komponen utama nya (Board()) akan mengetahui apa saja perubahan yang terjadi pada Square(), komponen turunan.
   // const [squares, setSquares] = useState(Array(9).fill(null)); // => diganti dengan useState untuk history, jadi di lifting state up lagi.
@@ -29,7 +29,7 @@ function Board(xIsnext, squares, onPlay) {
     // }
 
     // pengkondisian dengan ternary
-    nextSquares[i] = xIsnext ? "X" : "O";
+    nextSquares[i] = xIsNext ? "X" : "O";
 
     onPlay(nextSquares);
   }
@@ -39,7 +39,7 @@ function Board(xIsnext, squares, onPlay) {
   if (winner) {
     status = "Winner: " + winner;
   } else {
-    status = "Next Player: " + (xIsnext ? "X" : "O");
+    status = "Next Player: " + (xIsNext ? "X" : "O");
   }
 
   return (
@@ -68,10 +68,8 @@ export default function Game() {
   // useState untuk history
   const [history, setHistory] = useState([Array(9).fill(null)]);
 
-  const xIsnext = currentMove % 2 === 0;
   const [currentMove, setCurrentMove] = useState(0);
-
-  // untuk mengetahui keadaan board saat ini, yaitu keadaan array dari history yang paling akhir.
+  const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
 
   function jumpTo(nextMove) {
@@ -88,9 +86,9 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description = "";
     if (move > 0) {
-      description = "Go to move: #" + move;
+      description = "Go to move #" + move;
     } else {
-      description = "Go to game start!";
+      description = "Go to game start";
     }
 
     return (
@@ -103,7 +101,7 @@ export default function Game() {
   return (
     <div className="game">
       <div className="game-board">
-        <Board xIsnext={xIsnext} squares={currentSquares} onPlay={handlePlay} />
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
