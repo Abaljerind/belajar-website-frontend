@@ -62,21 +62,15 @@ function GroceryList() {
     <>
       <div className="list">
         <ul>
-          <li>
-            <input type="checkbox" />
-            <span>1 Kopi</span>
-            <button>&times;</button>
-          </li>
-          <li>
-            <input type="checkbox" />
-            <span>5 Gula Pasir</span>
-            <button>&times;</button>
-          </li>
-          <li>
-            <input type="checkbox" />
-            <span>3 Air Mineral</span>
-            <button>&times;</button>
-          </li>
+          {groceryItems.map((item) => (
+            <li key={item.id}>
+              <input type="checkbox" />
+              <span>
+                {item.quantity} {item.name}
+              </span>
+              <button>&times;</button>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="actions">
