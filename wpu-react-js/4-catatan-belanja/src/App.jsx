@@ -63,13 +63,8 @@ function GroceryList() {
       <div className="list">
         <ul>
           {groceryItems.map((item) => (
-            <li key={item.id}>
-              <input type="checkbox" />
-              <span>
-                {item.quantity} {item.name}
-              </span>
-              <button>&times;</button>
-            </li>
+            // mengirim props nya ke komponen Item
+            <Item item={item} key={item.id} />
           ))}
         </ul>
       </div>
@@ -82,6 +77,19 @@ function GroceryList() {
         <button>Bersihkan Daftar</button>
       </div>
     </>
+  );
+}
+
+// komponen item untuk looping item dengan map(), karna ada diluar komponen utama, maka perlu menerima data dari komponen utama nya lewat props 'item'.
+function Item({ item }) {
+  return (
+    <li key={item.id}>
+      <input type="checkbox" />
+      <span style={item.checked ? { textDecoration: "line-through" } : {}}>
+        {item.quantity} {item.name}
+      </span>
+      <button>&times;</button>
+    </li>
   );
 }
 
