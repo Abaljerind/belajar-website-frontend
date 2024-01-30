@@ -58,7 +58,7 @@ export default function App() {
         onToggleItem={handleToggleItem}
         onClearItems={handleClearItems}
       />
-      <Footer />
+      <Footer items={items} />
     </div>
   );
 }
@@ -188,10 +188,20 @@ function Item({ item, onDeleteItem, onToggleItem }) {
 }
 
 // komponen footer
-function Footer() {
+function Footer({ items }) {
+  // guard clause -> agar jika tidak ada items didalam GroceryList, kalimat pada footer berbeda
+  if (items.length === 0) {
+    return <footer className="stats">Daftar belanja masih kosong!</footer>;
+  }
+
+  const totalItems = items.length;
+  const checkedItems = items.filter((item) => item.checked === true).length;
+  const percentage = Math.round((checkedItems / totalItems) * 100);
+
   return (
     <footer className="stats">
-      Ada 10 barang di daftar belanjaan, 5 barang sudah dibeli (50%)
+      Ada {totalItems} barang di daftar belanjaan, {checkedItems} barang sudah
+      dibeli ({percentage}%)
     </footer>
   );
 }
