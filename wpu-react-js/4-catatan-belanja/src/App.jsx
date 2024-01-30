@@ -30,15 +30,29 @@ export default function App() {
   function handleAddItem(item) {
     setItems([...items, item]); // artinya, menduplikasi array items menjadi array baru bernama 'item', agar array items tidak berubah ketika ada penambahan item baru. sehingga array item yg baru akan ditimpa oleh data item yang baru dimasukkan lewat form. Cara duplikasi array nya, di spread dulu items nya dengan '...items' jadi array baru yang isinya persis sama dengan array items dari useState, lalu di akhir ditambahkan elemen baru si 'item', sehingga akan dibuat array baru yang ditambah satu datanya dibelakang, pada array item.
   }
+
   function handleDeleteItem(id) {
     // setItems carikan data dari items dengan filter menjadi satu satu dengan nama 'item', lalu item tadi di cari yang id nya tidak sama dengan id pada parameter handleDeleteItem.
     setItems((items) => items.filter((item) => item.id !== id));
   }
+
+  function handleToggleItem(id) {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, checked: !item.checked } : item
+      )
+    );
+  }
+
   return (
     <div className="app">
       <Header />
       <Form onAddItem={handleAddItem} />
-      <GroceryList items={items} onDeleteItem={handleDeleteItem} />
+      <GroceryList
+        items={items}
+        onDeleteItem={handleDeleteItem}
+        onToggleItem={handleToggleItem}
+      />
       <Footer />
     </div>
   );
@@ -108,14 +122,19 @@ function Form({ onAddItem }) {
 }
 
 // komponen GroceryList
-function GroceryList({ items, onDeleteItem }) {
+function GroceryList({ items, onDeleteItem, onToggleItem }) {
   return (
     <>
       <div className="list">
         <ul>
           {items.map((item) => (
             // mengirim props nya ke komponen Item
-            <Item item={item} key={item.id} onDeleteItem={onDeleteItem} />
+            <Item
+              item={item}
+              key={item.id}
+              onDeleteItem={onDeleteItem}
+              onToggleItem={onToggleItem}
+            />
           ))}
         </ul>
       </div>
@@ -132,10 +151,14 @@ function GroceryList({ items, onDeleteItem }) {
 }
 
 // komponen item untuk looping item dengan map(), karna ada diluar komponen utama, maka perlu menerima data dari komponen utama nya lewat props 'item'.
-function Item({ item, onDeleteItem }) {
+function Item({ item, onDeleteItem, onToggleItem }) {
   return (
     <li key={item.id}>
-      <input type="checkbox" />
+      <input
+        type="checkbox"
+        checked={item.checked}
+        onChange={() => onToggleItem(item.id)}
+      />
       <span style={item.checked ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.name}
       </span>
