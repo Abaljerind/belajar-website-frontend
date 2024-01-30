@@ -44,6 +44,10 @@ export default function App() {
     );
   }
 
+  function handleClearItems() {
+    setItems([]);
+  }
+
   return (
     <div className="app">
       <Header />
@@ -52,6 +56,7 @@ export default function App() {
         items={items}
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
+        onClearItems={handleClearItems}
       />
       <Footer />
     </div>
@@ -122,7 +127,7 @@ function Form({ onAddItem }) {
 }
 
 // komponen GroceryList
-function GroceryList({ items, onDeleteItem, onToggleItem }) {
+function GroceryList({ items, onDeleteItem, onToggleItem, onClearItems }) {
   return (
     <>
       <div className="list">
@@ -144,7 +149,7 @@ function GroceryList({ items, onDeleteItem, onToggleItem }) {
           <option value="name">Urutkan berdasarkan nama barang</option>
           <option value="checked">Urutkan berdasarkan ceklis</option>
         </select>
-        <button>Bersihkan Daftar</button>
+        <button onClick={onClearItems}>Bersihkan Daftar</button>
       </div>
     </>
   );
