@@ -23,11 +23,18 @@ const groceryItems = [
 ];
 
 export default function App() {
+  const [items, setItems] = useState(groceryItems);
+
+  // function untuk menangani ketika adanya perubahan, ketika berhasil menambahkan item baru dari form
+  function handleAddItem(item) {
+    setItems([...items, item]); // artinya, menduplikasi array items menjadi array baru bernama 'item', agar array items tidak berubah ketika ada penambahan item baru. sehingga array item yg baru akan ditimpa oleh data item yang baru dimasukkan lewat form. Cara duplikasi array nya, di spread dulu items nya dengan '...items' jadi array baru yang isinya persis sama dengan array items dari useState, lalu di akhir ditambahkan elemen baru si 'item', sehingga akan dibuat array baru yang ditambah satu datanya dibelakang, pada array item.
+  }
+
   return (
     <div className="app">
       <Header />
-      <Form />
-      <GroceryList />
+      <Form onAddItem={handleAddItem} />
+      <GroceryList items={items} />
       <Footer />
     </div>
   );
@@ -39,7 +46,7 @@ function Header() {
 }
 
 // komponen Form
-function Form() {
+function Form({ onAddItem }) {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
 
@@ -58,6 +65,8 @@ function Form() {
       checked: false,
       id: Date.now(),
     };
+    onAddItem(newItem);
+
     console.log(newItem);
 
     // set ulang nilai name dan quantity nya
@@ -95,12 +104,12 @@ function Form() {
 }
 
 // komponen GroceryList
-function GroceryList() {
+function GroceryList({ items }) {
   return (
     <>
       <div className="list">
         <ul>
-          {groceryItems.map((item) => (
+          {items.map((item) => (
             // mengirim props nya ke komponen Item
             <Item item={item} key={item.id} />
           ))}
