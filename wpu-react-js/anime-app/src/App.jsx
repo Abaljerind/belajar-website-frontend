@@ -49,34 +49,54 @@ export default function App() {
   );
 }
 
+// component NavBar
 function NavBar() {
-  const [query, setQuery] = useState("");
   return (
-    <>
-      <nav className="nav-bar">
-        <div className="logo">
-          <span role="img">🍥</span>
-          <h1>WeeBoo</h1>
-          <span role="img">🍥</span>
-        </div>
-        <div className="search-container">
-          <input
-            className="search"
-            type="text"
-            placeholder="Search anime..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <p className="search-results">
-            Found <strong>4</strong> results
-          </p>
-        </div>
-      </nav>
-      ;
-    </>
+    <nav className="nav-bar">
+      <Logo />
+      <Search />
+    </nav>
   );
 }
 
+// component Logo
+function Logo() {
+  return (
+    <div className="logo">
+      <span role="img">🍥</span>
+      <h1>WeeBoo</h1>
+      <span role="img">🍥</span>
+    </div>
+  );
+}
+
+// component Search
+function Search() {
+  const [query, setQuery] = useState("");
+  return (
+    <div className="search-container">
+      <input
+        className="search"
+        type="text"
+        placeholder="Search anime..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <NumResult />
+    </div>
+  );
+}
+
+// component NumResult
+function NumResult() {
+  return (
+    <p className="search-results">
+      Found <strong>4</strong> results
+    </p>
+  );
+}
+
+// component Main
 function Main() {
   const [animes, setAnimes] = useState(animesData);
   const [selectedAnime, setSelectedAnime] = useState(animes[0]);
@@ -147,7 +167,6 @@ function Main() {
           )}
         </div>
       </main>
-      ;
     </>
   );
 }
