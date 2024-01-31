@@ -45,18 +45,18 @@ export default function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar animes={animes} />
       <Main animes={animes} />
     </>
   );
 }
 
 // component NavBar
-function NavBar() {
+function NavBar({ animes }) {
   return (
     <nav className="nav-bar">
       <Logo />
-      <Search />
+      <Search animes={animes} />
     </nav>
   );
 }
@@ -73,7 +73,7 @@ function Logo() {
 }
 
 // component Search
-function Search() {
+function Search({ animes }) {
   const [query, setQuery] = useState("");
   return (
     <div className="search-container">
@@ -84,16 +84,16 @@ function Search() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <NumResult />
+      <NumResult animes={animes} />
     </div>
   );
 }
 
 // component NumResult
-function NumResult() {
+function NumResult({ animes }) {
   return (
     <p className="search-results">
-      Found <strong>4</strong> results
+      Found <strong>{animes.length}</strong> results
     </p>
   );
 }
