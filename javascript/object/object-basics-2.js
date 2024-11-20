@@ -61,3 +61,20 @@ console.log(naruto.introductionSelf());
 const sasuke = new Person("Sasuke");
 console.log(sasuke.name);
 console.log(sasuke.introductionSelf());
+
+// sumOfTripledEvens(array)
+/*
+PSEUDOCODE:
+1. We need to perform an operation only on the even numbers.
+2. We need to transform those numbers by multiplying them by 3.
+3. Finally, we need to add the result up from the previous transformation.
+*/
+
+function sumOfTripledEvens(arr) {
+  return arr
+    .filter((num) => num % 2 === 0)
+    .map((num) => num * 3)
+    .reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(sumOfTripledEvens([1, 2, 3, 4, 5]));
