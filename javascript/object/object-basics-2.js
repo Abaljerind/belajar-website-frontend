@@ -44,3 +44,20 @@ const bandInfo = `Lorem ${onePiece.name} dolor sit amet, ${
 } deleniti necessitatibus temporibus accusamus dolor cupiditate.`;
 
 console.log(bandInfo);
+
+// create object using constructor
+function Person(name) {
+  this.name = name;
+  this.introductionSelf = function () {
+    return `Hi! I'm ${this.name}.`;
+  };
+}
+
+// calling Person() as a constructor
+const naruto = new Person("Naruto");
+console.log(naruto.name);
+console.log(naruto.introductionSelf());
+
+const sasuke = new Person("Sasuke");
+console.log(sasuke.name);
+console.log(sasuke.introductionSelf());
