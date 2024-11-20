@@ -18,7 +18,26 @@
     </p>
 
     <script>
-      const person = {};
+      const person = {
+        name: {
+          first: "Bob",
+          last: "Smith",
+        },
+        age: 32,
+        bio() {
+          console.log(
+            `${this.name.first} ${this.name["last"]} is ${this.age} years old.`
+          );
+        },
+        introduceSelf() {
+          console.log(`Hi! I'm ${this.name[0]}`);
+        },
+      };
+
+      // add new member name and value to the person object
+      const myDataName = "height";
+      const myDataValue = "1.7m";
+      person[myDataName] = myDataValue;
     </script>
   </body>
 </html>
