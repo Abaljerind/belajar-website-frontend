@@ -1,7 +1,33 @@
 import { useState } from "react";
 
-function App() {
-  return <></>;
+function Square() {
+  const [value, setValue] = useState("");
+
+  function handleClick() {
+    setValue("X");
+  }
+
+  return (
+    <button className="square" onClick={handleClick}>
+      {value}
+    </button>
+  );
 }
 
-export default App;
+function Board() {
+  return (
+    <div className="board">
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+    </div>
+  );
+}
+
+export default Board;
