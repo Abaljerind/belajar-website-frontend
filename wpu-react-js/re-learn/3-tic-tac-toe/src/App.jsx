@@ -10,11 +10,23 @@ function Square({ value, onSquareClick }) {
 
 function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
 
   function hanldeClick(i) {
+    // cek apakah squares nya sudah ada isinya atau belum, kalau sudah ada jangan diubah
+    if (squares[i]) return;
+
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+    // cek apakah xIsNext bernilai true? untuk mengganti giliran antara X dan O
+    // if (xIsNext === true) {
+    //   nextSquares[i] = "X";
+    // } else {
+    //   nextSquares[i] = "O";
+    // }
+    nextSquares[i] = xIsNext === true ? "X" : "O";
+
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
 
   return (
