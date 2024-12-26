@@ -3,30 +3,36 @@ import { useState } from "react";
 const groceryItems = [
   {
     id: 1,
-    name: "Kopi Bubuk",
-    quantity: 2,
+    itemName: "Kopi Bubuk",
+    itemQuantity: 2,
     checked: true,
   },
   {
     id: 2,
-    name: "Gula Pasir",
-    quantity: 5,
+    itemName: "Gula Pasir",
+    itemQuantity: 5,
     checked: false,
   },
   {
     id: 3,
-    name: "Air Mineral",
-    quantity: 3,
+    itemName: "Air Mineral",
+    itemQuantity: 3,
     checked: false,
   },
 ];
 
 export default function App() {
+  const [items, setItems] = useState(groceryItems);
+
+  function handleAddItem(item) {
+    setItems([...items, item]);
+  }
+
   return (
     <div className="app">
       <Header />
-      <Form />
-      <GroceryList />
+      <Form onAddItem={handleAddItem} />
+      <GroceryList items={items} />
       <Footer />
     </div>
   );
@@ -36,7 +42,7 @@ function Header() {
   return <h1>Catatan Belanjaku 📝</h1>;
 }
 
-function Form() {
+function Form({ onAddItem }) {
   const [itemName, setItemName] = useState("");
   const [itemQuantity, setItemQuantity] = useState(1);
 
@@ -47,7 +53,7 @@ function Form() {
     if (!itemName) return;
 
     const newItem = { itemName, itemQuantity, checked: false, id: Date.now() };
-    console.log(newItem);
+    onAddItem(newItem);
 
     setItemName("");
     setItemQuantity(1);
@@ -77,12 +83,12 @@ function Form() {
   );
 }
 
-function GroceryList() {
+function GroceryList({ items }) {
   return (
     <>
       <div className="list">
         <ul>
-          {groceryItems.map((item) => (
+          {items.map((item) => (
             <Item item={item} key={item.id} />
           ))}
         </ul>
@@ -108,7 +114,7 @@ function Item({ item }) {
     <li key={item.id}>
       <input type="checkbox" />
       <span style={item.checked ? { textDecoration: "line-through" } : {}}>
-        {item.quantity} {item.name}
+        {item.itemQuantity} {item.itemName}
       </span>
       <button>&times;</button>
     </li>
