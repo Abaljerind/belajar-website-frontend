@@ -36,12 +36,21 @@ export default function App() {
     setItems((items) => items.map((item) => (item.id === id ? { ...item, checked: !item.checked } : item)));
   }
 
+  function handleClearItems() {
+    setItems([]);
+  }
+
   return (
     <div className="app">
       <Header />
       <Form onAddItem={handleAddItem} />
-      <GroceryList items={items} onDeleteItem={handleDeleteItem} onToggleItem={handleToggleItem} />
-      <Footer />
+      <GroceryList
+        items={items}
+        onDeleteItem={handleDeleteItem}
+        onToggleItem={handleToggleItem}
+        onClearItems={handleClearItems}
+      />
+      <Footer items={items} />
     </div>
   );
 }
@@ -91,30 +100,69 @@ function Form({ onAddItem }) {
   );
 }
 
-function GroceryList({ items, onDeleteItem, onToggleItem }) {
+function GroceryList({ items, onDeleteItem, onToggleItem, onClearItems }) {
+  const [sortBy, setSortBy] = useState("input");
+
+  let sortedItems;
+
+  // if (sortBy === "input") {
+  //   sortedItems = items;
+  // }
+
+  // if (sortBy === "name") {
+  //   sortedItems = items.slice().sort((a, b) => a.itemName.localeCompare(b.itemName));
+  // }
+
+  // if (sortBy === "checked") {
+  //   sortedItems = items.slice().sort((a, b) => a.checked - b.checked);
+  // }
+
+  // sorting berdasarkan input, name & checked
+  switch (sortBy) {
+    case "name":
+      sortedItems = items.slice().sort((a, b) => a.itemName.localeCompare(b.itemName));
+      break;
+    case "checked":
+      sortedItems = items.slice().sort((a, b) => a.checked - b.checked);
+      break;
+    default:
+      sortedItems = items;
+      break;
+  }
+
   return (
     <>
       <div className="list">
         <ul>
-          {items.map((item) => (
+          {sortedItems.map((item) => (
             <Item item={item} key={item.id} onDeleteItem={onDeleteItem} onToggleItem={onToggleItem} />
           ))}
         </ul>
       </div>
       <div className="actions">
-        <select>
+        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
           <option value="input">Urutkan berdasarkan urutan input</option>
           <option value="name">Urutkan berdasarkan nama barang</option>
           <option value="checked">Urutkan berdasarkan ceklis</option>
         </select>
-        <button>Bersihkan Daftar</button>
+        <button onClick={onClearItems}>Bersihkan Daftar</button>
       </div>
     </>
   );
 }
 
-function Footer() {
-  return <footer className="stats">Ada 10 barang di daftar belanjaan, 5 barang sudah dibeli (50%)</footer>;
+function Footer({ items }) {
+  if (items.length === 0) return <footer className="stats">Daftar Belanja Kamu Masih Kosong!</footer>;
+
+  const totalItems = items.length;
+  const checkedItems = items.filter((item) => item.checked === true).length;
+  const percentage = Math.round((checkedItems / totalItems) * 100);
+
+  return (
+    <footer className="stats">
+      Ada {totalItems} barang di daftar belanjaan, {checkedItems} barang sudah dibeli ({percentage}%)
+    </footer>
+  );
 }
 
 function Item({ item, onDeleteItem, onToggleItem }) {
