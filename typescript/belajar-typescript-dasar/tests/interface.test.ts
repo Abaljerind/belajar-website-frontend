@@ -1,3 +1,4 @@
+import { Employee, Manager } from "../src/employee";
 import { Seller } from "../src/seller";
 
 describe("interface", function () {
@@ -53,5 +54,24 @@ describe("interface", function () {
     expect(dictionary["address"]).toBe("konohagakure");
 
     console.log(dictionary);
+  });
+
+  it("should support extends interface", function () {
+    const employee: Employee = {
+      id: "1",
+      name: "Naruto",
+      division: "Jounin",
+    };
+
+    console.log(employee);
+
+    const manager: Manager = {
+      id: "2",
+      name: "Kakashi",
+      division: "Anbu",
+      numberOfEmployees: 3,
+    };
+
+    console.log(manager);
   });
 });
