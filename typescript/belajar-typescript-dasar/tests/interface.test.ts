@@ -28,4 +28,30 @@ describe("interface", function () {
 
     console.log(add(2, 3));
   });
+
+  it("should support indexable interface", function () {
+    interface StringArray {
+      [index: number]: string;
+    }
+
+    const names: StringArray = ["Naruto", "Sasuke", "Sakura"];
+    console.log(names);
+    console.log(names[0]);
+  });
+
+  it("should support indexable interface for non number index", function () {
+    interface StringDictionary {
+      [key: string]: string;
+    }
+
+    const dictionary: StringDictionary = {
+      name: "naruto uzumaki",
+      address: "konohagakure",
+    };
+
+    expect(dictionary["name"]).toBe("naruto uzumaki");
+    expect(dictionary["address"]).toBe("konohagakure");
+
+    console.log(dictionary);
+  });
 });
