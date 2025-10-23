@@ -90,4 +90,23 @@ describe("interface", function () {
 
     console.log(person.sayHello("Sakura"));
   });
+
+  it("should support intersection types", function () {
+    interface HasName {
+      name: string;
+    }
+
+    interface HasId {
+      id: string;
+    }
+
+    type Domain = HasId & HasName;
+
+    const domain: Domain = {
+      id: "1",
+      name: "Itachi Uchiha",
+    };
+
+    console.log(domain);
+  });
 });
