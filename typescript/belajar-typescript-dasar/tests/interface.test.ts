@@ -74,4 +74,20 @@ describe("interface", function () {
 
     console.log(manager);
   });
+
+  it("should support function in interface", function () {
+    interface Person {
+      name: string;
+      sayHello(name: string): string;
+    }
+
+    const person: Person = {
+      name: "Naruto",
+      sayHello: function (name: string): string {
+        return `Hello ${name}, my name is ${this.name}`;
+      },
+    };
+
+    console.log(person.sayHello("Sakura"));
+  });
 });
