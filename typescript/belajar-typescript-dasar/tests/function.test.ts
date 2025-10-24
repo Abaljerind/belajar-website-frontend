@@ -77,6 +77,11 @@ describe("function", function () {
     }
 
     expect(sayHello("naruto", toUpper)).toBe("Hello NARUTO");
-    console.log(sayHello("sasuke", toUpper));
+
+    console.log(
+      sayHello("sasuke", function (name: string): string {
+        return name.toUpperCase();
+      })
+    );
   });
 });
