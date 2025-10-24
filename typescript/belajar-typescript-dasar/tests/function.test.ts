@@ -47,4 +47,23 @@ describe("function", function () {
     expect(sayHello("Naruto")).toBe("Hello Naruto");
     expect(sayHello("Naruto", "Uzumaki")).toBe("Hello Naruto Uzumaki");
   });
+
+  it("should support function overloading", function () {
+    function callMe(value: number): number;
+    function callMe(value: string): string;
+    function callMe(value: any): any {
+      /* return value untuk implementasi nya, optional untuk ditulis.
+      wajib dibuatkan implementasi nya, dengan tipe data untuk parameter dan return value nya any,
+      kalau tidak ada implementasi nya, maka kedua function diatas akan menampilkan pesan error. */
+      if (typeof value === "string") {
+        // perlu melakukan pengecekkan apakah tipe data value nya ini number atau string.
+        return value.toUpperCase();
+      } else if (typeof value === "number") {
+        return value * 10;
+      }
+    }
+
+    expect(callMe(10)).toBe(100);
+    expect(callMe("Naruto")).toBe("NARUTO");
+  });
 });

@@ -1,0 +1,58 @@
+"use strict";
+describe("function", function () {
+    it("should support in typescript", function () {
+        function sayHello(name) {
+            return `Hello ${name}`;
+        }
+        expect(sayHello("Naruto")).toBe("Hello Naruto");
+        function printHello(name) {
+            console.log(`Hello ${name}`);
+        }
+        printHello("Sasuke");
+    });
+    it("should support default value", function () {
+        function sayHello(name = "Guest") {
+            return `Hello ${name}`;
+        }
+        expect(sayHello()).toBe("Hello Guest");
+        expect(sayHello("Sakura")).toBe("Hello Sakura");
+    });
+    it("should support rest parameter", function () {
+        function sum(...values) {
+            let total = 0;
+            for (const value of values) {
+                total += value;
+            }
+            return total;
+        }
+        expect(sum(1, 2, 3, 4, 5)).toBe(15);
+    });
+    it("should support optional parameter", function () {
+        function sayHello(firstname, lastname) {
+            if (lastname) {
+                return `Hello ${firstname} ${lastname}`;
+            }
+            else {
+                return `Hello ${firstname}`;
+            }
+        }
+        expect(sayHello("Naruto")).toBe("Hello Naruto");
+        expect(sayHello("Naruto", "Uzumaki")).toBe("Hello Naruto Uzumaki");
+    });
+    it("should support function overloading", function () {
+        function callMe(value) {
+            /* return value untuk implementasi nya, optional untuk ditulis.
+            wajib dibuatkan implementasi nya, dengan tipe data untuk parameter dan return value nya any,
+            kalau tidak ada implementasi nya, maka kedua function diatas akan menampilkan pesan error. */
+            if (typeof value === "string") {
+                // perlu melakukan pengecekkan apakah tipe data value nya ini number atau string.
+                return value.toUpperCase();
+            }
+            else if (typeof value === "number") {
+                return value * 10;
+            }
+        }
+        expect(callMe(10)).toBe(100);
+        expect(callMe("Naruto")).toBe("NARUTO");
+    });
+});
