@@ -76,12 +76,17 @@ describe("function", function () {
       return name.toUpperCase();
     }
 
+    // invoke using named function
     expect(sayHello("naruto", toUpper)).toBe("Hello NARUTO");
 
+    // invoke using anonymous function
     console.log(
       sayHello("sasuke", function (name: string): string {
         return name.toUpperCase();
       })
     );
+
+    // invoke using arrow function
+    console.log(sayHello("sakura", (name: string): string => name.toUpperCase()));
   });
 });
