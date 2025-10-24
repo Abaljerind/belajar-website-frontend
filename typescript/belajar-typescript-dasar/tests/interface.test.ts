@@ -1,4 +1,5 @@
 import { Employee, Manager } from "../src/employee";
+import { Person } from "../src/person";
 import { Seller } from "../src/seller";
 
 describe("interface", function () {
@@ -76,11 +77,6 @@ describe("interface", function () {
   });
 
   it("should support function in interface", function () {
-    interface Person {
-      name: string;
-      sayHello(name: string): string;
-    }
-
     const person: Person = {
       name: "Naruto",
       sayHello: function (name: string): string {
@@ -108,5 +104,17 @@ describe("interface", function () {
     };
 
     console.log(domain);
+  });
+
+  it("should support type assertions", function () {
+    const person: any = {
+      name: "Naruto",
+      age: "24",
+    };
+
+    const person2: Person = person as Person;
+    console.log(person2);
+    console.log(person2.sayHello("Sakura")); // akan error saat dilakukan test
+    // console.log(person2.age); // akan muncul error, efek collition
   });
 });
