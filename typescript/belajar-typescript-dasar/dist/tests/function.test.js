@@ -55,4 +55,20 @@ describe("function", function () {
         expect(callMe(10)).toBe(100);
         expect(callMe("Naruto")).toBe("NARUTO");
     });
+    it("should support function as parameter", function () {
+        function sayHello(name, filter) {
+            return `Hello ${filter(name)}`;
+        }
+        function toUpper(name) {
+            return name.toUpperCase();
+        }
+        // invoke using named function
+        expect(sayHello("naruto", toUpper)).toBe("Hello NARUTO");
+        // invoke using anonymous function
+        console.log(sayHello("sasuke", function (name) {
+            return name.toUpperCase();
+        }));
+        // invoke using arrow function
+        console.log(sayHello("sakura", (name) => name.toUpperCase()));
+    });
 });
