@@ -17,4 +17,24 @@ describe("if statement", function () {
 
     console.log(say);
   });
+
+  it("should support switch statement", function () {
+    function sayHello(name: string): string {
+      switch (name) {
+        case "Naruto":
+          return "Hi Naruto";
+          break;
+        case "Sakura":
+          return "Hi Sakura";
+          break;
+        default:
+          return "Hi!";
+          break;
+      }
+    }
+
+    console.log(sayHello("Naruto"));
+    console.log(sayHello("Sakura"));
+    console.log(sayHello("Sasuke"));
+  });
 });
